@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>O'MEGA</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link rel="stylesheet" href="/css/loading-bar.css">
+    <link href="/css/xeditable.css" rel="stylesheet">
+    <link href="/css/ngToast.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="/codemirror/theme/eclipse.css">
+    <link href="/css/ng-ckeditor.css" rel="stylesheet">
+
+
+  <!-- Custom CSS -->
+  <style>
+
+
+      .file {
+          -moz-box-shadow: none !important;
+          box-shadow: none !important;
+          border-color: #ccc;
+          width: 100%;
+          font-size: 12px;
+          line-height: 1em;
+          padding: 2px;
+          font-family: 'Monaco','Menlo','Ubuntu Mono','Consolas','source-code-pro', monospace;
+          resize: vertical;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom: 0px;
+          color: #333;
+      }
+      .text-center{text-align:center}
+      .fade {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 100%;
+          opacity: 1;
+      }
+      .fade.ng-enter,
+      .fade.ng-leave {
+          -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+      }
+      .fade.ng-enter {
+          opacity: 0;
+      }
+      .fade.ng-enter-active {
+          opacity: 1;
+      }
+      .fade.ng-leave {
+          opacity: 1;
+      }
+      .fade.ng-leave-active {
+          opacity: 0;
+      }
+      .slide {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+      }
+      .slide.ng-enter,
+      .slide.ng-leave {
+          -webkit-transition: all 1s ease;
+          transition: all 1s ease;
+      }
+      .slide.ng-enter {
+          left: 100%;
+      }
+      .slide.ng-enter-active {
+          left: 0;
+      }
+      .slide.ng-leave {
+          left: 0;
+      }
+      .slide.ng-leave-active {
+          left: -100%;
+      }
+      video {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          z-index: -100;
+          transform: translateX(-50%) translateY(-50%);
+
+          background-size: cover;
+          transition: 1s opacity;
+      }
+      body>.container .container {
+          margin-bottom: 50px;
+          margin-top: 50px;
+      }
+      .page-header {
+          margin: 0px 0 21px;
+      }
+
+      .navbar {
+          border: 0;
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+      }
+      footer.navbar {
+          border: 0;
+          box-shadow: 0px 4px 7px 8px rgba(0, 0, 0, .26)
+      }
+
+  </style>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body ng-controller='AppCtrl'>
+<toast></toast>
+<div class="navbar  navbar-fixed-top" ng-class="$root.user != null?'navbar-inverse':'navbar-default'" ng-controller="menuCtr">
+    <div class="container" ng-init="init()">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand"><i class="fa fa-codepen"></i> O'MEGA</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active:isActive('/')}">
+                    <a href="#/"><i class="fa fa-home"></i> Home</a>
+                </li>
+                <li class="dropdown" ng-show="$root.user != null && $root.user.copilot">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-secret"></i> Admin <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/users"><i class="fa fa-users"></i> Users</a></li>
+                        <li><a href="#/buckets"><i class="fa fa-bitbucket"></i> Buckets</a></li>
+                        <li><a href="#/challenges"><i class="fa fa-bullseye"></i> Challenges</a></li>
+                        <li><a href="#/live">Live</a></li>
+                        <li><a href="#/fullStat">Full Status</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#/winners">Winners</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#/login">Help</a>
+                </li>
+
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <li ng-show="$root.user == null"><a href="#/login">Login</a></li>
+                <li ng-show="$root.user != null"><p class="navbar-text">
+                    <img class="img-circle" src="{{$root.user.photoLink}}" style="height:23px"> &nbsp;{{$root.user.name}}!
+
+
+                </p></li>
+                <li ng-show="$root.user != null"><a href="#" ng-click="logout(); ">Logout</a></li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<!-- Page Content -->
+<div class="container">
+    <div ng-view class="fade"></div>
+  <!-- /.row -->
+
+
+
+
+
+</div>
+
+<!-- /.container -->
+<!-- Footer -->
+<footer class="navbar navbar-default navbar-fixed-bottom">
+    <p class="navbar-text">Powered By KHOJ</p>
+    <!-- /.row -->
+</footer>
+<!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="javascripts/bootstrap.min.js"></script>
+<script src="javascripts/angular.min.js"></script>
+<script src="javascripts/angular-route.js"></script>
+<script src="javascripts/angular-sanitize.min.js"></script>
+<script src="javascripts/angular-animate.js"></script>
+<script src="javascripts/loading-bar.js"></script>
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="javascripts/socket.js"></script>
+<script src="javascripts/xeditable.js"></script>
+<script src="javascripts/ngToast.min.js"></script>
+<script src="//codemirror.net/lib/codemirror.js"></script>
+<script src="//codemirror.net/addon/edit/matchbrackets.js"></script>
+<script src="//codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+<script src="//codemirror.net/mode/xml/xml.js"></script>
+<script src="//codemirror.net/mode/javascript/javascript.js"></script>
+<script src="//codemirror.net/mode/css/css.js"></script>
+<script src="//codemirror.net/mode/clike/clike.js"></script>
+<script src="//codemirror.net/mode/php/php.js"></script>
+<script type="text/javascript" src="angular-ui-codemirror/ui-codemirror.js"></script>
+<script type="text/javascript" src="javascripts/moment.js"></script>
+<script type="text/javascript" src="javascripts/humanize-duration.js"></script>
+
+<script type="text/javascript" src="javascripts/angular-timer.js"></script>
+<script src="javascripts/ckeditor.js"></script>
+<script src="javascripts/ng-ckeditor.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+</body>
+
+</html>

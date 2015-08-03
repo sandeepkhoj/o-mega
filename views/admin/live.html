@@ -1,0 +1,86 @@
+<style>
+    table input[type=text] {
+        width: 50px;
+    }
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+    table {
+        width: 100%;
+    }
+
+    thead, tbody, tr, td, th { display: block; }
+
+    tr:after {
+        content: ' ';
+        display: block;
+        visibility: hidden;
+        clear: both;
+    }
+
+    thead th {
+        height: 30px;
+
+        /*text-align: left;*/
+    }
+
+    tbody {
+        height: 120px;
+        overflow-y: auto;
+    }
+
+    thead {
+        /* fallback */
+    }
+
+
+    tbody td, thead th {
+        width: 50%;
+        float: left;
+    }
+</style>
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6" ng-repeat="(bucketkey, bucketvalue) in buckets">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{bucketvalue[0].name}}</div>
+                    <div class="panel-body">
+
+                    <table class="table table-bordered table-condensed" ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
+                        <thead>
+                        <tr style="font-weight: bold">
+                            <th>handle</th>
+                            <th>status</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted,'danger':!score.isSubmitted}">
+                            <td>
+                                <!-- editable group (select-remote) -->
+                              <span>
+                                {{ score.handle }}
+                              </span>
+                            </td>
+                            <td>
+                                <!-- editable status (select-local) -->
+                              <span>
+                                {{ score.uid }}
+                              </span>
+                            </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

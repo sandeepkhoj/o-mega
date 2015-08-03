@@ -1,0 +1,80 @@
+<style>
+    table input[type=text] {
+        width: 50px;
+    }
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+</style>
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- table -->
+            <table class="table table-bordered table-condensed">
+                <tr style="font-weight: bold">
+                    <td>id</td>
+                    <td>uid</td>
+                    <td>Handle</td>
+                    <td>Name</td>
+                    <td>winner</td>
+                    <td>No of submission</td>
+                    <td>No of participation</td>
+                    <td>Action</td>
+                </tr>
+                <tr ng-repeat="user in users | filter:filterUser" ng-class="user.winner > 0?'success':{'warning':user.submitted > 0,'danger':user.participation>0}">
+                    <td>
+                        <!-- editable status (select-local) -->
+                          <span>
+                            {{ user.id }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.uid }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                          <span>
+                            {{ user.handle }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable username (text with validation) -->
+                      <span>
+                        {{ user.userName || 'empty' }}
+                      </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.winner }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.submitted }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.participation }}
+                          </span>
+                    </td>
+                    <td>
+                        <a href="#/userdesc/{{user.uid}}" class="btn btn-default btn-sm">Detail</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

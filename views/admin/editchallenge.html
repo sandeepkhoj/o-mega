@@ -1,0 +1,158 @@
+<style>
+    #cke_editor1 {
+        color: #000;
+    }
+</style>
+<div class="container" ng-init="init()">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Title">Title</label>
+                        <input type="text" class="form-control" id="Title" placeholder="Title" ng-model="challenge.title">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select class="form-control" id="type" placeholder="type" ng-model="challenge.type">
+                            <option>Coding</option>
+                            <option>Objective</option>
+                            <option>Descriptive</option>
+                            <option>SQL</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="bucketId">Bucket Id</label>
+                        <input type="number" class="form-control" id="bucketId" placeholder="Bucket Id" ng-model="challenge.bucketId">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="bucketId">Language</label>
+                        <select name="lang" class="form-control" ng-model="challenge.language" id="lang">
+                            <option ng-repeat="lang in allowedlanguage">{{lang.value}}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="ShortDescription">Short Description</label>
+                        <input type="text" class="form-control" id="ShortDescription" placeholder="Short Description" ng-model="challenge.shortDescription">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label>Description</label>
+                        <textarea ng-model="challenge.description" ckeditor="editorOptions" style="width: 100%;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-show="challenge.type == 'Coding' || challenge.type == 'SQL'">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase1">Test Case 1</label>
+                        <input type="text" class="form-control" id="testCase1" ng-model="challenge.testCase1" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result1">Result for test case 1</label>
+                        <input type="text" class="form-control" id="Result1" ng-model="challenge.result1" placeholder="Result">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase2">Test Case 2</label>
+                        <input type="text" class="form-control" id="testCase2" ng-model="challenge.testCase2" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result2">Result for test case 2</label>
+                        <input type="text" class="form-control" id="Result2" ng-model="challenge.result2" placeholder="Result">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase3">Test Case 3</label>
+                        <input type="text" class="form-control" id="testCase3" ng-model="challenge.testCase3" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result3">Result for test case 3</label>
+                        <input type="text" class="form-control" id="Result3" ng-model="challenge.result3" placeholder="Result">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase4">Test Case 4</label>
+                        <input type="text" class="form-control" id="testCase4" ng-model="challenge.testCase4" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result4">Result for test case 4</label>
+                        <input type="text" class="form-control" id="Result4" ng-model="challenge.result4" placeholder="Result">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase5">Test Case 5</label>
+                        <input type="text" class="form-control" id="testCase5" ng-model="challenge.testCase5" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result5">Result for test case 5</label>
+                        <input type="text" class="form-control" id="Result5" ng-model="challenge.result5" placeholder="Result">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="testCase6">Test Case 6</label>
+                        <input type="text" class="form-control" id="testCase6" ng-model="challenge.testCase6" placeholder="Test Case">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="Result6">Result for test case 6</label>
+                        <input type="text" class="form-control" id="Result6" ng-model="challenge.result6" placeholder="Result">
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="checkbox" ng-model="challenge.solved">
+                        <label>
+                            <input type="checkbox"> Is Solved
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row" ng-show="challenge.type == 'Descriptive'">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="singleresult">Solution</label>
+                        <input type="text" class="form-control" id="singleresult" ng-model="challenge.singleresult" placeholder="Solution">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="checkbox" ng-model="challenge.solved">
+                        <label>
+                            <input type="checkbox"> Is Solved
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary" ng-click="save();">Submit</button>
+            </div>
+            </div>
+        </div>
+    </div>

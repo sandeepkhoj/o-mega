@@ -1,0 +1,109 @@
+<style>
+
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+</style>
+<div class="container" ng-init="init()">
+
+    <div class="row">
+        <div class="col-md-12">
+
+
+            <!-- table -->
+            <table class="table table-bordered table-condensed">
+                <tr style="font-weight: bold">
+                    <td>id</td>
+                    <td>Name</td>
+                    <td>Short Name</td>
+                    <td>Type</td>
+                    <td>isActive</td>
+                    <td>icon</td>
+                    <td>Current ChallengeId</td>
+                    <td>Last question change time</td>
+                    <td>Next question change time</td>
+                    <td><span>Action</span></td>
+                </tr>
+                <tr ng-repeat="bucket in buckets | filter:filterUser">
+                    <td>
+                        <!-- editable username (text with validation) -->
+                          <span>
+                            {{ bucket.id}}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                              <span editable-text="bucket.name" e-form="rowform" e-name="name">
+                                {{ bucket.name }}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                              <span editable-text="bucket.shortname" e-form="rowform" e-name="shortname">
+                                {{ bucket.shortname }}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                              <span editable-select="bucket.type" e-form="rowform" e-ng-options="s.value as s.text for s in type" e-name="type">
+                                {{ bucket.type }}
+                              </span>
+                    </td>
+                    <td>
+                        <span editable-checkbox="bucket.isActive" e-form="rowform" e-name="isActive">
+                                {{ bucket.isActive }}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                              <span editable-text="bucket.icon" e-form="rowform" e-name="icon">
+                                {{ bucket.icon }}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                              <span editable-number="bucket.challengeId" e-min="1" e-form="rowform" e-name="challengeId">
+                                {{ bucket.challengeId }}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                              <span editable-datetime="bucket.timestamp" e-form="rowform" e-name="timestamp">
+                                {{ bucket.timestamp | date:'shortTime'}}
+                              </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                              <span>
+                                <timer countdown="bucket.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min
+                              </span>
+                    </td>
+
+
+                    <td style="white-space: nowrap">
+                        <!-- form -->
+                        <form editable-form name="rowform" onbeforesave="saveBucket($data, bucket.id)" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == bucket">
+                            <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary btn-sm">
+                                save
+                            </button>
+                            <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default btn-sm">
+                                cancel
+                            </button>
+                        </form>
+                        <div class="buttons" ng-show="!rowform.$visible">
+                            <button class="btn btn-primary btn-sm" ng-click="rowform.$show()">edit</button>
+                            <button class="btn btn-danger btn-sm" ng-click="removeBucket($index)">del</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

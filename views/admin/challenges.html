@@ -1,0 +1,162 @@
+<style>
+    table input[type=text] {
+        width: 50px;
+    }
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+</style>
+<script>
+    function bindTab() {
+        $('#myTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+        $('#myTabs a:first').tab('show');
+    }
+</script>
+<div class="container" ng-init="init()">
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div id="myTabs">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" ng-repeat="bucket in buckets">
+                        <a href="#tab{{bucket.id}}" aria-controls="tab{{bucket.id}}" role="tab" data-toggle="tab">{{bucket.name}}</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="tab{{bucket.id}}" ng-repeat="bucket in buckets">
+                        <table class="table table-bordered table-condensed">
+                            <tr style="font-weight: bold">
+                                <td>id</td>
+                                <td>title</td>
+                                <td>isSolved</td>
+                                <td>testCase1</td>
+                                <td>result1</td>
+                                <td>testCase2</td>
+                                <td>result2</td>
+                                <td>testCase3</td>
+                                <td>result3</td>
+                                <td>testCase4</td>
+                                <td>result4</td>
+                                <td>testCase5</td>
+                                <td>result5</td>
+                                <td>Action</td>
+                            </tr>
+                            <tr ng-repeat="challenge in bucket.challenges">
+                                <td>
+                                    <!-- editable username (text with validation) -->
+                          <span>
+                            {{challenge.id}}
+                          </span>
+                                </td>
+                                <td>
+                                    <!-- editable status (select-local) -->
+                              <span>
+                                {{ challenge.title }}
+                              </span>
+                                </td>
+
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.solved }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.testCase1 }}
+                              </span>
+                                </td>
+
+
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.result1 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.testCase2 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.result2 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.testCase3 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.result3 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.testCase4 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.result4 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.testCase5 }}
+                              </span>
+                                </td>
+                                <td>
+                                    <!-- editable group (select-remote) -->
+                              <span>
+                                {{ challenge.result5 }}
+                              </span>
+                                </td>
+                                <td style="white-space: nowrap">
+                                    <!-- form -->
+
+                                    <div class="buttons">
+                                        <a href="#/editchallenges/{{challenge.id}}" class="btn btn-primary btn-sm">edit</a>
+                                        <button class="btn btn-danger btn-sm" ng-click="remove(challenge.id)">del</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- table -->
+
+        </div>
+        <div class="col-md-12">
+            <a href="#/editchallenges" class="btn btn-primary btn-sm">Add</a>
+        </div>
+    </div>
+</div>

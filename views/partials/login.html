@@ -1,0 +1,39 @@
+<style>
+    .vertical-center {
+        min-height: 100% !important;  /* Fallback for browsers do NOT support vh unit */
+        min-height: 100vh !important;; /* These two lines are counted as one :-)       */
+
+        display: flex;
+        align-items: center;
+    }
+</style>
+    <div class="row">
+        <video autoplay id="bgvid" loop muted>
+            <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+
+            <source src="Hackathon_Timelapse.mp4" type="video/mp4">
+        </video>
+        <div class="col-md-4 col-md-offset-4 vertical-center">
+            <div class="panel panel-default" style="  width: 100%;">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Please sign in</h3>
+                </div>
+                <div class="panel-body">
+
+                    <img src="https://apps.topcoder.com/i/reskin/logo.png" style="width: 100%">
+                    <form accept-charset="UTF-8" role="form">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="E-mail" name="email" type="text" ng-model="user.username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password" value="" ng-model="user.password">
+                            </div>
+                            <div style="font-style: italic;color: #c9302c;text-align: center;font-weight: bold;">{{errorMessage}}</div>
+                            <input class="btn btn-lg btn-success btn-block" type="submit" value="Login" ng-click="login()">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

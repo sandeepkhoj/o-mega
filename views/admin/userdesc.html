@@ -1,0 +1,83 @@
+<style>
+    table input[type=text] {
+        width: 50px;
+    }
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+</style>
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- table -->
+            <table class="table table-bordered table-condensed">
+                <tr style="font-weight: bold">
+                    <td>uid</td>
+                    <td>bucket_challenge</td>
+                    <td>challengeId</td>
+                    <td>bucketId</td>
+                    <td>folder</td>
+                    <td>isWinner</td>
+                    <td>isSubmitted</td>
+                    <td>Submission No</td>
+                </tr>
+                <tr ng-repeat="user in users" ng-class="user.isWinner?'success':{'warning':user.isSubmitted,'danger':!user.isSubmitted}">
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.uid }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                          <span>
+                            {{ user.bucket_challenge }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable status (select-local) -->
+                          <span>
+                            {{ user.challengeId }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable username (text with validation) -->
+                      <span>
+                        {{ user.bucketId}}
+                      </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.folder }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.isWinner }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.isSubmitted }}
+                          </span>
+                    </td>
+                    <td>
+                        <!-- editable group (select-remote) -->
+                          <span>
+                            {{ user.submissionNo}}
+                          </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

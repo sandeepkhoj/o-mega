@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var request = require('request');
-var session = require('express-session')
+var session = require('express-session');
+var cfenv = require('cfenv');
 
 var routes = require('./routes/index');
 var admin = require('./routes/admin');
@@ -199,7 +200,10 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-http.listen(3000, function(){
+// get the app environment from Cloud Foundry
+var appEnv = cfenv.getAppEnv();
+
+http.listen(appEnv.port | 3000,appEnv.bind | 'localhost', function(){
   console.log('listening on *:3000');
     updateBuckets();
 });

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
-var compiler = require('compilex');
+var compiler = require('../compilex/compilex');
 var pg = require('pg');
 var connection = 'postgres://sandeepkumar@localhost:5432/omega';
 

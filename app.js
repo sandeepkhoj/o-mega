@@ -199,7 +199,7 @@ io.sockets.on('connection', function (socket) {
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-http.listen(3000, function(){
+http.listen(appEnv.port, appEnv.bind, function(){
   console.log('listening on *:3000');
     updateBuckets();
 });

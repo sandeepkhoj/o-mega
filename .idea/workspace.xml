@@ -2,7 +2,853 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/DemoPicture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/DemoPicture.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/.gitmodules" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/Cakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/Cakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/HISTORY.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/License.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/License.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/License.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/MIT-LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/README.markdown" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/ReadMe.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/TestSnippets.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/TestSnippets.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/applitude-cuid-test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/applitude-cuid-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/lib/applitude.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/lib/applitude.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/browser-cuid-test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/browser-cuid-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/dist/browser-cuid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/src/browser-fingerprint.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/charset.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/charset.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/colors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/compilex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/compilex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/compilex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/component.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/cppModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/cppModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/cppModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/tests/crc.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/tests/crc.test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/csModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/csModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/lib/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/lib/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/lib/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/lib/debug.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/encoding.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/encoding.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/example.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/express.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/express.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/src/footer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/grunt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/src/head.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/router/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/middleware/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/middleware/init.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/src/ipaddr.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/src/ipaddr.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/lib/ipaddr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/lib/ipaddr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/ipaddr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/ipaddr.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/test/ipaddr.test.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/test/ipaddr.test.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/javaModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/javaModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/javaModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/lib/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/language.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/language.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/router/layer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/router/layer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/mediaType.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/mediaType.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/test/methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/test/methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/mime.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/types/mime.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/negotiator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/lib/negotiator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/node-cuid-test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/dist/node-cuid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/src/node-fingerprint.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/types/node.types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/bytes/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/qs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/buffer-crc32/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/cookie-signature/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/debug/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/escape-html/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/fresh/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/merge-descriptors/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/methods/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/parseurl/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/proxy-addr/node_modules/ipaddr.js/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/qs/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/range-parser/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/debug/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/serve-static/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/utils-merge/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/pyModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/pyModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/compilex/pyModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/middleware/query.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/middleware/query.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/qunit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/qunit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/negotiator/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/request.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/request.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/response.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/response.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/router/route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/router/route.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/lib/send.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/lib/send.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/body-parser/node_modules/type-is/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/accepts/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/path-to-regexp/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/type-is/node_modules/mime/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/cuid/test/testling.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/lib/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/node_modules/send/lib/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/vbModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/vbModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/compilex/examples/compilex-Demo1/node_modules/express/lib/view.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/examples/compilex-Demo1/node_modules/express/lib/view.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/themes/winston-dark.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/compilex/node_modules/colors/themes/winston-light.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.jshintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/History.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/Readme.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/node_modules/bytes/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc1.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_ccitt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc16_modbus.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc24.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc32.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/crc8_1wire.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/create.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/hex.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/lib/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/node_modules/crc/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/.npmignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/component.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/.jshintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/test/array.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/test/assert.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/test/dates.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/HISTORY.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/mime-types/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/message.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/.jshintignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/Makefile" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/1a0ctpw/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/1a0ctpw/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/1u7mte3/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/1u7mte3/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/1u7mte3/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2i1ctc7/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2i1ctc7/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2i1ctc7/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2u1mtrx/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2u1mtrx/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/2u1mtrx/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/4f4etfg/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/644mtjy/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/8v5et1n/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/a40mtbv/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/a40mtbv/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/a40mtbv/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/du2mtuz/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/du2mtuz/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/du2mtuz/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/em5mtlu/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/em5mtlu/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/em5mtlu/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/jn6mt59/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/jn6mt59/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/jn6mt59/input.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/ru3mtuk/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/wb8mt7s/Main.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/wb8mt7s/Main.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/temp/wb8mt7s/input.txt" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/History.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/build/Release/bufferutil.node" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/build/Release/bufferutil.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/bufferutil.node" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/Release/bufferutil.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/build/Release/validation.node" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/build/Release/validation.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/validation.node" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/Release/validation.node" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/.jscs.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/.jscs.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.npmignore" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/.npmignore" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/.npmignore" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/request/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/Changelog.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/Changelog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/etag/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/morgan/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/HISTORY.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/HISTORY.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/History.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/History.md" afterPath="$PROJECT_DIR$/node_modules/express/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/History.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/History.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/LICENSE" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/LICENSE" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/LICENSE" afterPath="$PROJECT_DIR$/node_modules/morgan/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/LICENSE" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/LICENSE" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/LICENSE" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/etag/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/README.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/README.md" afterPath="$PROJECT_DIR$/node_modules/morgan/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/README.md" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/README.md" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/README.md" afterPath="$PROJECT_DIR$/node_modules/pg/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/README.md" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/README.md" afterPath="$PROJECT_DIR$/node_modules/request/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/README.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/Readme.md" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/Readme.md" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/Readme.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/Readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_passthrough.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_passthrough.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_transform.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_transform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_writable.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_writable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.js" afterPath="$PROJECT_DIR$/routes/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/application.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/lib/arrayParser.js" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/lib/arrayParser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/bind.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/bind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/browser/bluebird.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/browser/bluebird.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/browser/bluebird.min.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/browser/bluebird.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/browser.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/browser.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/browser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/catch_filter.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/catch_filter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/challenges.html" afterPath="$PROJECT_DIR$/views/admin/challenges.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/changelog.md" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/changelog.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/lib/client.js" afterPath="$PROJECT_DIR$/node_modules/pg/lib/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/client.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/client.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/private/coding.html" afterPath="$PROJECT_DIR$/views/private/coding.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/compilex/compilex.js" afterPath="$PROJECT_DIR$/node_modules/compilex/compilex.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/component.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/build/config.gypi" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/build/config.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/build/config.gypi" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/build/config.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/config.gypi" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/bufferutil/build/config.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/config.gypi" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/node_modules/utf-8-validate/build/config.gypi" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/compilex/cppModule.js" afterPath="$PROJECT_DIR$/node_modules/compilex/cppModule.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/crypto.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/crypto.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/db.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/db.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-codec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/dbcs-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/editchallenge.html" afterPath="$PROJECT_DIR$/views/admin/editchallenge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/express.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/express.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/extend-node.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/extend-node.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/finally.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/finally.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/lib/form_data.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/lib/form_data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/index.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/index.js" afterPath="$PROJECT_DIR$/node_modules/express/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/router/index.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/router/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/etag/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/index.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/index.js" afterPath="$PROJECT_DIR$/node_modules/morgan/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/index.js" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/index.js" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/index.js" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/test/index.js" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/test/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/caseless/index.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/caseless/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/index.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/index.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/index.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/middleware/init.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/internal.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/internal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/types/json.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/types/json.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/router/layer.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/router/layer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/live.html" afterPath="$PROJECT_DIR$/views/admin/live.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/map.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/nodeify.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/nodeify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/bytes/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/on-finished/node_modules/ee-first/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/raw-body/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/cfenv/package.json" afterPath="$PROJECT_DIR$/node_modules/cfenv/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/cfenv/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/package.json" afterPath="$PROJECT_DIR$/node_modules/cfenv/node_modules/js-yaml/node_modules/argparse/node_modules/sprintf-js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/cookie-parser/package.json" afterPath="$PROJECT_DIR$/node_modules/cookie-parser/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/package.json" afterPath="$PROJECT_DIR$/node_modules/express/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-session/package.json" afterPath="$PROJECT_DIR$/node_modules/express-session/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-session/node_modules/crc/package.json" afterPath="$PROJECT_DIR$/node_modules/express-session/node_modules/crc/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-session/node_modules/uid-safe/node_modules/base64-url/package.json" afterPath="$PROJECT_DIR$/node_modules/express-session/node_modules/uid-safe/node_modules/base64-url/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express-session/node_modules/utils-merge/package.json" afterPath="$PROJECT_DIR$/node_modules/express-session/node_modules/utils-merge/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/accepts/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/escape-html/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/etag/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/etag/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/finalhandler/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/on-finished/node_modules/ee-first/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/path-to-regexp/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/node_modules/mime/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/serve-static/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/type-is/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/vary/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/vary/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/package.json" afterPath="$PROJECT_DIR$/node_modules/morgan/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/basic-auth/package.json" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/basic-auth/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/package.json" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/package.json" afterPath="$PROJECT_DIR$/node_modules/morgan/node_modules/on-finished/node_modules/ee-first/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/passport/node_modules/pause/package.json" afterPath="$PROJECT_DIR$/node_modules/passport/node_modules/pause/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/package.json" afterPath="$PROJECT_DIR$/node_modules/pg/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/package.json" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/package.json" afterPath="$PROJECT_DIR$/node_modules/request/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/caseless/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/caseless/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/extend/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/extend/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/form-data/node_modules/async/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/is-my-json-valid/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/node_modules/boom/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/node_modules/boom/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/mime-types/node_modules/mime-db/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/debug/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/after/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/engine.io-parser/node_modules/after/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/bufferutil/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/engine.io/node_modules/ws/node_modules/utf-8-validate/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-adapter/node_modules/object-keys/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-adapter/node_modules/object-keys/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/debug/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/node_modules/better-assert/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parsejson/node_modules/better-assert/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/node_modules/better-assert/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/parseqs/node_modules/better-assert/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/engine.io-client/node_modules/ws/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/indexof/package.json" afterPath="$PROJECT_DIR$/node_modules/socket.io/node_modules/socket.io-client/node_modules/indexof/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/lib/parse.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/lib/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/test/parse.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/test/parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/private.js" afterPath="$PROJECT_DIR$/routes/private.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/promise.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/promise.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/middleware/query.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/middleware/query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/lib/query.js" afterPath="$PROJECT_DIR$/node_modules/pg/lib/query.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/types/raw.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/types/raw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/read.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/read.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/readme.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/readme.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/lib/redirect.js" afterPath="$PROJECT_DIR$/node_modules/request/lib/redirect.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/reduce.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/har-validator/node_modules/bluebird/js/main/reduce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/request.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/request.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/request.js" afterPath="$PROJECT_DIR$/node_modules/request/request.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/response.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/response.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/router/route.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/router/route.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-codec.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-codec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data-generated.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data-generated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/sbcs-data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/server.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/server.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/server.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/streams.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/lib/streams.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/test/stringify.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/test/stringify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/types/text.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/types/text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/lib/textParsers.js" afterPath="$PROJECT_DIR$/node_modules/pg/node_modules/pg-types/lib/textParsers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/uri.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/uri.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/lib/types/urlencoded.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/lib/types/urlencoded.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/example/usage.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/example/usage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/utf16.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/utf16.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/utf7.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/iconv-lite/encodings/utf7.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/body-parser/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/utils.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/hawk/test/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/request/node_modules/qs/lib/utils.js" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/qs/lib/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/lib/view.js" afterPath="$PROJECT_DIR$/node_modules/express/lib/view.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="codeComp.iws" />
@@ -28,7 +874,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="216" column="60" selection-start-line="216" selection-start-column="60" selection-end-line="216" selection-end-column="60" />
+              <caret line="170" column="44" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -37,11 +883,21 @@
       <file leaf-file-name="coding.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/private/coding.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
+            <state vertical-scroll-proportion="-45.583332">
+              <caret line="118" column="110" selection-start-line="118" selection-start-column="110" selection-end-line="118" selection-end-column="110" />
               <folding>
-                <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.028625954">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,33 +906,8 @@
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+              <caret line="208" column="51" selection-start-line="208" selection-start-column="51" selection-end-line="208" selection-end-column="51" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editchallenge.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/editchallenge.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="59" column="63" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="63" />
-              <folding>
-                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="challenges.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/challenges.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-              <folding>
-                <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#13;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +916,27 @@
         <entry file="file://$PROJECT_DIR$/routes/private.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="189" column="28" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
+              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="compilex.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/compilex/compilex.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cppModule.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/compilex/cppModule.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="298" column="63" selection-start-line="298" selection-start-column="63" selection-end-line="298" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -95,34 +946,24 @@
         <entry file="file://$PROJECT_DIR$/routes/admin.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+              <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="live.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/admin/live.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28625953">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="-10.875">
+              <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manifest.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manifest.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/temp/4f4etfg/Main.java">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compilex/examples/compilex-Demo1/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -148,7 +989,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/node_modules/compilex/compilex.js" />
         <option value="$PROJECT_DIR$/views/partials/login.ejs" />
         <option value="$PROJECT_DIR$/public/js/jquery.mb.YTPlayer.js" />
         <option value="$PROJECT_DIR$/views/partials/coding.html" />
@@ -159,14 +999,12 @@
         <option value="$PROJECT_DIR$/views/admin/bucket.html" />
         <option value="$PROJECT_DIR$/views/admin/winners.html" />
         <option value="$PROJECT_DIR$/public/css/angular-notify.css" />
-        <option value="$PROJECT_DIR$/requiresLogin.js" />
         <option value="$PROJECT_DIR$/requiresAdmin.js" />
         <option value="$PROJECT_DIR$/node_modules/compilex/javaModule.js" />
         <option value="$PROJECT_DIR$/public/css/bootstrap-theme.css" />
         <option value="$PROJECT_DIR$/public/js/services.js" />
         <option value="$PROJECT_DIR$/views/error.ejs" />
         <option value="$PROJECT_DIR$/public/javascripts/angular-timer.js" />
-        <option value="$PROJECT_DIR$/views/admin/challenges.html" />
         <option value="$PROJECT_DIR$/views/partials/login.html" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/admin/users.html" />
@@ -174,17 +1012,20 @@
         <option value="$PROJECT_DIR$/views/admin/userdesc.html" />
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
-        <option value="$PROJECT_DIR$/routes/admin.js" />
-        <option value="$PROJECT_DIR$/views/admin/live.html" />
         <option value="$PROJECT_DIR$/views/private/dashboard.html" />
-        <option value="$PROJECT_DIR$/node_modules/compilex/cppModule.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers.js" />
-        <option value="$PROJECT_DIR$/views/admin/editchallenge.html" />
-        <option value="$PROJECT_DIR$/views/private/coding.html" />
-        <option value="$PROJECT_DIR$/routes/private.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/manifest.yml" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/views/private/coding.html" />
+        <option value="$PROJECT_DIR$/requiresLogin.js" />
+        <option value="$PROJECT_DIR$/views/admin/challenges.html" />
+        <option value="$PROJECT_DIR$/views/admin/editchallenge.html" />
+        <option value="$PROJECT_DIR$/node_modules/compilex/compilex.js" />
+        <option value="$PROJECT_DIR$/node_modules/compilex/cppModule.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/js/controllers.js" />
+        <option value="$PROJECT_DIR$/routes/admin.js" />
+        <option value="$PROJECT_DIR$/views/admin/live.html" />
+        <option value="$PROJECT_DIR$/routes/private.js" />
       </list>
     </option>
   </component>
@@ -225,6 +1066,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -253,7 +1095,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -267,13 +1109,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="node_modules" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -289,9 +1134,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/javascripts" />
       <recent name="$PROJECT_DIR$/public/css" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/views/partials" />
     </key>
@@ -373,13 +1218,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299363" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -400,20 +1245,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/partials/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.3333335">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/fullStat.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5756208">
@@ -498,20 +1329,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requiresLogin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requiresAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="1" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -520,13 +1337,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/bootstrap-theme.css.map">
-      <provider editor-type-id="sourcemapFileViewerProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/angular-ui-codemirror/bower.json">
@@ -540,20 +1357,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="46" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/compilex/javaModule.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="141" column="22" selection-start-line="141" selection-start-column="22" selection-end-line="141" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -624,6 +1427,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -648,20 +1452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/live.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/userdesc.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.875">
@@ -683,64 +1473,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/compilex/cppModule.js">
+    <entry file="file://$PROJECT_DIR$/manifest.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="45" selection-start-line="174" selection-start-column="45" selection-end-line="174" selection-end-column="45" />
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/temp/4f4etfg/Main.java">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="-13.75">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/challenges.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="36" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#13;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.22900763">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/public/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="216" column="60" selection-start-line="216" selection-start-column="60" selection-end-line="216" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.39781022">
+          <caret line="65" column="16" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requiresAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24635036">
+          <caret line="9" column="1" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requiresLogin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13686131">
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/editchallenge.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="63" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="63" />
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
           <folding>
-            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/private/coding.html">
+    <entry file="file://$PROJECT_DIR$/node_modules/compilex/javaModule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="80" selection-start-line="45" selection-start-column="80" selection-end-line="45" selection-end-column="80" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="148" column="67" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="67" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/private.js">
+    <entry file="file://$PROJECT_DIR$/node_modules/compilex/compilex.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="189" column="28" selection-start-line="189" selection-start-column="28" selection-end-line="189" selection-end-column="28" />
+          <caret line="48" column="29" selection-start-line="48" selection-start-column="29" selection-end-line="48" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/compilex/cppModule.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="298" column="63" selection-start-line="298" selection-start-column="63" selection-end-line="298" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="170" column="44" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -748,7 +1568,31 @@
     <entry file="file://$PROJECT_DIR$/routes/admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="3" selection-start-line="58" selection-start-column="3" selection-end-line="58" selection-end-column="3" />
+          <caret line="74" column="69" selection-start-line="74" selection-start-column="69" selection-end-line="74" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/live.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.875">
+          <caret line="59" column="18" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compilex/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compilex/examples/compilex-Demo1/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -756,23 +1600,33 @@
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="25" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+          <caret line="208" column="51" selection-start-line="208" selection-start-column="51" selection-end-line="208" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manifest.yml">
+    <entry file="file://$PROJECT_DIR$/routes/private.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/views/private/coding.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28625953">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state vertical-scroll-proportion="-45.583332">
+          <caret line="118" column="110" selection-start-line="118" selection-start-column="110" selection-end-line="118" selection-end-column="110" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.028625954">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
           <folding />
         </state>
       </provider>

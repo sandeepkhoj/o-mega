@@ -33,7 +33,7 @@ router.get('/viewUsers',requiresAdmin,function(req,res) {
             ' (SELECT COUNT(*) FROM "userChallenge" WHERE "userChallenge".uid="userTbl".uid) participation,'+
             ' (SELECT COUNT(*) FROM "userChallenge" WHERE "userChallenge".uid="userTbl".uid AND "userChallenge"."isWinner" = true) winner,'+
             ' (SELECT COUNT(*) FROM "userChallenge" WHERE "userChallenge".uid="userTbl".uid AND "userChallenge"."isSubmitted" = true) submitted'+
-            ' FROM "userTbl" WHERE uid IS NOT NULL',
+            ' FROM "userTbl" WHERE uid IS NOT NULL ORDER BY "userTbl".id',
         function(err, result) {
           if (err) {
             console.log(err);
@@ -49,9 +49,9 @@ router.get('/getUserDesc',requiresAdmin,function(req,res) {
     pg.connect(connection, function(err, client, done) {
 
         client.query('SELECT bucket_challenge.id as bucket_challenge, * FROM "userChallenge" '+
-                    ' LEFT JOIN    bucket_challenge ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
+                    ' LEFT JOIN bucket_challenge ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
                     ' LEFT JOIN challenge ON bucket_challenge."challengeId" = challenge.id'+
-                    ' WHERE uid = '+uid,
+                    ' WHERE uid = '+uid+' ORDER BY bucket_challenge.id',
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -66,11 +66,14 @@ router.get('/getLiveData',requiresAdmin,function(req,res) {
     var uid = req.query.uid;
     pg.connect(connection, function(err, client, done) {
 
-        client.query('SELECT "userChallenge".id as userChallengeId, bucket_challenge.id as bucket_challenge_id, * FROM "userChallenge" '+
-                        ' LEFT JOIN bucket_challenge ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
-                        ' LEFT JOIN "userTbl" ON "userTbl"."uid" = "userChallenge".uid'+
-                        ' LEFT JOIN bucket ON bucket_challenge."bucketId" = bucket.id'+
-                        ' ORDER BY bucket_challenge.id, "userChallenge".id',
+        client.query(' SELECT * FROM bucket_challenge p1'+
+                    ' INNER JOIN (SELECT "bucketId", MAX(id) AS maxid'+
+                    ' FROM bucket_challenge GROUP BY "bucketId") p2'+
+                    ' ON (p1.id = p2.maxid)'+
+                    ' LEFT JOIN "userChallenge" ON "userChallenge".bucket_challenge_id = p1.id'+
+                    ' LEFT JOIN "userTbl" ON "userTbl"."uid" = "userChallenge".uid'+
+                    ' LEFT JOIN bucket ON p1."bucketId" = bucket.id'+
+                    ' ORDER BY p1."bucketId"',
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -127,7 +130,7 @@ router.get('/viewBuckets',requiresAdmin,function(req,res) {
     pg.connect(connection, function(err, client, done) {
 
         client.query(
-            'SELECT * FROM bucket',
+            'SELECT * FROM bucket ORDER BY id',
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -158,13 +161,22 @@ router.post('/updateChallenge',requiresAdmin,function(req,res) {
     var testCase6 = req.body.testCase6;
     var title = req.body.title;
     var type = req.body.type;
+    var starter_code_java = req.body.starter_code_java;
+    var starter_code_c = req.body.starter_code_c;
+    var starter_code_cpp = req.body.starter_code_cpp;
+    var singleresult = req.body.singleresult;
+    var option1 = req.body.option1;
+    var option2 = req.body.option2;
+    var option3 = req.body.option3;
+    var option4 = req.body.option4;
+    var correctOption = req.body.correctOption;
 
     pg.connect(connection, function(err, client, done) {
 
         client.query(
-            'Update challenge Set ("bucketId", "description", "result1","result2","result3","result4","result5", "result6", "solved", "shortDescription","testCase1","testCase2","testCase3","testCase4","testCase5","testCase6","title","type")' +
-            ' = ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) WHERE id=$19 RETURNING id',
-            [bucketId,description, result1, result2,result3,result4,result5,result6,solved,shortDescription,testCase1,testCase2,testCase3,testCase4,testCase5,testCase6,title,type,id],
+            'Update challenge Set ("bucketId", "description", "result1","result2","result3","result4","result5", "result6", "solved", "shortDescription","testCase1","testCase2","testCase3","testCase4","testCase5","testCase6","title","type","starter_code_java","starter_code_c","starter_code_cpp","singleresult","option1","option2","option3","option4","correctOption")' +
+            ' = ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18,$19,$20,$21,$22,$23,$24,$25,$26,$27) WHERE id=$28 RETURNING id',
+            [bucketId,description, result1, result2,result3,result4,result5,result6,solved,shortDescription,testCase1,testCase2,testCase3,testCase4,testCase5,testCase6,title,type,starter_code_java,starter_code_c,starter_code_cpp,singleresult,option1,option2,option3,option4,correctOption,id],
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -195,13 +207,22 @@ router.post('/addChallenge',requiresAdmin,function(req,res) {
     var testCase6 = req.body.testCase6;
     var title = req.body.title;
     var type = req.body.type;
+    var starter_code_java = req.body.starter_code_java;
+    var starter_code_c = req.body.starter_code_c;
+    var starter_code_cpp = req.body.starter_code_cpp;
+    var singleresult = req.body.singleresult;
+    var option1 = req.body.option1;
+    var option2 = req.body.option2;
+    var option3 = req.body.option3;
+    var option4 = req.body.option4;
+    var correctOption = req.body.correctOption;
 
     pg.connect(connection, function(err, client, done) {
 
         client.query(
-            'INSERT into challenge ("bucketId", "description", "result1","result2","result3","result4","result5", "result6", "solved", "shortDescription","testCase1","testCase2","testCase3","testCase4","testCase5","testCase6","title","type")' +
-            ' VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING id',
-            [bucketId,description, result1, result2,result3,result4,result5,result6,solved,shortDescription,testCase1,testCase2,testCase3,testCase4,testCase5,testCase6,title,type],
+            'INSERT into challenge ("bucketId", "description", "result1","result2","result3","result4","result5", "result6", "solved", "shortDescription","testCase1","testCase2","testCase3","testCase4","testCase5","testCase6","title","type","starter_code_java","starter_code_c","starter_code_cpp","singleresult","option1","option2","option3","option4","correctOption")' +
+            ' VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18,$19,$20,$21,$22,$23,$24,$25,$26,$27) RETURNING id',
+            [bucketId,description, result1, result2,result3,result4,result5,result6,solved,shortDescription,testCase1,testCase2,testCase3,testCase4,testCase5,testCase6,title,type,starter_code_java,starter_code_c,starter_code_cpp,singleresult,option1,option2,option3,option4,correctOption],
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -216,7 +237,7 @@ router.get('/viewChallenges',requiresAdmin,function(req,res) {
     pg.connect(connection, function(err, client, done) {
 
         client.query(
-            'SELECT * FROM challenge',
+            'SELECT * FROM challenge ORDER BY id',
             function(err, result) {
                 if (err) {
                     console.log(err);

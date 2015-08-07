@@ -120,9 +120,6 @@ app.use('/admin', admin);
 app.use('/private', private);
 app.use(redirectUnmatched);
 
-
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -202,18 +199,18 @@ io.sockets.on('connection', function (socket) {
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 
-http.listen(appEnv.port | 3000,appEnv.bind | 'localhost', function(){
+http.listen(3000, function(){
   console.log('listening on *:3000');
     updateBuckets();
 });
 
 module.exports = app;
 
-var minutes = 1, the_interval = minutes * 60 * 100;
+var minutes = 1, the_interval = minutes * 60 * 1000;
 setInterval(function() {
   for(var i = 0 ; i < buckets.length ; i++) {
       if(buckets[i].timestamp != null) {
-          var counter = addMinutes(new Date(buckets[i].timestamp), 30).getTime() - new Date().getTime();
+          var counter = addMinutes(new Date(buckets[i].timestamp), buckets[i].timer).getTime() - new Date().getTime();
           console.log('--counter--'+counter);
           if (counter <= 0) {
 
@@ -240,7 +237,7 @@ function updateBuckets() {
     pg.connect(connection, function (err, client, done) {
 
         client.query(
-            'SELECT date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, id, "challengeId", "isActive" FROM bucket WHERE "isActive" = true',
+            'SELECT date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, id, "challengeId", "isActive", timer FROM bucket WHERE "isActive" = true',
             function (err, result) {
                 if (err) {
                     console.log(err);

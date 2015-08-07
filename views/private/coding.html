@@ -3,9 +3,30 @@
         border: 1px solid #ddd !important;
     }
 </style>
-<div class="container">
-
-<div class="page-header" ng-init="init();">
+<script>
+    $(function() {
+        $('input:radio').click(function() {
+            if($(this).is(':checked')) {
+                $('input:radio').parent().removeClass('active');
+                $(this).parent().addClass('active');
+            }
+        })
+        setTimeout(function() {
+            $('input:radio').each(function(){
+                if($(this).is(':checked')) {
+                    $('input:radio').parent().removeClass('active');
+                    $(this).parent().addClass('active');
+                }
+            });
+        },2000);
+    });
+</script>
+<div class="container" ng-init="init();">
+    <div class="alert alert-dismissible alert-success" ng-show="challenge.isSubmitted">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Note!</strong> You have completed this challenge.
+    </div>
+<div class="page-header">
     <div class="row">
         <div class="col-lg-12">
             <h1 id="buttons"><i class="fa fa-question-circle"></i> {{challenge.title}}</h1>
@@ -19,14 +40,14 @@
         <h3>DESCRIPTION</h3>
         <div ng-bind-html="challenge.description"></div>
 
-        <div class="well">
+        <div class="well" ng-show="challenge.testCase1 != null">
             <h5>SAMPLE INPUT</h5>
             <p class="text-success">{{challenge.testCase1}}</p>
             <hr/>
             <h5>SAMPLE OUTPUT</h5>
             <p class="text-success">{{challenge.result1}}</p>
         </div>
-        <div class="well">
+        <div class="well" ng-show="challenge.testCase2 != null">
             <h5>SAMPLE INPUT</h5>
             <p class="text-success">{{challenge.testCase2}}</p>
             <hr/>
@@ -53,7 +74,18 @@
                         <label>Submit Solution</label>
                         <ui-codemirror ui-codemirror-opts="editorOptions" ng-model="challenge.code" ng-show="challenge.type == 'Coding'"></ui-codemirror>
                         <textarea class="form-control" ng-model="challenge.code" ng-show="challenge.type == 'SQL'"></textarea>
-                        <textarea class="form-control" ng-model="challenge.singleAnswer" ng-show="challenge.type == 'Descriptive'"></textarea>
+                        <textarea class="form-control" ng-model="challenge.solution" ng-show="challenge.type == 'Descriptive'"></textarea>
+                        <ul class="list-group" ng-show="challenge.type == 'Objective'">
+                            <li class="list-group-item" ng-class="testCase.testCase1 == true ? 'list-group-item-success' : ''">
+                                <input type="radio" value="1" ng-model="challenge.solution"> &nbsp;{{challenge.option1}}</li>
+                            <li class="list-group-item" ng-class="testCase.testCase2 == true ? 'list-group-item-success' : ''">
+                                <input type="radio" value="2" ng-model="challenge.solution"> &nbsp;{{challenge.option2}}</li>
+                            <li class="list-group-item" ng-class="testCase.testCase1 == true ? 'list-group-item-success' : ''">
+                                <input type="radio" value="3" ng-model="challenge.solution"> &nbsp;{{challenge.option3}}</li>
+                            <li class="list-group-item" ng-class="testCase.testCase2 == true ? 'list-group-item-success' : ''">
+                                <input type="radio" value="4" ng-model="challenge.solution"> &nbsp;{{challenge.option4}}</li>
+
+                        </ul>
                     </div>
                     <!--
                     <div class="form-group">
@@ -62,7 +94,7 @@
                     </div>-->
 
 
-                    <div class="form-group  col-md-4" ng-show="challenge.type == 'Coding' || challenge.type == 'SQL'">
+                    <div class="form-group  col-md-4" ng-show="challenge.type == 'Coding'">
                         <label>Testing Case</label>
                         <ul class="list-group">
                             <li class="list-group-item" ng-class="testCase.testCase1 == true ? 'list-group-item-success' : ''">
@@ -77,20 +109,17 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
                     <div style="clear: both"></div>
-                    <div class="alert alert-dismissible alert-success" ng-show="challenge.isSubmitted">
-                        <button type="button" class="close" data-dismiss="alert">×</button>
-                        <strong>Note!</strong> You have completed this challenge.
-                    </div>
+
                     <div class="btn-group" ng-show="challenge.type == 'Coding'">
                         <button type="button" class="btn btn-success" ng-click="compile();" ng-show="!challenge.isSubmitted && challenge.batch == challenge.counter">Compile</button>
                         <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && challenge.folder != null && (testCase.testCase1 == false || testCase.testCase2 == false)">Test Code</button>
                         <button type="button" class="btn btn-primary" ng-click="submitCode();" ng-show="!challenge.isSubmitted &&  testCase.testCase1 == true && testCase.testCase2 == true">Submit Code</button>
                     </div>
                     <div class="btn-group" ng-show="challenge.type == 'Objective' || challenge.type == 'Descriptive'">
-                        <button type="button" class="btn btn-primary" ng-click="submitCode();" ng-show="!challenge.isSubmitted &&  testCase.testCase1 == true && testCase.testCase2 == true">Submit</button>
+                        <button type="button" class="btn btn-primary" ng-click="submitSolution();" ng-show="!challenge.isSubmitted">Submit</button>
                     </div>
                     <div class="btn-group" ng-show="challenge.type == 'SQL'">
-                        <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && challenge.folder != null && (testCase.testCase1 == false || testCase.testCase2 == false)">Test</button>
+                        <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && (testCase.testCase1 == false || testCase.testCase2 == false)">Test</button>
                         <button type="button" class="btn btn-primary" ng-click="submitCode();" ng-show="!challenge.isSubmitted &&  testCase.testCase1 == true && testCase.testCase2 == true">Submit</button>
                     </div>
 

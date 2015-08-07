@@ -1,8 +1,9 @@
 <style>
-    #cke_editor1 {
+    [id^=cke_editor] {
         color: #000;
     }
 </style>
+
 <div class="container" ng-init="init()">
 
     <div class="row">
@@ -53,7 +54,57 @@
                     </div>
                 </div>
             </div>
+            <div class="row" ng-show="challenge.type == 'Objective'">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Option 1</label>
+                        <textarea ng-model="challenge.option1" style="width: 100%;height: 200px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Option 2</label>
+                        <textarea ng-model="challenge.option2" style="width: 100%;height: 200px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Option 3</label>
+                        <textarea ng-model="challenge.option3" style="width: 100%;height: 200px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Option 4</label>
+                        <textarea ng-model="challenge.option4" style="width: 100%;height: 200px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="CorrectOption">Correct Option number</label>
+                        <input type="number" id="CorrectOption" class="form-control" min="1" max="4" ng-model="challenge.correctOption" placeholder="Correct Option">
+                    </div>
+                </div>
+            </div>
             <div class="row" ng-show="challenge.type == 'Coding' || challenge.type == 'SQL'">
+                <div class="col-md-12" ng-show="challenge.type == 'Coding'">
+                    <div class="form-group">
+                        <label>Starter Code Java</label>
+                        <textarea ng-model="challenge.starter_code_java" style="width: 100%;height: 300px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12" ng-show="challenge.type == 'Coding'">
+                    <div class="form-group">
+                        <label>Starter Code C</label>
+                        <textarea ng-model="challenge.starter_code_c" style="width: 100%;height: 300px;"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-12" ng-show="challenge.type == 'Coding'">
+                    <div class="form-group">
+                        <label>Starter Code C++</label>
+                        <textarea ng-model="challenge.starter_code_cpp" style="width: 100%;height: 300px;"></textarea>
+                    </div>
+                </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="testCase1">Test Case 1</label>

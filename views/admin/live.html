@@ -48,7 +48,7 @@
 <div class="container" ng-init="init()">
     <div class="row">
         <div class="col-md-12">
-            <div class="col-md-6" ng-repeat="(bucketkey, bucketvalue) in buckets">
+            <div class="col-md-6" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
                 <div class="panel panel-default">
                     <div class="panel-heading">{{bucketvalue[0].name}}</div>
                     <div class="panel-body">

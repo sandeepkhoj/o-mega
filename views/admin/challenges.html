@@ -14,11 +14,11 @@
 </style>
 <script>
     function bindTab() {
-        $('#myTabs a').click(function (e) {
+        $('#myTabs a.tab').click(function (e) {
             e.preventDefault()
             $(this).tab('show')
         })
-        $('#myTabs a:first').tab('show');
+        $('#myTabs a.tab:first').tab('show');
     }
 </script>
 <div class="container" ng-init="init()">
@@ -31,7 +31,7 @@
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
                     <li role="presentation" ng-repeat="bucket in buckets">
-                        <a href="#tab{{bucket.id}}" aria-controls="tab{{bucket.id}}" role="tab" data-toggle="tab">{{bucket.name}}</a>
+                        <a href="#tab{{bucket.id}}" class="tab" aria-controls="tab{{bucket.id}}" role="tab" data-toggle="tab">{{bucket.name}}</a>
                     </li>
                 </ul>
 

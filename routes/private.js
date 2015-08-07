@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
-var compiler = require('compilex');
+var compiler = require('../compilex/compilex');
 var connection = 'postgres://sandeepkumar@localhost:5432/omega';
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
@@ -40,17 +40,13 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
 
     var path = req.body.path;
     var input = req.body.input;
-    console.log(req.body);
+    input = input.replace(/,/g, ' ');
+    console.log(input);
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
         var envData = { OS : "linux" , cmd : "g++"};
-        compiler.compileCPPWithInput(envData , path ,input , function (data) {
-            if(data.error) {
-                res.json(data.error);
-            }
-            else {
-                res.json(data.output);
-            }
+        compiler.runCppWithInput(envData , path ,input , function (data) {
+            res.json(data);
         });
     }
     if(lang === "Java") {
@@ -70,12 +66,13 @@ router.post('/updateCode',requiresLogin,function(req,res) {
     var code = req.body.code;
     var challengeid = req.body.challengeid;
     var code_language = req.body.code_language;
+    var solution = req.body.solution;
     console.log(req.body);
     pg.connect(connection, function(err, client, done) {
 
         client.query(
-            'Update "userChallenge" Set (code,code_language) = ($1,$2) WHERE bucket_challenge_id = $3 AND "isSubmitted" = false AND uid = $4',
-            [code,code_language,challengeid,uid],
+            'Update "userChallenge" Set (code,code_language,solution) = ($1,$2,$3) WHERE bucket_challenge_id = $4 AND "isSubmitted" = false AND uid = $5',
+            [code,code_language,solution,challengeid,uid],
             function(err, result) {
                 if (err) {
                     console.log(err);
@@ -108,6 +105,7 @@ router.post('/openProblem',requiresLogin,function(req,res) {
 
 router.post('/submitCode',requiresLogin,function(req,res) {
     var uid = req.body.userId;
+    var bucket_challenge_id = req.body.bucket_challenge_id;
     var challengeid = req.body.challengeid;
     pg.connect(connection, function(err, client, done) {
         if(err) {
@@ -115,7 +113,7 @@ router.post('/submitCode',requiresLogin,function(req,res) {
             return console.error('error fetching client from pool', err);
         }
         client.query('SELECT count(*) as count FROM "userChallenge" WHERE bucket_challenge_id = $1 AND "isSubmitted" = true',
-            [challengeid],
+            [bucket_challenge_id],
             function(err, result) {
             //call `done()` to release the client back to the pool
             done();
@@ -131,17 +129,65 @@ router.post('/submitCode',requiresLogin,function(req,res) {
                 }
             client.query(
             'UPDATE "userChallenge" SET "isSubmitted" = $1, "submissionNo" = $2 WHERE uid = $3 AND bucket_challenge_id = $4',
-            [true, count, uid, challengeid],
+            [true, count, uid, bucket_challenge_id],
             function(err, result) {
                 if (err) {
                     console.log(err);
                 } else {
-                    res.json({status:'loser'});
+                    client.query(
+                        'UPDATE "challenge" SET solved = $1 WHERE id = $2',
+                        [true, challengeid],
+                        function(err, result) {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                res.json({status:'loser'});
+                            }
+                            client.end();
+                        });
                 }
-                client.end();
             });
 
         });
+    });
+});
+router.post('/submitSolution',requiresLogin,function(req,res) {
+    var uid = req.body.userId;
+    var challengeid = req.body.challengeid;
+    var solution = req.body.solution;
+    pg.connect(connection, function(err, client, done) {
+        if(err) {
+            res.write("error..");
+            return console.error('error fetching client from pool', err);
+        }
+        client.query('SELECT count(*) as count FROM "userChallenge" WHERE bucket_challenge_id = $1 AND "isSubmitted" = true',
+            [challengeid],
+            function(err, result) {
+                //call `done()` to release the client back to the pool
+                done();
+
+                if(err) {
+                    //
+                    res.write("error..");
+                    return console.error('error running query', err);
+                }
+                var count = 1;
+                if(result.rows.length>0) {
+                    count = parseInt(result.rows[0].count) + 1;
+                }
+                client.query(
+                    'UPDATE "userChallenge" SET "isSubmitted" = $1, "submissionNo" = $2, "solution" = $3 WHERE uid = $4 AND bucket_challenge_id = $5',
+                    [true, count, solution, uid, challengeid],
+                    function(err, result) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            res.json({status:'loser'});
+                        }
+                        client.end();
+                    });
+
+            });
     });
 });
 

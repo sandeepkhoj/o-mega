@@ -27,34 +27,6 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
         theme:"eclipse"
     };
 
-    $scope.jTemplate = "/* package whatever; // don't place package name! */\n\n"
-
-        +"import java.util.*;\n"
-        +"import java.lang.*;\n"
-        +"import java.io.*;\n\n"
-
-        +"/* Name of the class has to be \"Main\" only. */\n"
-        +"public class Main {\n"
-        +"\tpublic static void main (String[] args) throws java.lang.Exception {\n"
-        +"\t\t// your code goes here\n"
-        +"\t\tScanner x = new Scanner(System.in);\n"
-        +"\t}\n"
-        +"}";
-
-    $scope.cTemplate = "#include<stdio.h>\n"
-        +"using namespace std;\n"
-        +"int main() {\n"
-        +'\t\n'
-        +'\treturn 0;\n'
-        +"}";
-
-    $scope.cppTemplate = "#include<iostream>\n"
-        +"using namespace std;\n"
-        +"int main() {\n"
-        +'\t\n'
-        +'\treturn 0;\n'
-        +"}";
-
     $scope.input = '';
     $scope.result;
     $scope.challenge;
@@ -62,18 +34,20 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
     $scope.allowedlanguage = [];
 
     $scope.init = function() {
-        if(typeof $rootScope.user === "undefined") {
-            externalCall.callGetService('/getUserDetail').success(function(response){
-                //console.log(response);
-                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + response.photoLink;
                 $rootScope.user = response;
                 console.log($rootScope.user);
                 loadChallenge();
-            });
-        }
-        else {
-            loadChallenge();
-        }
+            }
+        });
+
     };
 
     function loadChallenge(){
@@ -83,8 +57,9 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 $scope.challenge = response[0];
 
                 if($scope.challenge.code == null) {
-                    $scope.challenge.code = $scope.jTemplate;
+                    $scope.challenge.code = $scope.challenge.starter_code_java;
                 }
+
                 if($scope.challenge.language == null) {
                     $scope.allowedlanguage = [
                         {value: "Java", text: 'Java'},
@@ -117,7 +92,8 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                                 userId: $rootScope.user.uid,
                                 challengeid: $scope.challenge.bucket_challenge,
                                 code: $scope.challenge.code,
-                                code_language:$scope.challenge.code_language
+                                code_language:$scope.challenge.code_language,
+                                solution:$scope.challenge.solution
                             });
                         }
                     }
@@ -132,14 +108,14 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
 
 
     $scope.updateLanguage = function() {
-        if($scope.language == 'Java') {
-            $scope.challenge.code = $scope.jTemplate;
+        if($scope.challenge.code_language == 'Java') {
+            $scope.challenge.code = $scope.challenge.starter_code_java;
         }
-        else if($scope.language == 'C'){
-            $scope.challenge.code = $scope.cTemplate;
+        else if($scope.challenge.code_language == 'C'){
+            $scope.challenge.code = $scope.challenge.starter_code_c;
         }
         else {
-            $scope.challenge.code = $scope.cppTemplate;
+            $scope.challenge.code = $scope.challenge.starter_code_cpp;
         }
     };
 
@@ -154,22 +130,31 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 success(function (data, status, headers, config) {
                     $scope.result = data;
                     console.log(data);
-                    pgCall.callPostService('/private/updatePath', {
-                        userId: $rootScope.user.uid,
-                        challengeid: $scope.challenge.bucket_challenge,
-                        path: $scope.result.path,
-                        code: $scope.challenge.code
-                    }).success(function (response) {
-                        console.log(response);
-                        $scope.challenge.folder = $scope.result.path;
+                    if(typeof data.error != 'undefined') {
                         ngToast.create({
-                            className: 'success',
-                            content: 'Compiled Successfully..',
+                            className: 'danger',
+                            content: 'Compilation fail..',
                             timeout: 2000
                         });
+                    }
+                    else {
+                        pgCall.callPostService('/private/updatePath', {
+                            userId: $rootScope.user.uid,
+                            challengeid: $scope.challenge.bucket_challenge,
+                            path: $scope.result.path,
+                            code: $scope.challenge.code
+                        }).success(function (response) {
+                            console.log(response);
+                            $scope.challenge.folder = $scope.result.path;
+                            ngToast.create({
+                                className: 'success',
+                                content: 'Compiled Successfully..',
+                                timeout: 2000
+                            });
 
-                        //notify({ message:'Compiled Successfully..', position:'right'});
-                    });
+                            //notify({ message:'Compiled Successfully..', position:'right'});
+                        });
+                    }
                 }).
                 error(function (data, status, headers, config) {
                     $scope.result = 'Error!';
@@ -182,7 +167,8 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
     function submitCodeAfterTest() {
         if($scope.testCase.testCase1 && $scope.testCase.testCase2 && $scope.testCase.testCase3 && $scope.testCase.testCase4) {
             internalCall.submitCode({userId:$rootScope.user.uid,
-                challengeid:$scope.challenge.bucket_challenge}).success(function(response){
+                bucket_challenge_id:$scope.challenge.bucket_challenge,
+                challengeid:$scope.challenge.challengeId}).success(function(response){
                 console.log(response);
                 loadChallenge();
                 ngToast.create({
@@ -193,9 +179,16 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
             });
         }
     }
-
+    $scope.submitSolution = function() {
+        pgCall.callPostService('/private/submitSolution',{userId:$rootScope.user.uid,
+            challengeid:$scope.challenge.bucket_challenge,
+            solution:$scope.challenge.solution}).success(function(response){
+            loadChallenge();
+        });
+    };
     $scope.submitCode = function() {
         if(!$scope.challenge.isSubmitted) {
+
             internalCall.testCode({
                 path: $scope.challenge.folder,
                 input: $scope.challenge.testCase3,
@@ -251,6 +244,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
             });
         }
     };
+
     $scope.test = function () {
         if($scope.input == '' || $scope.input == null) {
             alert('Select any test case..')
@@ -369,19 +363,19 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
         $scope.buckets = [];
 
         $scope.init = function() {
-            if(typeof $rootScope.user === "undefined") {
-                externalCall.callGetService('/getUserDetail').success(function(response){
-                    //console.log(response);
-                    response.photoLink = "http://www.topcoder.com"+response.photoLink;
+            externalCall.callGetService('/getUserDetail').success(function(response){
+                //console.log(response);
+                if(typeof response.photoLink == "undefined") {
+                    $rootScope.user = null;
+                    $location.url('/');
+                }
+                else {
+                    response.photoLink = "http://www.topcoder.com" + response.photoLink;
                     $rootScope.user = response;
                     console.log($rootScope.user);
                     viewLoad();
-                });
-            }
-            else {
-                viewLoad();
-            }
-
+                }
+            });
         }
 
 
@@ -410,13 +404,12 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
             return new Date(date.getTime() + minutes*60000);
         }
 
-
         function viewLoad() {
             pgCall.callGetService('/private/viewLoad?userId='+$rootScope.user.uid).success(function(response){
                 console.log(response);
                 for(var i = 0;i<response.length;i++) {
                     if(response[i].timestamp != null) {
-                        response[i].counter = addMinutes(new Date(response[i].timestamp), 30).getTime() - new Date().getTime();
+                        response[i].counter = addMinutes(new Date(response[i].timestamp), response[i].timer).getTime() - new Date().getTime();
                         console.log(response[i].counter);
                         if(response[i].counter > 0) {
                             response[i].counter = Math.abs(response[i].counter / 1000);
@@ -425,7 +418,7 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
                             response[i].counter = 0;
                         }
                         console.log(response[i].counter);
-                        console.log(addMinutes(new Date(response[i].timestamp), 30));
+                        console.log(addMinutes(new Date(response[i].timestamp), response[i].timer));
                         console.log(new Date(response[i].timestamp));
                     }
                     else {
@@ -446,18 +439,6 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
 
     });
 
-app.controller('testCode', function ($scope, $modalInstance, items) {
-    $scope.gmailPassword = '';
-
-    $scope.ok = function () {
-        $modalInstance.close($scope.gmailPassword);
-    };
-
-    $scope.cancel = function () {
-        $modalInstance.dismiss('cancel');
-    }
-
-});
 app.controller('menuCtr', function($scope,$http,$location,$rootScope,externalCall) {
         $scope.init = function() {
 
@@ -479,14 +460,19 @@ app.controller('menuCtr', function($scope,$http,$location,$rootScope,externalCal
     });
 app.controller('usersCtr', function ($scope,$rootScope,$location,externalCall,pgCall) {
     $scope.init = function() {
-        if(typeof $rootScope.user === "undefined") {
-            externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + response.photoLink;
                 $rootScope.user = response;
                 console.log($rootScope.user);
-            });
-        }
-        loadUsers();
+                loadUsers();
+            }
+        });
     }
     function loadUsers() {
         pgCall.callGetService('/admin/viewUsers').success(function(response){
@@ -547,14 +533,19 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
     }
 
     $scope.init = function() {
-        if(typeof $rootScope.user === "undefined") {
-            externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + response.photoLink;
                 $rootScope.user = response;
                 console.log($rootScope.user);
-            });
-        }
-        loadBuckets();
+                loadBuckets();
+            }
+        });
     }
     function loadBuckets() {
         pgCall.callGetService('/admin/viewBuckets').success(function(response){
@@ -631,14 +622,19 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
 });
 app.controller('winnersCtr', function ($scope,$rootScope,$location,externalCall,pgCall) {
     $scope.init = function() {
-        if(typeof $rootScope.user === "undefined") {
-            externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + response.photoLink;
                 $rootScope.user = response;
                 console.log($rootScope.user);
-            });
-        }
-        loadBuckets();
+                loadBuckets();
+            }
+        });
     }
     function loadBuckets() {
         pgCall.callGetService('/admin/viewWinners').success(function(response){
@@ -650,14 +646,19 @@ app.controller('winnersCtr', function ($scope,$rootScope,$location,externalCall,
 });
 app.controller('challengesCtr', function ($scope,$rootScope,$location,externalCall,pgCall) {
     $scope.init = function() {
-        if(typeof $rootScope.user === "undefined") {
-            externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + response.photoLink;
                 $rootScope.user = response;
                 console.log($rootScope.user);
-            });
-        }
-        loadChallenges();
+                loadChallenges();
+            }
+        });
     }
 
     function loadChallenges() {
@@ -693,6 +694,7 @@ app.controller('editchallengesCtr', function ($scope,$rootScope,$location,$route
         {value: "C++", text: 'C++'}
     ];
     $scope.init = function() {
+
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
                 response.photoLink = "http://www.topcoder.com"+response.photoLink;

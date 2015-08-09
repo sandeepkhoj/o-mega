@@ -6,7 +6,7 @@ var config = {};
 config.connection = 'postgres://sandeepkumar@localhost:5432/omega';
 //config.connection = 'postgres://postgres:ciitdc123@localhost:5432/omega';
 
-config.port = 3001;
+config.port = 3003;
 //config.port = 80;
 
 config.interval = 100;

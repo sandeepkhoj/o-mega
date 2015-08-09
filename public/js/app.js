@@ -79,6 +79,10 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
           templateUrl: 'admin/view/live',
           controller: 'liveCtr'
       }).
+      when('/liveall', {
+        templateUrl: 'admin/view/liveall',
+        controller: 'liveAllCtr'
+      }).
     otherwise({
       redirectTo: '/'
     });

@@ -84,6 +84,26 @@ router.get('/getLiveData',requiresAdmin,function(req,res) {
             });
     });
 });
+router.get('/getLiveAllData',requiresAdmin,function(req,res) {
+    var uid = req.query.uid;
+    pg.connect(config.connection, function(err, client, done) {
+
+        client.query(' SELECT bucket.id AS bucket_id, bucket_challenge.id AS bucket_challenge_main_id, "userChallenge".id as user_challenge_id, * FROM bucket'+
+            ' LEFT JOIN bucket_challenge ON (bucket.id = bucket_challenge."bucketId" AND bucket_challenge."challengeId" IS NOT NULL)'+
+            ' LEFT JOIN challenge ON challenge.id = bucket_challenge."challengeId"'+
+            ' LEFT JOIN "userChallenge" ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
+                ' LEFT JOIN "userTbl" ON "userChallenge".uid = "userTbl".uid'+
+            ' ORDER BY bucket.id, "userChallenge".id',
+            function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.json(result.rows);
+                }
+                client.end();
+            });
+    });
+});
 router.post('/removeUser',requiresAdmin,function(req,res) {
     var id = req.body.id;
     pg.connect(config.connection, function(err, client, done) {
@@ -120,6 +140,24 @@ router.post('/updateUser',requiresAdmin,function(req,res) {
                     console.log(err);
                 } else {
                     res.json(result.rows);
+                }
+                client.end();
+            });
+    });
+});
+router.post('/setWinner',requiresAdmin,function(req,res) {
+    var id = req.body.id;
+    var status = req.body.status;
+    pg.connect(config.connection, function(err, client, done) {
+
+        client.query(
+            'Update "userChallenge" Set ("isWinner") = ($1) WHERE id = $2',
+            [status,id],
+            function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.json({status:'done'});
                 }
                 client.end();
             });

@@ -63,13 +63,13 @@
                         <tbody>
                         <tr ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted,'danger':!score.isSubmitted}">
                             <td>
-                                <!-- editable group (select-remote) -->
+
                               <span>
                                 {{ score.handle }}
                               </span>
                             </td>
                             <td>
-                                <!-- editable status (select-local) -->
+
                               <span>
                                 {{ score.uid }}
                               </span>

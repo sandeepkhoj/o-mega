@@ -814,3 +814,53 @@ app.controller('liveCtr', function ($scope,$rootScope,$location,$routeParams,ext
         });
     }
 });
+app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,externalCall,pgCall) {
+    $scope.init = function() {
+        if(typeof $rootScope.user === "undefined") {
+            externalCall.callGetService('/getUserDetail').success(function(response){
+                response.photoLink = "http://www.topcoder.com"+response.photoLink;
+                $rootScope.user = response;
+                console.log($rootScope.user);
+            });
+        }
+        loadChallenges();
+    }
+    $scope.buckets = new Object();
+    $scope.rounds = new Object();
+
+    $scope.liveData;
+    function loadChallenges() {
+        pgCall.callGetService('/admin/getLiveAllData').success(function(response){
+            $scope.liveData = response;
+            $scope.buckets = new Object();
+            $scope.rounds = new Object();
+            console.log($scope.liveData);
+            for(var i = 0; i < $scope.liveData.length; i++) {
+
+                console.log($scope.liveData[i].bucket_id);
+                if($scope.buckets[$scope.liveData[i].bucket_id] == null) {
+                    $scope.buckets[$scope.liveData[i].bucket_id] = [];
+                }
+                $scope.buckets[$scope.liveData[i].bucket_id].push($scope.liveData[i]);
+            }
+
+            for(var bucketKey in $scope.buckets) {
+                var buckets = $scope.buckets[bucketKey];
+                $scope.rounds[bucketKey] = new Object();
+                for (var j = 0; j < buckets.length; j++) {
+                    if ($scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] == null) {
+                        $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] = [];
+                    }
+                    $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id].push(buckets[j]);
+                }
+            }
+            console.log($scope.buckets);
+            console.log($scope.rounds);
+        });
+    }
+    $scope.setWinner = function(id,status) {
+        pgCall.callPostService('/admin/setWinner',{id:id,status:status}).success(function(response){
+            loadChallenges();
+        });
+    };
+});

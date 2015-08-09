@@ -1,0 +1,66 @@
+<style>
+    table input[type=text] {
+        width: 50px;
+    }
+    .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+        border: 1px solid #4e5d6c;
+    }
+    .table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+        padding: 6px;
+        line-height: 1.42857143;
+        vertical-align: top;
+        border-top: 1px solid #4e5d6c;
+    }
+    table {
+        width: 100%;
+    }
+
+
+</style>
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-3" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{bucketvalue[0].name}}</div>
+                    <div class="panel-body">
+                        <div ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
+                            Round - {{$index+1}} AT {{roundvalue[0].timestamp | date:'mediumTime'}}
+                        <table class="table table-bordered table-condensed" ng-show="roundvalue.length>0">
+                            <thead>
+                            <tr style="font-weight: bold">
+                                <th>handle</th>
+                                <th>isSubmitted</th>
+                                <th>isWinner</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted,'danger':!score.isSubmitted}">
+                                <td>
+
+                              <span>
+                                {{ score.handle }}
+                              </span>
+                                </td>
+                                <td>
+
+                                    <span>
+                                {{ score.isSubmitted }}
+                              </span>
+                                </td>
+                                <td>
+                              <span>
+                                  <input type="checkbox" ng-model="score.isWinner" onchange="setWinner(score.user_challenge_id,score.isWinner);">
+                              </span>
+                                </td>
+
+                            </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

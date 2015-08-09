@@ -221,9 +221,6 @@ setInterval(function() {
       else if(buckets[i].isActive){
           console.log('--buckets[i]--'+buckets[i].id);
           assignNewChallenge(buckets[i].id,buckets[i].challengeId);
-      }
-      else {
-          updateBuckets();
           break;
       }
   }

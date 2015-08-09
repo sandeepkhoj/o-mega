@@ -52,16 +52,17 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">{{bucketvalue[0].name}}</div>
                     <div class="panel-body">
-
-                    <table class="table table-bordered table-condensed" ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
+                        <div ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
+                            Round - {{roundkey}} AT {{roundvalue[0].timestamp | date:'mediumTime'}}
+                    <table class="table table-bordered table-condensed">
                         <thead>
                         <tr style="font-weight: bold">
-                            <th>handle</th>
-                            <th>status</th>
+                            <th>Handle</th>
+                            <th>Submitted</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted,'danger':!score.isSubmitted}">
+                        <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                             <td>
 
                               <span>
@@ -69,15 +70,14 @@
                               </span>
                             </td>
                             <td>
+                                <i class="fa fa-check" ng-show="score.isSubmitted"></i>
+                                <i class="fa fa-times" ng-show="!score.isSubmitted"></i>
 
-                              <span>
-                                {{ score.uid }}
-                              </span>
                             </td>
-
                         </tr>
                         </tbody>
                     </table>
+                            </div>
                         </div>
                 </div>
             </div>

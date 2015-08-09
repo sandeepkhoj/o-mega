@@ -188,7 +188,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
     $scope.submitSolution = function() {
         pgCall.callPostService('/private/submitSolution',{userId:$rootScope.user.uid,
             challengeid:$scope.challenge.bucket_challenge,
-            solution:$scope.challenge.solution}).success(function(response){
+            solution:$scope.challenge.solution,option:$scope.challenge.correctOption}).success(function(response){
             loadChallenge();
         });
     };

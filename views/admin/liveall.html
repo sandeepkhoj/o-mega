@@ -14,10 +14,19 @@
     table {
         width: 100%;
     }
-
+    body>.container .container-fluid {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .panel-body {
+        padding: 5px;
+    }
+    .col-md-3 {
+        padding: 3px;
+    }
 
 </style>
-<div class="container" ng-init="init()">
+<div class="container-fluid" ng-init="init()">
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-3" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
@@ -29,13 +38,14 @@
                         <table class="table table-bordered table-condensed" ng-show="roundvalue.length>0">
                             <thead>
                             <tr style="font-weight: bold">
-                                <th>handle</th>
-                                <th>isSubmitted</th>
-                                <th>isWinner</th>
+                                <th>Handle</th>
+                                <th>Submitted</th>
+                                <th>Valid</th>
+                                <th>Winner</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted,'danger':!score.isSubmitted}">
+                            <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                                 <td>
 
                               <span>
@@ -43,14 +53,18 @@
                               </span>
                                 </td>
                                 <td>
+                                    <i class="fa fa-check" ng-show="score.isSubmitted"></i>
+                                    <i class="fa fa-times" ng-show="!score.isSubmitted"></i>
 
-                                    <span>
-                                {{ score.isSubmitted }}
-                              </span>
+                                </td>
+                                <td>
+
+                                    <i class="fa fa-check" ng-show="score.solution == score.correctOption && score.isSubmitted"></i>
+                                    <i class="fa fa-times" ng-show="score.solution != score.correctOption"></i>
                                 </td>
                                 <td>
                               <span>
-                                  <input type="checkbox" ng-model="score.isWinner" onchange="setWinner(score.user_challenge_id,score.isWinner);">
+                                  <input type="checkbox" ng-model="score.isWinner" ng-disabled="!score.isSubmitted || score.solution != score.correctOption" ng-change="setWinner(score.user_challenge_id,score.isWinner)">
                               </span>
                                 </td>
 

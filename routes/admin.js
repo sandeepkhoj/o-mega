@@ -73,6 +73,7 @@ router.get('/getLiveData',requiresAdmin,function(req,res) {
                     ' LEFT JOIN "userChallenge" ON "userChallenge".bucket_challenge_id = p1.id'+
                     ' LEFT JOIN "userTbl" ON "userTbl"."uid" = "userChallenge".uid'+
                     ' LEFT JOIN bucket ON p1."bucketId" = bucket.id'+
+                    ' WHERE "userTbl".uid IS NOT NULL'+
                     ' ORDER BY p1."bucketId"',
             function(err, result) {
                 if (err) {
@@ -93,6 +94,7 @@ router.get('/getLiveAllData',requiresAdmin,function(req,res) {
             ' LEFT JOIN challenge ON challenge.id = bucket_challenge."challengeId"'+
             ' LEFT JOIN "userChallenge" ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
                 ' LEFT JOIN "userTbl" ON "userChallenge".uid = "userTbl".uid'+
+                ' WHERE "userTbl".uid IS NOT NULL '+
             ' ORDER BY bucket.id, "userChallenge".id',
             function(err, result) {
                 if (err) {

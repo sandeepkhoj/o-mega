@@ -155,6 +155,7 @@ router.post('/submitSolution',requiresLogin,function(req,res) {
     var uid = req.body.userId;
     var challengeid = req.body.challengeid;
     var solution = req.body.solution;
+    var option = req.body.option;
     pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");
@@ -176,8 +177,8 @@ router.post('/submitSolution',requiresLogin,function(req,res) {
                     count = parseInt(result.rows[0].count) + 1;
                 }
                 client.query(
-                    'UPDATE "userChallenge" SET "isSubmitted" = $1, "submissionNo" = $2, "solution" = $3 WHERE uid = $4 AND bucket_challenge_id = $5',
-                    [true, count, solution, uid, challengeid],
+                    'UPDATE "userChallenge" SET "isSubmitted" = $1, "submissionNo" = $2, "solution" = $3, option = $4 WHERE uid = $5 AND bucket_challenge_id = $6',
+                    [true, count, solution,option, uid, challengeid],
                     function(err, result) {
                         if (err) {
                             console.log(err);

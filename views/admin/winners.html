@@ -11,80 +11,70 @@
         vertical-align: top;
         border-top: 1px solid #4e5d6c;
     }
-</style>
-<div class="container" ng-init="init()">
+    table {
+        width: 100%;
+    }
+    body>.container .container-fluid {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .panel-body {
+        padding: 5px;
+    }
+    .col-md-3 {
+        padding: 3px;
+    }
 
+</style>
+<div class="container-fluid" ng-init="init()">
     <div class="row">
         <div class="col-md-12">
+            <div class="col-md-3" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{{bucketvalue[0].name}}</div>
+                    <div class="panel-body">
+                        <div ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
+                            Round - {{$index+1}} AT {{roundvalue[0].timestamp | date:'mediumTime'}}
+                            <table class="table table-bordered table-condensed" ng-show="roundvalue.length>0">
+                                <thead>
+                                <tr style="font-weight: bold">
+                                    <th>Handle</th>
+                                    <th>Submitted</th>
+                                    <th>Valid</th>
+                                    <th>Winner</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
+                                    <td>
 
+                              <span>
+                                {{ score.handle }}
+                              </span>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-check" ng-show="score.isSubmitted"></i>
+                                        <i class="fa fa-times" ng-show="!score.isSubmitted"></i>
 
-            <!-- table -->
-            <table class="table table-bordered table-condensed">
-                <tr style="font-weight: bold">
-                    <td>Name</td>
-                    <td>Handle</td>
-                    <td>assign Chalenge Id</td>
-                    <td>Challenge title</td>
-                    <td>Challenge solved</td>
-                    <td>folder</td>
-                    <td>Bucket shortname</td>
+                                    </td>
+                                    <td>
 
-                    <td>batch</td>
-                </tr>
-                <tr ng-repeat="user in winners | filter:filterUser">
-                    <td>
-                        <!-- editable username (text with validation) -->
-                          <span>
-                            {{ user.userName || 'empty' }}
-                          </span>
-                    </td>
-                    <td>
-                        <!-- editable status (select-local) -->
+                                        <i class="fa fa-check" ng-show="score.solution == score.correctOption && score.isSubmitted"></i>
+                                        <i class="fa fa-times" ng-show="score.solution != score.correctOption"></i>
+                                    </td>
+                                    <td>
                               <span>
-                                {{ user.handle }}
-                              </span>
-                    </td>
+                                  <i class="fa fa-check" ng-show="score.isWinner"></i>
+                                        <i class="fa fa-times" ng-show="!score.isWinner"></i>
+                                    </td>
 
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.assignChallenge }}
-                              </span>
-                    </td>
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.title }}
-                              </span>
-                    </td>
-
-
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.solved }}
-                              </span>
-                    </td>
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.folder }}
-                              </span>
-                    </td>
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.shortname }}
-                              </span>
-                    </td>
-                    <td>
-                        <!-- editable group (select-remote) -->
-                              <span>
-                                {{ user.batch }}
-                              </span>
-                    </td>
-                </tr>
-            </table>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

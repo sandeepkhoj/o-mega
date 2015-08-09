@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var pg = require('pg');
 var compiler = require('../compilex/compilex');
-var connection = 'postgres://sandeepkumar@localhost:5432/omega';
+var config = require('../routes/config');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
 
@@ -68,7 +68,7 @@ router.post('/updateCode',requiresLogin,function(req,res) {
     var code_language = req.body.code_language;
     var solution = req.body.solution;
     console.log(req.body);
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
 
         client.query(
             'Update "userChallenge" Set (code,code_language,solution) = ($1,$2,$3) WHERE bucket_challenge_id = $4 AND "isSubmitted" = false AND uid = $5',
@@ -87,7 +87,7 @@ router.post('/openProblem',requiresLogin,function(req,res) {
     var uid = req.body.userId
     var bucketid = req.body.bucketid;
     var challengeid = req.body.challengeid;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
 
         client.query(
             'INSERT INTO "userChallenge" (folder, code, uid, bucket_challenge_id,"isSubmitted","isWinner") VALUES($1, $2, $3, $4, $5, $6) RETURNING id',
@@ -107,7 +107,7 @@ router.post('/submitCode',requiresLogin,function(req,res) {
     var uid = req.body.userId;
     var bucket_challenge_id = req.body.bucket_challenge_id;
     var challengeid = req.body.challengeid;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");
             return console.error('error fetching client from pool', err);
@@ -155,7 +155,7 @@ router.post('/submitSolution',requiresLogin,function(req,res) {
     var uid = req.body.userId;
     var challengeid = req.body.challengeid;
     var solution = req.body.solution;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");
             return console.error('error fetching client from pool', err);
@@ -196,7 +196,7 @@ router.post('/updatePath',requiresLogin,function(req,res) {
     var code = req.body.code;
     var path = req.body.path;
     var challengeid = req.body.challengeid;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
 
         client.query(
             'WITH upsert AS (UPDATE "userChallenge" SET "folder" = $1, code = $2 WHERE uid=$3 AND bucket_challenge_id = $4 RETURNING *)'+
@@ -215,7 +215,7 @@ router.post('/updatePath',requiresLogin,function(req,res) {
 
 router.get('/viewLoad',requiresLogin,function(req,res) {
     var uid = req.query.userId;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
 
         client.query(
             'SELECT bucket.id AS bucketId, bucket.type AS buckettype, bucket."isActive", bucket.type as buckettype, date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, bucket.shortname, challenge.id AS challengeId, * FROM bucket'+
@@ -235,7 +235,7 @@ router.get('/viewLoad',requiresLogin,function(req,res) {
 router.get('/viewChallenge',requiresLogin,function(req,res) {
     var uid = req.query.uid;
     var bucket_id = req.query.bucketId;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
 
         client.query(
             'SELECT bucket.id AS bucketId, bucket.type AS buckettype, bucket.bucket_challenge_id as bucket_challenge,"userChallenge".bucket_challenge_id as bucket_challenge_user, bucket."isActive", challenge.id AS challengeId,"userChallenge".id AS userChallengeId, * FROM bucket LEFT JOIN challenge ON (bucket."challengeId" = challenge.id) LEFT JOIN "userChallenge" ON ("userChallenge".bucket_challenge_id = bucket.bucket_challenge_id AND "userChallenge".uid = '+uid+') WHERE bucket.id = '+bucket_id,
@@ -256,7 +256,7 @@ router.post('/register',requiresLogin,function(req,res) {
     var handle = req.body.handle;
     var bucketId = req.body.bucketId;
 
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");
             return console.error('error fetching client from pool', err);

@@ -67,9 +67,15 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                         {value: "C++", text: 'C++'}
                     ];
                 }
+                else if($scope.challenge.language == 'Java') {
+                    $scope.allowedlanguage = [
+                        {value: "C", text: 'C'},
+                        {value: "C++", text: 'C++'}
+                    ];
+                }
                 else {
                     $scope.allowedlanguage = [
-                        {value: $scope.challenge.language, text: $scope.challenge.language}
+                        {value: "Java", text: 'Java'}
                     ];
                 }
                 if($scope.challenge.code_language == null) {
@@ -615,7 +621,7 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
     };
 
     $scope.type = [
-        {value: 'Coding', text: 'Coding'},
+        {value: 'Code', text: 'Code'},
         {value: 'SQL', text: 'SQL'},
         {value: 'Quiz', text: 'Quiz'}
     ];

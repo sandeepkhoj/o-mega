@@ -6,7 +6,7 @@ var passport = require('passport');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
 
-var connection = 'postgres://sandeepkumar@localhost:5432/omega';
+var config = require('../routes/config');
 
 
 /* GET home page. */
@@ -21,7 +21,7 @@ router.get('/partials/:name',function (req, res) {
 router.get('/pgdata',requiresLogin,function(req,res) {
     var resResult = '';
     var query = req.query.sql;
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");
             return console.error('error fetching client from pool', err);
@@ -54,10 +54,11 @@ router.get('/login', function(req, res){
 router.post('/login',
     passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }),
     function(req, res) {
-        pg.connect(connection, function(err, client, done) {
+        pg.connect(config.connection, function(err, client, done) {
 
             client.query(
-                'Update "userTbl" Set ("userName","lastLogin",uid) = ($1,$2,$3) WHERE handle = $4',
+                'WITH upsert AS (UPDATE "userTbl" SET "lastLogin" = $2 WHERE handle=$4 RETURNING *)'+
+                'INSERT INTO "userTbl" ("userName","lastLogin",uid,handle) SELECT $1, $2, $3, $4 WHERE NOT EXISTS (SELECT * FROM upsert)',
                 [req.user.name,new Date(),req.user.uid, req.user.handle],
                 function(err, result) {
                     done();

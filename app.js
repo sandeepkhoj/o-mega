@@ -6,20 +6,17 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var request = require('request');
 var session = require('express-session');
-var cfenv = require('cfenv');
-
+var config = require('./routes/config');
 var routes = require('./routes/index');
 var admin = require('./routes/admin');
 var private = require('./routes/private');
-socket = require('./routes/socket');
+var socket = require('./routes/socket');
 var pg = require('pg');
 var express = require('express')
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var flash = require('connect-flash');
-
-var connection = 'postgres://sandeepkumar@localhost:5432/omega';
 
 var users = [];
 var buckets = [];
@@ -53,40 +50,44 @@ passport.use(new LocalStrategy(
     function(username, password, done) {
       // asynchronous verification, for effect...
       process.nextTick(function () {
-          pg.connect(connection, function(err, client, donepg) {
+          console.log(username);
+          console.log(password);
+          request.post({url:'http://api.topcoder.com/v2/auth', form: {username:username,password:password}}, function (error, response, body) {
+              console.log(error);
+              console.log(body);
+              if (error) { return done(null, false, { message: error }); }
+              if(JSON.parse(body).error) {return done(null, false, { message: JSON.parse(body).error.details });}
+              console.log(body);
+              request.get({url:'http://api.topcoder.com/v2/user/profile', headers: {'Authorization': 'Bearer '+JSON.parse(body).token}}, function (error, response, body) {
+                  if (error) { return done(null, false, { message: error }); }
+                  if(JSON.parse(body).error) {return done(null, false, { message: JSON.parse(body).error.details });}
+                  var jsonBody = JSON.parse(body);
+                  console.log(jsonBody);
 
-              client.query(
-                  'SELECT id FROM "userTbl" WHERE handle = \''+ username +'\'',
-                  function(err, result) {
-                      console.log(result);
-                      if (err) {
-                          console.log(err);
-                      }
-                      if(result.rows.length > 0) {
-                          request.post({url:'http://api.topcoder.com/v2/auth', form: {username:username,password:password}}, function (error, response, body) {
-                              console.log(error);
-                              //console.log(response);
-                              if (error) { return done(null, false, { message: error }); }
-                              if(JSON.parse(body).error) {return done(null, false, { message: JSON.parse(body).error.details });}
-                              console.log(body);
-                              request.get({url:'http://api.topcoder.com/v2/user/profile', headers: {'Authorization': 'Bearer '+JSON.parse(body).token}}, function (error, response, body) {
-                                  if (error) { return done(null, false, { message: error }); }
-                                  if(JSON.parse(body).error) {return done(null, false, { message: JSON.parse(body).error.details });}
-                                  console.log(JSON.parse(body));
-                                  users.push(body);
-                                  return done(null, JSON.parse(body));
-                              });
+                  pg.connect(config.connection, function(err, client, done) {
+
+                      client.query(
+                          'SELECT * FROM admin WHERE handle = $1',
+                          [jsonBody.handle],
+                          function(err, result) {
+                              if (err) {
+                                  console.log(err);
+                              } else {
+                                  if(result.rows.length > 0) {
+                                      jsonBody.copilot = true;
+                                  }
+                                  else {
+                                      jsonBody.copilot = false;
+                                  }
+                              }
+                              client.end();
                           });
-                      }
-                      else {
-                          return done(null, false, { message: 'Not allow to access this application.' });
-                      }
-                      client.end();
                   });
+
+                  users.push(jsonBody);
+                  return done(null, jsonBody);
+              });
           });
-
-
-
         // Find the user by username.  If there is no user with the given
         // username, or the password is not correct, set the user to `false` to
         // indicate failure and set a flash message.  Otherwise, return the
@@ -161,11 +162,11 @@ app.get('/api/name', function (req, res) {
   });
 });
 
-var pg_client = new pg.Client(connection);
+var pg_client = new pg.Client(config.connection);
 pg_client.connect();
 var query = pg_client.query('LISTEN updateuser');
 
-var pg_client1 = new pg.Client(connection);
+var pg_client1 = new pg.Client(config.connection);
 pg_client1.connect();
 var query = pg_client1.query('LISTEN bucketupdate');
 
@@ -196,19 +197,18 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-// get the app environment from Cloud Foundry
-var appEnv = cfenv.getAppEnv();
 
-http.listen(appEnv.port, appEnv.bind, function(){
-  console.log('listening on *:3000');
+http.listen(config.port, function(){
+  console.log('listening on *:'+config.port);
     updateBuckets();
 });
 
 module.exports = app;
 
-var minutes = 1, the_interval = minutes * 60 * 1000;
+var minutes = 1, the_interval = minutes * 60 * config.interval;
 setInterval(function() {
   for(var i = 0 ; i < buckets.length ; i++) {
+      console.log(buckets[i].timestamp);
       if(buckets[i].timestamp != null) {
           var counter = addMinutes(new Date(buckets[i].timestamp), buckets[i].timer).getTime() - new Date().getTime();
           console.log('--counter--'+counter);
@@ -219,6 +219,7 @@ setInterval(function() {
           }
       }
       else if(buckets[i].isActive){
+          console.log('--buckets[i]--'+buckets[i].id);
           assignNewChallenge(buckets[i].id,buckets[i].challengeId);
       }
       else {
@@ -234,7 +235,7 @@ function addMinutes(date, minutes) {
 
 function updateBuckets() {
     console.log('--in Bucket Update--');
-    pg.connect(connection, function (err, client, done) {
+    pg.connect(config.connection, function (err, client, done) {
 
         client.query(
             'SELECT date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, id, "challengeId", "isActive", timer FROM bucket WHERE "isActive" = true',
@@ -250,13 +251,13 @@ function updateBuckets() {
 }
 function assignNewChallenge(bucketId,lastChallengeId) {
     console.log(lastChallengeId);
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         var sql = '';
         if(lastChallengeId != null) {
-            sql = 'SELECT id FROM challenge WHERE solved = false AND "bucketId" = '+bucketId+' AND id != '+lastChallengeId+' ORDER BY RANDOM() LIMIT 1';
+            sql = 'SELECT id FROM challenge WHERE (solved = false OR solved IS NULL) AND "bucketId" = '+bucketId+' AND id != '+lastChallengeId+' ORDER BY RANDOM() LIMIT 1';
         }
         else {
-            sql = 'SELECT id FROM challenge WHERE solved = false AND "bucketId" = '+bucketId+' ORDER BY RANDOM() LIMIT 1';
+            sql = 'SELECT id FROM challenge WHERE (solved = false OR solved IS NULL) AND "bucketId" = '+bucketId+' ORDER BY RANDOM() LIMIT 1';
         }
         client.query(sql,
             function(err, result) {

@@ -2,7 +2,7 @@
     .list-group-item {
         border: 1px solid #ddd !important;
     }
-    .fixed
+    .fixedPos
     {
         position: fixed;
         top: 48px;
@@ -38,9 +38,10 @@
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
     </div>
-    <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixed': 'alert-danger fixed'">
+    <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixed': 'alert-danger fixedPos'">
         Remaining Time - <span class="badge badge-success"><timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min</span>
     </div>
+    <timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer>
 <div class="page-header">
     <div class="row">
         <div class="col-lg-12">

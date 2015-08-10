@@ -566,7 +566,7 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
 
             for(var i = 0;i<response.length;i++) {
                 if(response[i].timestamp != null) {
-                    response[i].counter = addMinutes(new Date(response[i].timestamp), 30).getTime() - new Date().getTime();
+                    response[i].counter = addMinutes(new Date(response[i].timestamp), response[i].timer).getTime() - new Date().getTime();
                     console.log(response[i].counter);
                     if(response[i].counter > 0) {
                         response[i].counter = Math.abs(response[i].counter / 1000);
@@ -575,7 +575,7 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
                         response[i].counter = 0;
                     }
                     console.log(response[i].counter);
-                    console.log(addMinutes(new Date(response[i].timestamp), 30));
+                    console.log(addMinutes(new Date(response[i].timestamp), response[i].timer));
                     console.log(new Date(response[i].timestamp));
                 }
                 else {

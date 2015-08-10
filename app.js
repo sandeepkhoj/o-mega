@@ -17,9 +17,14 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var flash = require('connect-flash');
+var ipfilter = require('express-ipfilter')
 
 var users = [];
 
+var ips = [['103.228.187.0','103.228.187.255']];
+
+// Create the server
+app.use(ipfilter(ips, {mode: 'allow'}));
 
 function findById(id, fn) {
   //var idx = id - 1;

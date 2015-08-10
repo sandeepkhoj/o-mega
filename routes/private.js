@@ -44,13 +44,13 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
     console.log(input);
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
-        var envData = { OS : "linux" , cmd : "g++"};
+        var envData = { OS : "windows" , cmd : "g++"};
         compiler.runCppWithInput(envData , path ,input , function (data) {
             res.json(data);
         });
     }
     if(lang === "Java") {
-        var envData = { OS : "linux" };
+        var envData = { OS : "windows" };
         compiler.runJavaWithInput( envData , path , input ,  function(data){
             res.json(data);
         });

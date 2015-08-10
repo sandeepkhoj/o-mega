@@ -27,7 +27,7 @@
                     <td>isSubmitted</td>
                     <td>Submission No</td>
                 </tr>
-                <tr ng-repeat="user in users" ng-class="user.isWinner?'success':{'warning':user.isSubmitted,'danger':!user.isSubmitted}">
+                <tr ng-repeat="user in users" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                     <td>
                         <!-- editable group (select-remote) -->
                           <span>

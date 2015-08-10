@@ -38,7 +38,7 @@
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
     </div>
-    <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixed': 'alert-danger fixedPos'">
+    <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixedPos': 'alert-danger fixedPos'">
         Remaining Time - <span class="badge badge-success"><timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min</span>
     </div>
     <timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer>

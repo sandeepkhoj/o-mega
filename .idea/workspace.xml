@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="" />
+    <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/private/coding.html" afterPath="$PROJECT_DIR$/views/private/coding.html" />
+    </list>
     <ignored path="codeComp.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coding.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="coding.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/private/coding.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.375">
-              <caret line="43" column="115" selection-start-line="43" selection-start-column="115" selection-end-line="43" selection-end-column="115" />
+            <state vertical-scroll-proportion="0.79113925">
+              <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
               <folding>
                 <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -103,10 +105,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7278481">
+            <state vertical-scroll-proportion="-14.375">
               <caret line="233" column="61" selection-start-line="233" selection-start-column="48" selection-end-line="233" selection-end-column="61" />
               <folding />
             </state>
@@ -867,21 +869,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/private/coding.html">
+    <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-14.375">
-          <caret line="43" column="115" selection-start-line="43" selection-start-column="115" selection-end-line="43" selection-end-column="115" />
-          <folding>
-            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="233" column="61" selection-start-line="233" selection-start-column="48" selection-end-line="233" selection-end-column="61" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
+    <entry file="file://$PROJECT_DIR$/views/private/coding.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7278481">
-          <caret line="233" column="61" selection-start-line="233" selection-start-column="48" selection-end-line="233" selection-end-column="61" />
-          <folding />
+        <state vertical-scroll-proportion="0.79113925">
+          <caret line="40" column="80" selection-start-line="40" selection-start-column="80" selection-end-line="40" selection-end-column="80" />
+          <folding>
+            <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#5;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

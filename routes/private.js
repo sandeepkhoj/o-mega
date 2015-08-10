@@ -20,12 +20,8 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
     if((lang === "C") || (lang === "C++")) {
         var envData = { OS : "windows" , cmd : "g++"};
         compiler.compileCPPWithInput(envData , code ,input , function (data) {
-            if(data.error) {
-                res.json(data.error);
-            }
-            else {
-                res.json(data);
-            }
+
+            res.json(data);
         });
     }
     if(lang === "Java") {

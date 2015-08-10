@@ -30,7 +30,7 @@
                     <td>Next question change time</td>
                     <td><span>Action</span></td>
                 </tr>
-                <tr ng-repeat="bucket in buckets | filter:filterUser">
+                <tr ng-repeat="bucket in buckets | filter:filterUser" ng-class="!score.isActive?'danger':'warning'">
                     <td>
                         <!-- editable username (text with validation) -->
                           <span>

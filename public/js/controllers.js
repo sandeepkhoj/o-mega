@@ -74,7 +74,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 else {
                     $scope.challenge.counter = 0;
                 }
-
+                $scope.challenge.description = $sce.trustAsHtml($scope.challenge.description);
 
                 if($scope.challenge.code == null) {
                     $scope.challenge.code = $scope.challenge.starter_code_java;

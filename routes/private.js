@@ -18,7 +18,7 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
     console.log(input);
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
-        var envData = { OS : "linux" , cmd : "gcc"};
+        var envData = { OS : "windows" , cmd : "g++"};
         compiler.compileCPPWithInput(envData , code ,input , function (data) {
             if(data.error) {
                 res.json(data.error);
@@ -29,7 +29,7 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
         });
     }
     if(lang === "Java") {
-        var envData = { OS : "linux" };
+        var envData = { OS : "windows" };
         console.log(code);
         compiler.compileJavaWithInput( envData , code , input ,  function(data){
             res.json(data);

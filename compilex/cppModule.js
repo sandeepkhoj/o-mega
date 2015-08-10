@@ -25,57 +25,51 @@ exports.compileCPP = function ( envData ,  code , fn ) {
 	 					//compiling and exrcuiting source code
 					       if(envData.cmd === 'g++')
 					       {
+							   //compile c code
+							   commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.exe' ;
+							   exec(commmand , function ( error , stdout , stderr ){
+								   if(error)
+								   {
+									   if(exports.stats)
+									   {
+										   console.log('INFO: '.green + filename + '.cpp contained an error while compiling');
+									   }
+									   var out = { error : stderr};
+									   fn(out);
+								   }
+								   else
+								   {
+									   exec( path + filename + '.out', function ( error , stdout , stderr ){
+										   if(error)
+										   {
+											   if(error.toString().indexOf('Error: stdout maxBuffer exceeded.') != -1)
+											   {
+												   var out = { error : 'Error: stdout maxBuffer exceeded. You might have initialized an infinite loop.' };
+												   fn(out);
+											   }
+											   else
+											   {
+												   if(exports.stats)
+												   {
+													   console.log('INFO: '.green + filename + '.cpp contained an error while executing');
+												   }
+												   var out = { error : stderr };
+												   fn(out);
+											   }
+										   }
+										   else
+										   {
+											   if(exports.stats)
+											   {
+												   console.log('INFO: '.green + filename + '.cpp successfully compiled and executed !');
+											   }
+											   var out = { output : stdout};
+											   fn(out);
+										   }
+									   });
 
-							//compile c code 
-							commmand = 'g++ ' + path + filename +'.cpp -o '+path + filename +'.exe' ;
-							exec(commmand , function ( error , stdout , stderr ){  
-								if(error)
-								{
-									if(exports.stats)
-									{
-										console.log('INFO: '.green + filename + '.cpp contained an error while compiling');
-									}
-									var out = { error : stderr };
-									fn(out);
-								}
-								else
-								{
-								    var tempcommand = "cd temp & "+ filename ;
-									exec( tempcommand , function ( error , stdout , stderr ){
-										if(error)
-										{
-										
-										if(error.toString().indexOf('Error: stdout maxBuffer exceeded.') != -1)
-											{
-												var out = { error : 'Error: stdout maxBuffer exceeded. You might have initialized an infinite loop.' };
-												fn(out);								
-											}
-										else
-											{
-												if(exports.stats)
-												{
-													console.log('INFO: '.green + filename + '.cpp contained an error while executing');
-												}
-
-												var out = { error : stderr };
-												fn(out);								
-											}													
-										}
-										else
-										{
-											if(exports.stats)
-											{
-												console.log('INFO: '.green + filename + '.cpp successfully compiled and executed !');
-											}
-											var out = { output : stdout};
-											fn(out);
-										}
-						    		});
-								}			
-
-							});
-
-
+								   }
+							   });
 					       }  
 					       else if(envData.cmd === 'gcc')
 					       {
@@ -150,79 +144,25 @@ exports.compileCPPWithInput = function ( envData , code , input ,  fn ) {
 	    	{
 				console.log('INFO: '.green + filename +'.cpp created');
 				if(envData.cmd ==='g++')
-				    {	    	    
+				    {
 
-						//compile c code 
-						commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.out' ;
-						exec(commmand , function ( error , stdout , stderr ){  
+						commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.exe' ;
+						exec(commmand , function ( error , stdout , stderr ){
 							if(error)
 							{
 								if(exports.stats)
 								{
 									console.log('INFO: '.green + filename + '.cpp contained an error while compiling');
 								}
-								var out = { error : stderr };
+								var out = { error : stderr};
 								fn(out);
 							}
 							else
 							{
-								if(input){
-									var inputfile = filename + 'input.txt';
-
-									fs.writeFile( path  +  inputfile , input  , function(err ){
-										if(exports.stats)
-										{
-											if(err)
-												console.log('ERROR: '.red + err);
-						    				else
-						    					console.log('INFO: '.green + inputfile +' (inputfile) created');
-						    			}
-						            });
-						            var tempcommand = "cd temp & " + filename ;
-
-									exec( tempcommand + '<' + inputfile , function( error , stdout , stderr ){
-									if(error)
-									{
-									if(error.toString().indexOf('Error: stdout maxBuffer exceeded.') != -1)
-										{
-											var out = { error : 'Error: stdout maxBuffer exceeded. You might have initialized an infinite loop.'};
-											fn(out);
-										}
-									else
-										{
-											if(exports.stats)
-												{
-													console.log('INFO: '.green + filename + '.cpp contained an error while executing');
-												}
-											var out = { error : stderr};
-											fn(out);
-										}
-									}
-									else
-									{
-										if(exports.stats)
-										{
-											console.log('INFO: '.green + filename + '.cpp successfully compiled and executed !');
-										}
-										var out = { output : stdout};
-										fn(out);
-									}
-									});
-
-								}
-								else //input not provided
-								{
-									if(exports.stats)
-									{
-										console.log('INFO: '.green + 'Input mission for '+filename +'.cpp');
-									}
-								    var out = { error : 'Input Missing' };
-									fn(out);
-								}
-								
+								console.log("INFO: ".green + "compiled a cpp file");
+								var out = {message :  'compiled',path : filename };
+								fn(out);
 							}
-						
-
 						});
 				    								
 				    }
@@ -271,7 +211,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 			}
 		});
 
-		exec( path + filename +'.out' + ' < ' + path + inputfile , function( error , stdout , stderr ){
+		exec( path + filename +'.exe' + ' < ' + path + inputfile , function( error , stdout , stderr ){
 			if(error)
 			{
 

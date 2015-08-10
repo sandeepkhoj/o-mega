@@ -92,9 +92,9 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
     });
       ngToastProvider.configure({
           verticalPosition: 'bottom',
-          horizontalPosition: 'right',
+          horizontalPosition: 'left',
           maxNumber: 0,
-          animation:'slide'
+          animation:'fade'
       });
   //$locationProvider.html5Mode(true).hashPrefix('!');
 });

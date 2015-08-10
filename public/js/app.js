@@ -35,6 +35,10 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
       templateUrl: 'private/view/dashboard',
       controller: 'dashboardCtr'
     }).
+      when('/help', {
+          templateUrl: 'partials/help',
+          controller: 'helpCtr'
+      }).
       when('/coding/:bucketId', {
         templateUrl: 'private/view/coding',
         controller: 'codingCtr'

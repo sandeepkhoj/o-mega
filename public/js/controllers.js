@@ -345,12 +345,20 @@ app.controller('loginCtr', function ($scope,$rootScope, $http,$location) {
         };
 
   });
-app.controller('homeCtr', function ($scope,$rootScope,$location) {
+app.controller('homeCtr', function ($scope,$rootScope,$location,externalCall) {
         $scope.init = function() {
-
-            if($rootScope.user) {
-                $location.url('/dashboard');
-            }
+            externalCall.callGetService('/getUserDetail').success(function(response){
+                //console.log(response);
+                if(typeof response.photoLink == "undefined") {
+                    $rootScope.user = null;
+                }
+                else {
+                    response.photoLink = "http://www.topcoder.com" + response.photoLink;
+                    $rootScope.user = response;
+                    console.log($rootScope.user);
+                    $location.url('/dashboard');
+                }
+            });
         }
     });
 app.controller('fullStatCtr', function ($scope,$rootScope,$location,fullStat) {
@@ -791,6 +799,33 @@ app.controller('userDescCtr', function ($scope,$rootScope,$location,$routeParams
             console.log($scope.users);
         });
     }
+});
+app.controller('helpCtr', function ($scope,$rootScope,$location,$http,$routeParams,externalCall,pgCall) {
+    $scope.parsedEntries = [];
+    $scope.init = function() {
+        var url = 'https://spreadsheets.google.com/feeds/list/1bqbRtqxo5BkqzH2UvRH2Ub_aCCbuZ2NCAxmG27Qsme0/od6/public/values?alt=json'
+        var parse = function(entry) {
+            var title = entry['gsx$title']['$t'];
+            var description = entry['gsx$description']['$t'];
+
+            return {
+                description: description,
+                title: title
+            };
+        }
+        $http.get(url)
+            .success(function(response) {
+
+                var entries = response['feed']['entry'];
+                console.log(entries);
+                $scope.parsedEntries = [];
+                for (var key in entries) {
+                    var content = entries[key];
+                    $scope.parsedEntries.push(parse(content));
+                }
+                console.log($scope.parsedEntries);
+            });
+    };
 });
 app.controller('liveCtr', function ($scope,$rootScope,$location,$routeParams,externalCall,pgCall) {
     $scope.init = function() {

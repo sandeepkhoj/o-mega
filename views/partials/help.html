@@ -1,0 +1,53 @@
+<div class="container" ng-init="init();">
+
+
+    <div class="panel-group" id="accordion">
+        <div class="faqHeader">FAQ</div>
+        <div class="panel panel-default" ng-repeat="rec in parsedEntries">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle" ng-class="$index != 0 ? 'collapsed':''" onclick="return false;" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}">{{rec.title}}</a>
+                </h4>
+            </div>
+            <div id="collapse{{$index}}" class="panel-collapse collapse" ng-class="$index == 0 ? 'in':''">
+                <div class="panel-body">
+                    {{rec.description}}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<style>
+    .faqHeader {
+        font-size: 27px;
+        margin: 20px;
+    }
+
+    .panel-heading [data-toggle="collapse"]:after {
+        font-family: 'Glyphicons Halflings';
+        content: "\e072"; /* "play" icon */
+        float: right;
+        color: #F58723;
+        font-size: 18px;
+        line-height: 22px;
+        /* rotate "play" icon from > (right arrow) to down arrow */
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .panel-heading [data-toggle="collapse"].collapsed:after {
+        /* rotate "play" icon from > (right arrow) to ^ (up arrow) */
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+        color: #454444;
+    }
+</style>

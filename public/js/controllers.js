@@ -49,12 +49,32 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
         });
 
     };
+    function addMinutes(date, minutes) {
+        return new Date(date.getTime() + minutes*60000);
+    }
 
     function loadChallenge(){
         pgCall.callGetService('/private/viewChallenge?uid='+$rootScope.user.uid+'&bucketId='+$scope.bucket_id).success(function(response){
             console.log(response);
             if(response.length>0 && response[0].challengeid != null) {
                 $scope.challenge = response[0];
+                if($scope.challenge.timestamp != null) {
+                    $scope.challenge.counter = addMinutes(new Date($scope.challenge.timestamp), $scope.challenge.timer).getTime() - new Date().getTime();
+                    console.log($scope.challenge.counter);
+                    if($scope.challenge.counter > 0) {
+                        $scope.challenge.counter = Math.abs($scope.challenge.counter / 1000);
+                    }
+                    else {
+                        $scope.challenge.counter = 0;
+                    }
+                    console.log($scope.challenge.counter);
+                    console.log(addMinutes(new Date($scope.challenge.timestamp), $scope.challenge.timer));
+                    console.log(new Date($scope.challenge.timestamp));
+                }
+                else {
+                    $scope.challenge.counter = 0;
+                }
+
 
                 if($scope.challenge.code == null) {
                     $scope.challenge.code = $scope.challenge.starter_code_java;

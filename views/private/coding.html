@@ -2,6 +2,14 @@
     .list-group-item {
         border: 1px solid #ddd !important;
     }
+    .fixed
+    {
+        position: fixed;
+        top: 48px;
+        right: 15px;
+        z-index: 9999;
+        padding: 5px;
+    }
 </style>
 <script>
     $(function() {
@@ -25,6 +33,13 @@
     <div class="alert alert-dismissible alert-success" ng-show="challenge.isSubmitted">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <strong>Note!</strong> You have completed this challenge.
+    </div>
+    <div class="alert alert-dismissible alert-danger" ng-show="challenge.counter == 0 && !challenge.isSubmitted">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
+    </div>
+    <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixed': 'alert-danger fixed'">
+        Remaining Time - <timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min
     </div>
 <div class="page-header">
     <div class="row">
@@ -109,7 +124,7 @@
                     <div class="col-md-4"></div>
                     <div class="col-md-4"></div>
                     <div style="clear: both"></div>
-
+                    <div ng-show="challenge.counter > 0">
                     <div class="btn-group" ng-show="challenge.type == 'Coding'">
                         <button type="button" class="btn btn-success" ng-click="compile();" ng-show="!challenge.isSubmitted && challenge.batch == challenge.counter">Compile</button>
                         <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && challenge.folder != null && (testCase.testCase1 == false || testCase.testCase2 == false)">Test Code</button>
@@ -121,6 +136,11 @@
                     <div class="btn-group" ng-show="challenge.type == 'SQL'">
                         <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && (testCase.testCase1 == false || testCase.testCase2 == false)">Test</button>
                         <button type="button" class="btn btn-primary" ng-click="submitCode();" ng-show="!challenge.isSubmitted &&  testCase.testCase1 == true && testCase.testCase2 == true">Submit</button>
+                    </div>
+                    </div>
+                    <div class="alert alert-dismissible alert-danger" ng-show="challenge.counter == 0 && !challenge.isSubmitted">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
                     </div>
 
                 </form>

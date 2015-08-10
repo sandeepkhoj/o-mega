@@ -23,8 +23,6 @@ var users = [];
 
 var ips = [['103.228.187.0','103.228.187.255']];
 
-// Create the server
-app.use(ipfilter(ips, {mode: 'allow'}));
 
 function findById(id, fn) {
   //var idx = id - 1;
@@ -125,6 +123,7 @@ app.use('/', routes);
 app.use('/admin', admin);
 app.use('/private', private);
 app.use(redirectUnmatched);
+app.use(ipfilter(ips, {mode: 'allow'}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

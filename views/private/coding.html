@@ -39,7 +39,7 @@
         <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
     </div>
     <div class="alert " ng-class="challenge.counter > 0? 'alert-success fixed': 'alert-danger fixed'">
-        Remaining Time - <timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min
+        Remaining Time - <span class="badge badge-success"><timer countdown="challenge.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min</span>
     </div>
 <div class="page-header">
     <div class="row">

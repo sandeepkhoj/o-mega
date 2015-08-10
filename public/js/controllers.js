@@ -62,7 +62,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                     $scope.challenge.counter = addMinutes(new Date($scope.challenge.timestamp), $scope.challenge.timer).getTime() - new Date().getTime();
                     console.log($scope.challenge.counter);
                     if($scope.challenge.counter > 0) {
-                        $scope.challenge.counter = Math.abs($scope.challenge.counter / 1000);
+                        $scope.challenge.counter = Math.round(Math.abs($scope.challenge.counter / 1000));
                     }
                     else {
                         $scope.challenge.counter = 0;
@@ -447,7 +447,7 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
                         response[i].counter = addMinutes(new Date(response[i].timestamp), response[i].timer).getTime() - new Date().getTime();
                         console.log(response[i].counter);
                         if(response[i].counter > 0) {
-                            response[i].counter = Math.abs(response[i].counter / 1000);
+                            response[i].counter = Math.round(Math.abs(response[i].counter / 1000));
                         }
                         else {
                             response[i].counter = 0;

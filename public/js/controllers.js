@@ -124,6 +124,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                         }
                     }
                 });
+                console.log($scope.challenge);
             }
             else {
                 $location.url('/dashboard');
@@ -535,32 +536,6 @@ app.controller('usersCtr', function ($scope,$rootScope,$location,externalCall,pg
     };
 });
 app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,pgCall,ngToast,socket) {
-
-    /*
-    socket.on('connected', function (data) {
-        socket.emit('ready for updateuser update', {});
-        socket.emit('ready for insertuser update', {});
-    });
-
-    socket.on('updateuser', function (data) {
-        console.log(data);
-        ngToast.create({
-            className: 'info',
-            content: 'Refresh',
-            timeout:2000
-        });
-        loadBuckets();
-    });
-    socket.on('insertuser', function (data) {
-        console.log(data);
-        ngToast.create({
-            className: 'info',
-            content: 'Refresh',
-            timeout:2000
-        });
-        loadBuckets();
-    });
-    */
 
     function addMinutes(date, minutes) {
         return new Date(date.getTime() + minutes*60000);

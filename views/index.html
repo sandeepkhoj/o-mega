@@ -178,7 +178,7 @@
 
                 <li ng-show="$root.user == null"><a href="#/login">Login</a></li>
                 <li ng-show="$root.user != null"><p class="navbar-text">
-                    <img class="img-circle" src="{{$root.user.photoLink}}" style="height:23px"> &nbsp;{{$root.user.name}}!
+                    <img class="img-circle" src="{{$root.user.photoLink}}" style="height:23px"> &nbsp;<span ng-bind="$root.user.name"></span>
 
 
                 </p></li>

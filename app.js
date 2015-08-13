@@ -17,11 +17,8 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 var flash = require('connect-flash');
-var ipfilter = require('express-ipfilter')
 
 var users = [];
-
-var ips = [['103.228.187.0','103.228.187.255']];
 
 
 function findById(id, fn) {
@@ -123,7 +120,6 @@ app.use('/', routes);
 app.use('/admin', admin);
 app.use('/private', private);
 app.use(redirectUnmatched);
-app.use(ipfilter(ips, {mode: 'allow'}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

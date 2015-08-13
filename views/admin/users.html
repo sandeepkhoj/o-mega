@@ -27,7 +27,7 @@
                     <td>No of participation</td>
                     <td>Action</td>
                 </tr>
-                <tr ng-repeat="user in users | filter:filterUser" ng-class="user.winner > 0?'success':{'warning':user.submitted > 0,'danger':user.participation>0}">
+                <tr ng-repeat="user in users | filter:filterUser" ng-class="user.winner > 0?'success':{'danger':user.participation>0,'warning':user.submitted > 0}">
                     <td>
                         <!-- editable status (select-local) -->
                           <span>

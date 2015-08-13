@@ -87,6 +87,7 @@
   -o-animation:      loading-bar-spinner 400ms linear infinite;
   animation:         loading-bar-spinner 400ms linear infinite;
 }
+#cover{ position:fixed; top:0; left:0; background:rgba(0,0,0,0.6); z-index:10000; width:100%; height:100%;}
 
 @-webkit-keyframes loading-bar-spinner {
   0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }

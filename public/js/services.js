@@ -54,10 +54,14 @@ myApp.service('register',function($http){
 myApp.factory('pgCall', function ($http) {
     var pgCall = {};
     pgCall.callPostService = function(apiEndPoint, arg) {
-        return $http.post(apiEndPoint,arg);
+        return $http.post(apiEndPoint,arg,{
+            ignoreLoadingBar: true
+        });
     };
     pgCall.callGetService = function(apiEndPoint) {
-        return $http.get(apiEndPoint);
+        return $http.get(apiEndPoint,{
+            ignoreLoadingBar: true
+        });
     };
     return pgCall;
 });

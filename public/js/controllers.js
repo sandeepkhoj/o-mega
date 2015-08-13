@@ -41,7 +41,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 $location.url('/');
             }
             else {
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
                 loadChallenge();
@@ -374,7 +374,7 @@ app.controller('homeCtr', function ($scope,$rootScope,$location,externalCall) {
                     $rootScope.user = null;
                 }
                 else {
-                    response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                    response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                     $rootScope.user = response;
                     console.log($rootScope.user);
                     $location.url('/dashboard');
@@ -405,7 +405,7 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
                     $location.url('/');
                 }
                 else {
-                    response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                    response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                     $rootScope.user = response;
                     console.log($rootScope.user);
                     viewLoad();
@@ -502,7 +502,7 @@ app.controller('usersCtr', function ($scope,$rootScope,$location,externalCall,pg
                 $location.url('/');
             }
             else {
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
                 loadUsers();
@@ -549,7 +549,7 @@ app.controller('bucketCtr', function ($scope,$rootScope,$location,externalCall,p
                 $location.url('/');
             }
             else {
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
                 loadBuckets();
@@ -633,7 +633,7 @@ app.controller('winnersCtr', function ($scope,$rootScope,$location,externalCall,
     $scope.init = function() {
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });
@@ -683,7 +683,7 @@ app.controller('challengesCtr', function ($scope,$rootScope,$location,externalCa
                 $location.url('/');
             }
             else {
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
                 loadChallenges();
@@ -727,7 +727,7 @@ app.controller('editchallengesCtr', function ($scope,$rootScope,$location,$route
 
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });
@@ -758,7 +758,7 @@ app.controller('newchallengesCtr', function ($scope,$rootScope,$location,$routeP
     $scope.init = function() {
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });
@@ -779,7 +779,7 @@ app.controller('userDescCtr', function ($scope,$rootScope,$location,$routeParams
     $scope.init = function() {
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });
@@ -826,7 +826,7 @@ app.controller('liveCtr', function ($scope,$rootScope,$location,$routeParams,ext
     $scope.init = function() {
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });
@@ -869,7 +869,7 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
     $scope.init = function() {
         if(typeof $rootScope.user === "undefined") {
             externalCall.callGetService('/getUserDetail').success(function(response){
-                response.photoLink = "http://www.topcoder.com" + response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink;
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
                 $rootScope.user = response;
                 console.log($rootScope.user);
             });

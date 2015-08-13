@@ -39,8 +39,7 @@
                                 <thead>
                                 <tr style="font-weight: bold">
                                     <th>Handle</th>
-                                    <th>Submitted</th>
-                                    <th>Valid</th>
+
                                     <th>Winner</th>
                                 </tr>
                                 </thead>
@@ -48,22 +47,12 @@
                                 <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                                     <td>
 
-                              <span>
-                                {{ score.handle }}
+                              <span ng-bind="score.handle" style="font-weight: bold;font-size: 20px;">
                               </span>
                                     </td>
-                                    <td>
-                                        <i class="fa fa-check" ng-show="score.isSubmitted"></i>
-                                        <i class="fa fa-times" ng-show="!score.isSubmitted"></i>
 
-                                    </td>
                                     <td>
-
-                                        <i class="fa fa-check" ng-show="score.solution == score.correctOption && score.isSubmitted"></i>
-                                        <i class="fa fa-times" ng-show="score.solution != score.correctOption"></i>
-                                    </td>
-                                    <td>
-                              <span>
+                              <td>
                                   <i class="fa fa-check" ng-show="score.isWinner"></i>
                                         <i class="fa fa-times" ng-show="!score.isWinner"></i>
                                     </td>

@@ -1,3 +1,9 @@
+/*! 
+ * angular-loading-bar v0.8.0
+ * https://chieffancypants.github.io/angular-loading-bar
+ * Copyright (c) 2015 Wes Cruver
+ * License: MIT
+ */
 /*
  * angular-loading-bar
  *
@@ -26,7 +32,7 @@ angular.module('chieffancypants.loadingBar', ['cfp.loadingBarInterceptor']);
 angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
   .config(['$httpProvider', function ($httpProvider) {
 
-    var interceptor = ['$q', '$cacheFactory', '$timeout', '$rootScope', 'cfpLoadingBar', function ($q, $cacheFactory, $timeout, $rootScope, cfpLoadingBar) {
+    var interceptor = ['$q', '$cacheFactory', '$timeout', '$rootScope', '$log', 'cfpLoadingBar', function ($q, $cacheFactory, $timeout, $rootScope, $log, cfpLoadingBar) {
 
       /**
        * The total number of requests made
@@ -107,6 +113,11 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
         },
 
         'response': function(response) {
+          if (!response || !response.config) {
+            $log.error('Broken interceptor detected: Config object not supplied in response:\n https://github.com/chieffancypants/angular-loading-bar/pull/50');
+            return response;
+          }
+
           if (!response.config.ignoreLoadingBar && !isCached(response.config)) {
             reqsCompleted++;
             $rootScope.$broadcast('cfpLoadingBar:loaded', {url: response.config.url, result: response});
@@ -120,6 +131,11 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
         },
 
         'responseError': function(rejection) {
+          if (!rejection || !rejection.config) {
+            $log.error('Broken interceptor detected: Config object not supplied in rejection:\n https://github.com/chieffancypants/angular-loading-bar/pull/50');
+            return $q.reject(rejection);
+          }
+
           if (!rejection.config.ignoreLoadingBar && !isCached(rejection.config)) {
             reqsCompleted++;
             $rootScope.$broadcast('cfpLoadingBar:loaded', {url: rejection.config.url, result: rejection});
@@ -150,12 +166,13 @@ angular.module('cfp.loadingBarInterceptor', ['cfp.loadingBar'])
 angular.module('cfp.loadingBar', [])
   .provider('cfpLoadingBar', function() {
 
+    this.autoIncrement = true;
     this.includeSpinner = true;
     this.includeBar = true;
     this.latencyThreshold = 100;
     this.startSize = 0.02;
     this.parentSelector = 'body';
-    this.spinnerTemplate = '<div id="cover" ></div><div id="loading-bar-spinner"><div class="spinner-icon"></div></div>';
+    this.spinnerTemplate = '<div id="loading-bar-spinner"><div class="spinner-icon"></div></div>';
     this.loadingBarTemplate = '<div id="loading-bar"><div class="bar"><div class="peg"></div></div></div>';
 
     this.$get = ['$injector', '$document', '$timeout', '$rootScope', function ($injector, $document, $timeout, $rootScope) {
@@ -170,6 +187,7 @@ angular.module('cfp.loadingBar', [])
         started = false,
         status = 0;
 
+      var autoIncrement = this.autoIncrement;
       var includeSpinner = this.includeSpinner;
       var includeBar = this.includeBar;
       var startSize = this.startSize;
@@ -194,11 +212,11 @@ angular.module('cfp.loadingBar', [])
         started = true;
 
         if (includeBar) {
-          $animate.enter(loadingBarContainer, $parent);
+          $animate.enter(loadingBarContainer, $parent, angular.element($parent[0].lastChild));
         }
 
         if (includeSpinner) {
-          $animate.enter(spinner, $parent);
+          $animate.enter(spinner, $parent, angular.element($parent[0].lastChild));
         }
 
         _set(startSize);
@@ -220,10 +238,12 @@ angular.module('cfp.loadingBar', [])
         // increment loadingbar to give the illusion that there is always
         // progress but make sure to cancel the previous timeouts so we don't
         // have multiple incs running at the same time.
-        $timeout.cancel(incTimeout);
-        incTimeout = $timeout(function() {
-          _inc();
-        }, 250);
+        if (autoIncrement) {
+          $timeout.cancel(incTimeout);
+          incTimeout = $timeout(function() {
+            _inc();
+          }, 250);
+        }
       }
 
       /**
@@ -296,6 +316,7 @@ angular.module('cfp.loadingBar', [])
         status           : _status,
         inc              : _inc,
         complete         : _complete,
+        autoIncrement    : this.autoIncrement,
         includeSpinner   : this.includeSpinner,
         latencyThreshold : this.latencyThreshold,
         parentSelector   : this.parentSelector,

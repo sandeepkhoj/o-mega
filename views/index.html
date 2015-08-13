@@ -22,12 +22,8 @@
     <link rel="stylesheet" href="/codemirror/lib/codemirror.css">
     <link rel="stylesheet" href="/codemirror/theme/eclipse.css">
     <link href="/css/ng-ckeditor.css" rel="stylesheet">
-
-
-  <!-- Custom CSS -->
+    <!-- Custom CSS -->
   <style>
-
-
       .file {
           -moz-box-shadow: none !important;
           box-shadow: none !important;
@@ -170,8 +166,6 @@
                 <li>
                     <a href="#/help">Help</a>
                 </li>
-
-
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -179,8 +173,6 @@
                 <li ng-show="$root.user == null"><a href="#/login">Login</a></li>
                 <li ng-show="$root.user != null"><p class="navbar-text">
                     <img class="img-circle" src="{{$root.user.photoLink}}" style="height:23px"> &nbsp;<span ng-bind="$root.user.name"></span>
-
-
                 </p></li>
                 <li ng-show="$root.user != null"><a href="#" ng-click="logout(); ">Logout</a></li>
             </ul>
@@ -192,11 +184,6 @@
 <div class="container">
     <div ng-view class="fade"></div>
   <!-- /.row -->
-
-
-
-
-
 </div>
 
 <!-- /.container -->
@@ -207,8 +194,6 @@
 </footer>
 <!-- jQuery -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
 <script src="javascripts/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>

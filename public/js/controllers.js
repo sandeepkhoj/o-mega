@@ -716,7 +716,7 @@ app.controller('challengesCtr', function ($scope,$rootScope,$location,externalCa
     // remove user
     $scope.removeBucket = function(id) {
         pgCall.callPostService('/admin/removeChallenge',{id:id}).success(function(response){
-            loadBuckets();
+            loadChallenges();
         });
     };
     $scope.challenges = [];

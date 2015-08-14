@@ -47,11 +47,11 @@
                                 <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                                     <td>
 
-                              <span ng-bind="score.handle" style="font-weight: bold;font-size: 20px;">
+                              <span ng-bind="score.handle" style="font-weight: bold;font-size: 16px;">
                               </span>
                                     </td>
 
-                                    <td>
+
                               <td>
                                   <i class="fa fa-check" ng-show="score.isWinner"></i>
                                         <i class="fa fa-times" ng-show="!score.isWinner"></i>

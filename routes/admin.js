@@ -342,6 +342,21 @@ router.post('/removeBucket',requiresAdmin,function(req,res) {
             });
     });
 });
+router.post('/removeChallenge',requiresAdmin,function(req,res) {
+    var id = req.body.id;
+    pg.connect(config.connection, function(err, client, done) {
+
+        client.query(
+            'Delete from challenge where "id"='+id,
+            function(err, result) {
+                if (err) {
+                    console.log(err);
+                }
+                res.json({status:'done'});
+                client.end();
+            });
+    });
+});
 router.post('/nextCounter',requiresAdmin,function(req,res) {
     var id = req.body.id;
     var counter = req.body.counter;

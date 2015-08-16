@@ -355,7 +355,7 @@ app.controller('loginCtr', function ($scope,$rootScope, $http,$location) {
                     else {
                         user.photoLink = "http://www.topcoder.com"+user.photoLink;
                         $rootScope.user = user;
-                        $location.url('/dashboard');
+                        $location.url('/help/1');
                     }
                 })
                 .error(function(){
@@ -803,7 +803,21 @@ app.controller('userDescCtr', function ($scope,$rootScope,$location,$routeParams
 });
 app.controller('helpCtr', function ($scope,$rootScope,$location,$http,$routeParams,externalCall,pgCall) {
     $scope.parsedEntries = [];
+    $scope.showNextBtn = $routeParams.l === '1';
+
     $scope.init = function() {
+        externalCall.callGetService('/getUserDetail').success(function(response){
+            //console.log(response);
+            if(typeof response.photoLink == "undefined") {
+                $rootScope.user = null;
+                $location.url('/');
+            }
+            else {
+                response.photoLink = "http://www.topcoder.com" + (response.photoLink == '' || response.photoLink == null ? '/wp-content/themes/tcs-responsive/i/default-photo.png':response.photoLink);
+                $rootScope.user = response;
+                console.log($rootScope.user);
+            }
+        });
         var url = 'https://spreadsheets.google.com/feeds/list/1bqbRtqxo5BkqzH2UvRH2Ub_aCCbuZ2NCAxmG27Qsme0/od6/public/values?alt=json'
         var parse = function(entry) {
             var title = entry['gsx$title']['$t'];
@@ -827,6 +841,10 @@ app.controller('helpCtr', function ($scope,$rootScope,$location,$http,$routePara
                 console.log($scope.parsedEntries);
             });
     };
+
+    $scope.next = function() {
+        $location.url('/dashboard');
+    }
 });
 app.controller('liveCtr', function ($scope,$rootScope,$location,$routeParams,externalCall,pgCall) {
     $scope.init = function() {

@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>O'MEGA</title>
+  <title>TCO-15</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -135,10 +135,10 @@
 
 <body ng-controller='AppCtrl'>
 <toast></toast>
-<div class="navbar  navbar-fixed-top" ng-class="$root.user != null?'navbar-inverse':'navbar-default'" ng-controller="menuCtr">
+<div class="navbar navbar-fixed-top" ng-show="$root.user != null" ng-class="$root.user.copilot?'navbar-inverse':'navbar-default'" ng-controller="menuCtr">
     <div class="container" ng-init="init()">
         <div class="navbar-header">
-            <a href="#/" class="navbar-brand"><i class="fa fa-codepen"></i> O'MEGA</a>
+            <a href="#/" class="navbar-brand"><i class="fa fa-codepen"></i>TCO-15</a>
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -148,7 +148,7 @@
         <div class="navbar-collapse collapse" id="navbar-main">
             <ul class="nav navbar-nav">
                 <li ng-class="{active:isActive('/')}">
-                    <a href="#/"><i class="fa fa-home"></i> Home</a>
+                    <a href="#/"><i class="fa fa-home"></i> Dashboard</a>
                 </li>
                 <li class="dropdown" ng-show="$root.user != null && $root.user.copilot">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-secret"></i> Admin <span class="caret"></span></a>
@@ -164,7 +164,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#/help">Help</a>
+                    <a href="#/help/0">Rules</a>
                 </li>
             </ul>
 

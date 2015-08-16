@@ -24,6 +24,14 @@
 
 
 <div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-12" style="text-align: center">
+            <h3>Click on the icon to participate in challenge</h3>
+        </div>
+    </div>
+    <div class="row">
+
+
     <div class="col-md-1">
     </div>
     <div class="col-md-10">
@@ -32,10 +40,11 @@
             <a href="#/coding/{{x.bucketid}}" class="btn btn-lg" ng-class="x.challengeid == null?'btn-default':{'btn-warning':x.isSubmitted,'btn-danger':!x.isSubmitted && x.counter == 0,'btn-info':!x.isSubmitted && x.counter != 0}" style="width: 100%; padding-top: 30px; padding-bottom:30px;margin: 15px 0px">
                 <span style="font-size: 21px;" ng-show="x.challengeid != null" class="badge badge-success pull-right"><timer countdown="x.counter" max-time-unit="'minute'" interval="1000">{{mminutes}}:{{sseconds}}</timer> min</span>
                 <span style="font-size: 21px;" ng-show="x.challengeid == null" class="badge badge-success pull-right">0:00 min</span>
-                <i class="fa fa-5x {{x.icon}}" style="margin-left: 120px;"></i><br/>
+                <i class="fa fa-4x {{x.icon}}" style="margin-left: 120px;"></i><br/>
                 <h3>{{x.name}}</h3>
+                <p style="font-size: 12px;">{{x.short_description}}</p>
                 <hr/>
-                <span ng-show="x.challengeid != null">{{x.title}}</span>
+                <span ng-show="x.challengeid != null" style="font-size: 15px;">{{x.title}}</span>
                 <span ng-show="x.challengeid == null">Shutter Closed</span>
             </a>
 
@@ -45,5 +54,5 @@
     <div class="col-md-1">
     </div>
 
-
+    </div>
 </div>

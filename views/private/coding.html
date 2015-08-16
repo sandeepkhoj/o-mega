@@ -130,7 +130,7 @@
                     <div style="clear: both"></div>
                     <div ng-show="challenge.counter > 0">
                     <div class="btn-group" ng-show="challenge.type == 'Coding'">
-                        <button type="button" class="btn btn-success" ng-click="compile();" ng-show="!challenge.isSubmitted && challenge.batch == challenge.counter">Compile</button>
+                        <button type="button" class="btn btn-success" ng-click="compile();" ng-show="!challenge.isSubmitted">Compile</button>
                         <button type="button" class="btn btn-info" ng-click="test();" ng-show="!challenge.isSubmitted && challenge.folder != null && (testCase.testCase1 == false || testCase.testCase2 == false)">Test Code</button>
                         <button type="button" class="btn btn-primary" ng-click="submitCode();" ng-show="!challenge.isSubmitted &&  testCase.testCase1 == true && testCase.testCase2 == true">Submit Code</button>
                     </div>

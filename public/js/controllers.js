@@ -147,7 +147,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
     };
 
     $scope.compile = function () {
-        if($scope.challenge.batch == $scope.challenge.counter) {
+        if($scope.challenge.counter > 0) {
             $scope.testCase = {testCase1: false, testCase2: false};
             internalCall.compileCode({
                 code: $scope.challenge.code,

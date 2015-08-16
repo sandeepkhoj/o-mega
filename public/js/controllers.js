@@ -126,6 +126,9 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 });
                 console.log($scope.challenge);
             }
+            else if(response.length>0 && response[0].is_dummy){
+                $scope.challenge = response[0];
+            }
             else {
                 $location.url('/dashboard');
             }

@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.80972517">
-              <caret line="958" column="50" selection-start-line="958" selection-start-column="50" selection-end-line="958" selection-end-column="50" />
+              <caret line="958" column="25" selection-start-line="958" selection-start-column="25" selection-end-line="958" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -809,7 +809,7 @@
     <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80972517">
-          <caret line="958" column="50" selection-start-line="958" selection-start-column="50" selection-end-line="958" selection-end-column="50" />
+          <caret line="958" column="25" selection-start-line="958" selection-start-column="25" selection-end-line="958" selection-end-column="25" />
           <folding />
         </state>
       </provider>

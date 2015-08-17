@@ -196,6 +196,7 @@ io.sockets.on('connection', function (socket) {
 
 
 });
+io.sockets.setMaxListeners(0);
 
 
 http.listen(config.port, function(){

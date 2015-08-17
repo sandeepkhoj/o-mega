@@ -80,7 +80,7 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
     var path = req.body.path;
     var input = req.body.input;
     var sql = req.body.sql;
-    if(input) {
+    if(input && typeof input != 'undefined') {
         input = input.replace(/,/g, ' ');
         console.log(input);
     }

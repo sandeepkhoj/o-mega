@@ -10,6 +10,11 @@
         z-index: 9999;
         padding: 5px;
     }
+    .problem {
+        background-color: white;
+        color: black;
+        padding: 20px;
+    }
 </style>
 <script>
     $(function() {
@@ -59,7 +64,7 @@
     <div class="col-md-12" ng-show="!challenge.is_dummy">
         <p class="lead">
         <h3>PROBLEM</h3>
-        <div ng-bind-html="challenge.description"></div>
+        <div ng-bind-html="challenge.description" class="problem"></div>
 
         <div class="well" ng-show="challenge.testCase1 != null" >
             <h5>SAMPLE INPUT</h5>

@@ -275,7 +275,36 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
             });
         }
     };
+    $scope.sqlsyntexCheck = function () {
+        internalCall.compileCode({
+            sql: $scope.challenge.code,
+            lang: 'sql'
+        }).success(function (data, status, headers, config) {
+            $scope.result = data;
+            console.log(data);
 
+        }).
+            error(function (data, status, headers, config) {
+                $scope.result = 'Error!';
+                console.log('Error');
+                console.log(data);
+            });
+    };
+    $scope.submitSql = function () {
+        internalCall.testCode({
+            sql: $scope.challenge.code,
+            lang: 'sql'
+        }).success(function (data, status, headers, config) {
+            $scope.result = data;
+            console.log(data);
+
+        }).
+            error(function (data, status, headers, config) {
+                $scope.result = 'Error!';
+                console.log('Error');
+                console.log(data);
+            });
+    };
     $scope.test = function () {
         if($scope.input == '' || $scope.input == null) {
             alert('Select any test case..')

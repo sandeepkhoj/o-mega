@@ -6,11 +6,17 @@ var config = require('../routes/config');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
 var mysql      = require('mysql');
-var mysql_connection = mysql.createConnection({
+var mysql_connection_db1 = mysql.createConnection({
     host     : 'localhost',
-    user     : 'root',
-    password : 'secret',
-    database : 'my_db'
+    user     : 'enduser',
+    password : 'ciitdc@123',
+    database : 'db1'
+});
+var mysql_connection_db2 = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'enduser',
+    password : 'ciitdc@123',
+    database : 'db1'
 });
 
 var option = {stats : true};
@@ -37,6 +43,17 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
             res.json(data);
         });
     }
+    if(lang === 'sql') {
+        mysql_connection_db1.connect();
+
+        mysql_connection_db1.query(sql, function(err, rows, fields) {
+            if (err) throw err;
+
+            res.json(rows);
+        });
+
+        mysql_connection_db1.end();
+    }
 });
 router.post('/testCode' ,requiresLogin, function (req , res ) {
 
@@ -59,15 +76,15 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
         });
     }
     if(lang === 'sql') {
-        mysql_connection.connect();
+        mysql_connection_db2.connect();
 
-        mysql_connection.query(sql, function(err, rows, fields) {
+        mysql_connection_db2.query(sql, function(err, rows, fields) {
             if (err) throw err;
 
-            console.log('The solution is: ', rows[0].solution);
+            res.json(rows);
         });
 
-        mysql_connection.end();
+        mysql_connection_db2.end();
     }
 });
 router.get('/view/:name',requiresLogin,function (req, res) {

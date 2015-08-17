@@ -5,7 +5,7 @@ var compiler = require('../compilex/compilex');
 var config = require('../routes/config');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
-var mysql      = require('mysql');
+var mysql = require('mysql');
 var mysql_connection_db1 = mysql.createConnection({
     host     : 'localhost',
     user     : 'enduser',
@@ -16,7 +16,7 @@ var mysql_connection_db2 = mysql.createConnection({
     host     : 'localhost',
     user     : 'enduser',
     password : 'ciitdc@123',
-    database : 'db1'
+    database : 'db2'
 });
 
 var option = {stats : true};
@@ -44,7 +44,14 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
         });
     }
     if(lang === 'sql') {
-        mysql_connection_db1.connect();
+
+        mysql_connection_db1.connect(function(err){
+            if(!err) {
+                console.log("Database is connected ... \n\n");
+            } else {
+                console.log("Error connecting database ... \n\n");
+            }
+        });
 
         mysql_connection_db1.query(sql, function(err, rows, fields) {
             if (err) {

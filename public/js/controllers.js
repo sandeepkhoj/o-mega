@@ -102,6 +102,9 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 if($scope.challenge.code_language == null) {
                     $scope.challenge.code_language = 'Java';
                 }
+                if($scope.challenge.type == 'SQL') {
+                    $scope.challenge.code_language = 'SQL'
+                }
                 console.log($scope.challenge.code_language);
                 if($scope.challenge.userchallengeid == null) {
                     pgCall.callPostService('/private/openProblem', {
@@ -282,8 +285,20 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 lang: 'sql'
             }).success(function (data, status, headers, config) {
                 $scope.result = data;
-                console.log(data);
-
+                if($scope.result.code == 200) {
+                    ngToast.create({
+                        className: 'success',
+                        content: '<span class="glyphicon glyphicon-ok-circle"></span> Syntex is valid.',
+                        timeout:2000
+                    });
+                }
+                else {
+                    ngToast.create({
+                        className: 'danger',
+                        content: '<span class="glyphicon glyphicon-ok-circle"></span> Syntex is invalid.',
+                        timeout:2000
+                    });
+                }
             }).error(function (data, status, headers, config) {
                     $scope.result = 'Error!';
                     console.log('Error');
@@ -293,17 +308,44 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
     };
     $scope.submitSql = function () {
         if($scope.challenge.code) {
-            internalCall.testCode({
-                sql: $scope.challenge.code,
-                lang: 'sql'
+            pgCall.callPostService('/private/updateCode', {
+                userId: $rootScope.user.uid,
+                challengeid: $scope.challenge.bucket_challenge,
+                code: $scope.challenge.code,
+                code_language:$scope.challenge.code_language,
+                solution:$scope.challenge.solution
             }).success(function (data, status, headers, config) {
-                $scope.result = data;
-                console.log(data);
-
-            }).error(function (data, status, headers, config) {
-                $scope.result = 'Error!';
-                console.log('Error');
-                console.log(data);
+                internalCall.testCode({
+                    sql: $scope.challenge.code,
+                    lang: 'sql'
+                }).success(function (data, status, headers, config) {
+                    $scope.result = data;
+                    console.log(data);
+                    if($scope.result.code == 200) {
+                        internalCall.submitCode({userId:$rootScope.user.uid,
+                            bucket_challenge_id:$scope.challenge.bucket_challenge,
+                            challengeid:$scope.challenge.challengeId}).success(function(response){
+                            console.log(response);
+                            loadChallenge();
+                            ngToast.create({
+                                className: 'success',
+                                content: '<i class="fa fa-smile-o"></i> Submitted your code.',
+                                timeout:2000
+                            });
+                        });
+                    }
+                    else {
+                        ngToast.create({
+                            className: 'danger',
+                            content: '<span class="glyphicon glyphicon-ok-circle"></span> Syntex is invalid.',
+                            timeout:2000
+                        });
+                    }
+                }).error(function (data, status, headers, config) {
+                    $scope.result = 'Error!';
+                    console.log('Error');
+                    console.log(data);
+                });
             });
         }
     };

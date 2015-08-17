@@ -61,10 +61,10 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
             connection.query(sql,function(err,rows){
                 connection.release();
                 if(!err) {
-                    res.json(rows);
+                    res.json({"code" : 200, "status" : "DONE"});
                 }
                 else {
-                    res.json({"code" : 200, "status" : "Error in sql"});
+                    res.json({"code" : 150, "status" : "Error in sql"});
                 }
             });
 
@@ -96,17 +96,30 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
         });
     }
     if(lang === 'sql') {
-        mysql_connection_db2.connect();
-
-        mysql_connection_db2.query(sql, function(err, rows, fields) {
+        pool2.getConnection(function(err,connection){
             if (err) {
-                res.json(err);
+                connection.release();
+                res.json({"code" : 100, "status" : "Error in connection database"});
+                return;
             }
 
-            res.json(rows);
-        });
+            console.log('connected as id ' + connection.threadId);
 
-        mysql_connection_db2.end();
+            connection.query(sql,function(err,rows){
+                connection.release();
+                if(!err) {
+                    res.json({"code" : 200, data:rows});
+                }
+                else {
+                    res.json({"code" : 150, "status" : "Error in sql"});
+                }
+            });
+
+            connection.on('error', function(err) {
+                res.json({"code" : 100, "status" : "Error in connection database"});
+                return;
+            });
+        });
     }
 });
 router.get('/view/:name',requiresLogin,function (req, res) {
@@ -160,6 +173,7 @@ router.post('/submitCode',requiresLogin,function(req,res) {
     var uid = req.body.userId;
     var bucket_challenge_id = req.body.bucket_challenge_id;
     var challengeid = req.body.challengeid;
+
     pg.connect(config.connection, function(err, client, done) {
         if(err) {
             res.write("error..");

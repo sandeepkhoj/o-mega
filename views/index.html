@@ -137,7 +137,7 @@
 
 <body ng-controller='AppCtrl'>
 <toast></toast>
-<div class="navbar navbar-fixed-top" ng-show="$root.user != null" ng-class="$root.user.copilot?'navbar-inverse':'navbar-default'" ng-controller="menuCtr">
+<div class="navbar navbar-fixed-top ng-hide" ng-show="$root.user != null" ng-class="$root.user.copilot?'navbar-inverse':'navbar-default'" ng-controller="menuCtr">
     <div class="container" ng-init="init()">
         <div class="navbar-header">
             <a href="#/" class="navbar-brand"><img src="images/logo.png" height="25px;"></a>

@@ -727,6 +727,7 @@ app.controller('challengesCtr', function ($scope,$rootScope,$location,externalCa
 });
 app.controller('editchallengesCtr', function ($scope,$rootScope,$location,$routeParams,externalCall,pgCall) {
     $scope.challengeId = $routeParams.id;
+
     $scope.allowedlanguage = [
         {value: "Java", text: 'Java'},
         {value: "C", text: 'C'},

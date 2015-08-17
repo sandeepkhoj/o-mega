@@ -39,7 +39,10 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
           templateUrl: 'partials/help',
           controller: 'helpCtr'
       }).
-
+      when('/help', {
+        templateUrl: 'partials/help',
+        controller: 'helpCtr'
+      }).
       when('/coding/:bucketId', {
         templateUrl: 'private/view/coding',
         controller: 'codingCtr'

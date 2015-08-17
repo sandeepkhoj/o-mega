@@ -95,7 +95,7 @@ router.get('/getLiveAllData',requiresAdmin,function(req,res) {
             ' LEFT JOIN challenge ON challenge.id = bucket_challenge."challengeId"'+
             ' LEFT JOIN "userChallenge" ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
                 ' LEFT JOIN "userTbl" ON "userChallenge".uid = "userTbl".uid'+
-                ' WHERE "userTbl".uid IS NOT NULL AND bucket_id = '+ id +
+                ' WHERE "userTbl".uid IS NOT NULL AND bucket.id = '+ id +
             ' ORDER BY bucket.id, "userChallenge".id',
             function(err, result) {
                 if (err) {

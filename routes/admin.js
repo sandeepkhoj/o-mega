@@ -113,8 +113,9 @@ router.get('/viewRounds',requiresAdmin,function(req,res) {
     var id = req.query.id;
     pg.connect(config.connection, function(err, client, done) {
 
-        client.query(' SELECT id FROM bucket_challenge '+
-            ' WHERE "bucketId" = '+ id +
+        client.query('SELECT bucket_challenge.id FROM bucket_challenge '+
+            ' LEFT JOIN "userChallenge" ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
+            ' WHERE bucket_challenge."bucketId" = '+ id + ' AND "userChallenge".id IS NOT NULL'+
             ' ORDER BY bucket_challenge.id DESC',
             function(err, result) {
                 if (err) {

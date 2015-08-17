@@ -80,8 +80,10 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
     var path = req.body.path;
     var input = req.body.input;
     var sql = req.body.sql;
-    input = input.replace(/,/g, ' ');
-    console.log(input);
+    if(input) {
+        input = input.replace(/,/g, ' ');
+        console.log(input);
+    }
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
         var envData = { OS : "windows" , cmd : "g++"};

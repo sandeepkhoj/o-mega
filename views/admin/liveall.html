@@ -59,8 +59,8 @@
                                 </td>
                                 <td>
 
-                                    <i class="fa fa-check" ng-show="score.solution == score.correctOption && score.isSubmitted"></i>
-                                    <i class="fa fa-times" ng-show="score.solution != score.correctOption"></i>
+                                    <i class="fa fa-check" ng-show="(score.solution == score.correctOption || score.solution == scope.singleresult) && score.isSubmitted"></i>
+                                    <i class="fa fa-times" ng-show="score.solution != score.correctOption && score.solution != scope.singleresult"></i>
                                 </td>
                                 <td>
                               <span>

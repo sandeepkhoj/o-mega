@@ -8,7 +8,7 @@ var requiresAdmin = require('../requiresAdmin');
 var mysql      = require('mysql');
 var mysql_connection = mysql.createConnection({
     host     : 'localhost',
-    user     : 'me',
+    user     : 'root',
     password : 'secret',
     database : 'my_db'
 });
@@ -42,6 +42,7 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
 
     var path = req.body.path;
     var input = req.body.input;
+    var sql = req.body.sql;
     input = input.replace(/,/g, ' ');
     console.log(input);
     var lang = req.body.lang;
@@ -60,7 +61,7 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
     if(lang === 'sql') {
         mysql_connection.connect();
 
-        mysql_connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+        mysql_connection.query(sql, function(err, rows, fields) {
             if (err) throw err;
 
             console.log('The solution is: ', rows[0].solution);

@@ -6,17 +6,21 @@ var config = require('../routes/config');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
 var mysql = require('mysql');
-var mysql_connection_db1 = mysql.createConnection({
+var pool1      =    mysql.createPool({
+    connectionLimit : 200, //important
     host     : 'localhost',
     user     : 'enduser',
     password : 'ciitdc@123',
-    database : 'db1'
+    database : 'db1',
+    debug    :  false
 });
-var mysql_connection_db2 = mysql.createConnection({
+var pool2      =    mysql.createPool({
+    connectionLimit : 200, //important
     host     : 'localhost',
     user     : 'enduser',
     password : 'ciitdc@123',
-    database : 'db2'
+    database : 'db2',
+    debug    :  false
 });
 
 var option = {stats : true};
@@ -45,24 +49,30 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
         });
     }
     if(lang === 'sql') {
-
-        mysql_connection_db1.connect(function(err){
-            if(!err) {
-                console.log("Database is connected ... \n\n");
-            } else {
-                console.log("Error connecting database ... \n\n");
-            }
-        });
-
-        mysql_connection_db1.query(sql, function(err, rows, fields) {
+        pool1.getConnection(function(err,connection){
             if (err) {
-                res.json(err);
+                connection.release();
+                res.json({"code" : 100, "status" : "Error in connection database"});
+                return;
             }
 
-            res.json(rows);
-        });
+            console.log('connected as id ' + connection.threadId);
 
-        mysql_connection_db1.end();
+            connection.query(sql,function(err,rows){
+                connection.release();
+                if(!err) {
+                    res.json(rows);
+                }
+                else {
+                    res.json({"code" : 200, "status" : "Error in sql"});
+                }
+            });
+
+            connection.on('error', function(err) {
+                res.json({"code" : 100, "status" : "Error in connection database"});
+                return;
+            });
+        });
     }
 });
 router.post('/testCode' ,requiresLogin, function (req , res ) {

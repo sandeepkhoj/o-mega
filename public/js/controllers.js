@@ -956,6 +956,6 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
     };
     function removeSpace(value) {
         alert(value);
-        return (!value) ? '' : value.replace(/ /g, '');
+        return (!value && typeof value == 'string') ? '' : value.replace(/ /g, '');
     }
 });

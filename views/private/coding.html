@@ -153,6 +153,10 @@
                         <button type="button" class="close" data-dismiss="alert">×</button>
                         <strong>Note!</strong> This challenge is closed. Please wait for next challenge.
                     </div>
+                    <div class="alert alert-dismissible alert-success" ng-show="challenge.isSubmitted && !challenge.is_dummy">
+                        <button type="button" class="close" data-dismiss="alert">×</button>
+                        <strong>Note!</strong> You have completed this challenge.
+                    </div>
 
                 </form>
             </div>

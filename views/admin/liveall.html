@@ -29,6 +29,12 @@
 <div class="container-fluid" ng-init="init()">
     <div class="row">
         <div class="col-md-12">
+            <label>SELECT BUCKET</label>
+            <select ng-repeat="(bucketkey, bucketvalue) in buckets" ng-bind="selectedBucket" ng-change="loadChallenges()">
+                <option value="{{bucketvalue[0].id}}">{{bucketvalue[0].name}}</option>
+            </select>
+        </div>
+        <div class="col-md-12">
             <div class="col-md-3" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
                 <div class="panel panel-default">
                     <div class="panel-heading">{{bucketvalue[0].name}}</div>

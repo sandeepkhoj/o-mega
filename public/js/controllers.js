@@ -338,14 +338,14 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                     else if($scope.result.rows.length == 0) {
                         ngToast.create({
                             className: 'danger',
-                            content: '<span class="glyphicon glyphicon-ok-circle"></span> No Result.',
+                            content: '<span class="glyphicon glyphicon-remove-circle"></span> No Result.',
                             timeout:2000
                         });
                     }
                     else {
                         ngToast.create({
                             className: 'danger',
-                            content: '<span class="glyphicon glyphicon-ok-circle"></span> Syntex is invalid.',
+                            content: '<span class="glyphicon glyphicon-remove-circle"></span> Syntex is invalid.',
                             timeout:2000
                         });
                     }
@@ -1009,14 +1009,16 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
                 console.log($rootScope.user);
             });
         }
-        loadChallenges();
+        //loadChallenges();
     }
+    $scope.selectedBucket = 1;
     $scope.buckets = new Object();
     $scope.rounds = new Object();
 
     $scope.liveData;
+
     function loadChallenges() {
-        pgCall.callGetService('/admin/getLiveAllData').success(function(response){
+        pgCall.callGetService('/admin/getLiveAllData?id='+$scope.selectedBucket).success(function(response){
             $scope.liveData = response;
             $scope.buckets = new Object();
             $scope.rounds = new Object();

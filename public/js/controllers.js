@@ -321,7 +321,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 }).success(function (data, status, headers, config) {
                     $scope.result = data;
                     console.log(data);
-                    if($scope.result.code == 200 && $scope.result.rows > 0) {
+                    if($scope.result.code == 200 && $scope.result.rows.length > 0) {
                         internalCall.submitSQL({userId:$rootScope.user.uid,
                             bucket_challenge_id:$scope.challenge.bucket_challenge,
                             challengeid:$scope.challenge.challengeId,
@@ -335,7 +335,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                             });
                         });
                     }
-                    else if($scope.result.rows == 0) {
+                    else if($scope.result.rows.length == 0) {
                         ngToast.create({
                             className: 'danger',
                             content: '<span class="glyphicon glyphicon-ok-circle"></span> No Result.',

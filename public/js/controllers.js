@@ -455,16 +455,16 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
         socket.on('updateuser', function (data) {
             console.log(data);
             //notify({ message:'Updating view..', position:'right'});
-            viewLoad();
+            viewReload();
         });
 
         socket.on('bucketupdate', function (data) {
             console.log(data);
-            viewLoad();
+            viewReload();
         });
         $scope.$on('timer-stopped', function (event, data){
             console.log('Timer Stopped - data = ', data);
-            viewLoad();
+            viewReload();
         });
 
 
@@ -496,6 +496,31 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
                 $scope.buckets = response;
             });
         }
+
+    function viewReload() {
+        internalCall.viewReload($rootScope.user.uid).success(function(response){
+            console.log(response);
+            for(var i = 0;i<response.length;i++) {
+                if(response[i].timestamp != null) {
+                    response[i].counter = addMinutes(new Date(response[i].timestamp), response[i].timer).getTime() - new Date().getTime();
+                    console.log(response[i].counter);
+                    if(response[i].counter > 0) {
+                        response[i].counter = Math.round(Math.abs(response[i].counter / 1000));
+                    }
+                    else {
+                        response[i].counter = 0;
+                    }
+                    console.log(response[i].counter);
+                    console.log(addMinutes(new Date(response[i].timestamp), response[i].timer));
+                    console.log(new Date(response[i].timestamp));
+                }
+                else {
+                    response[i].counter = 0;
+                }
+            }
+            $scope.buckets = response;
+        });
+    }
 
         $scope.getToken = function(bucketId) {
             $interval.cancel($scope.stop);

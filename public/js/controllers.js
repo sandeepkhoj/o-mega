@@ -3,6 +3,7 @@
 /* Controllers */
 
 var app = angular.module('myApp.controllers', []);
+
 app.controller('AppCtrl', function ($scope, $http) {
 
     $http({
@@ -916,14 +917,14 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
             console.log($scope.liveData);
             for(var i = 0; i < $scope.liveData.length; i++) {
                 if($scope.liveData[i].correctOption != null ) {
-                    $scope.liveData[i].correctOption == $scope.liveData[i].correctOption.trim();
+                    $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
 
                 }
                 if($scope.liveData[i].correctOption == null || $scope.liveData[i].correctOption == '') {
                     $scope.liveData[i].correctOption = $scope.liveData[i].singleresult;
                 }
                 if($scope.liveData[i].correctOption != null ) {
-                    $scope.liveData[i].correctOption == $scope.liveData[i].correctOption.trim();
+                    $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
 
                 }
 
@@ -953,4 +954,8 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
             loadChallenges();
         });
     };
+    function removeSpace(value) {
+
+        return (!value) ? '' : value.replace(/ /g, '');
+    }
 });

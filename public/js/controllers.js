@@ -360,7 +360,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
         window.onbeforeunload = undefined;
     });
 
-  })
+  });
 app.controller('loginCtr', function ($scope,$rootScope, $http,$location) {
         $scope.user = {};
 

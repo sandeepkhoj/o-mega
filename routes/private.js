@@ -47,7 +47,9 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
         mysql_connection_db1.connect();
 
         mysql_connection_db1.query(sql, function(err, rows, fields) {
-            if (err) throw err;
+            if (err) {
+                res.json(err);
+            }
 
             res.json(rows);
         });
@@ -79,7 +81,9 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
         mysql_connection_db2.connect();
 
         mysql_connection_db2.query(sql, function(err, rows, fields) {
-            if (err) throw err;
+            if (err) {
+                res.json(err);
+            }
 
             res.json(rows);
         });

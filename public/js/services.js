@@ -54,14 +54,10 @@ myApp.service('register',function($http){
 myApp.factory('pgCall', function ($http) {
     var pgCall = {};
     pgCall.callPostService = function(apiEndPoint, arg) {
-        return $http.post(apiEndPoint,arg,{
-            ignoreLoadingBar: true
-        });
+        return $http.post(apiEndPoint,arg);
     };
     pgCall.callGetService = function(apiEndPoint) {
-        return $http.get(apiEndPoint,{
-            ignoreLoadingBar: true
-        });
+        return $http.get(apiEndPoint);
     };
     return pgCall;
 });
@@ -85,6 +81,11 @@ myApp.factory('internalCall', function ($http) {
     };
     internalCall.submitCode = function(arg) {
         return $http.post('/private/submitCode',arg);
+    };
+    internalCall.viewReload = function(arg) {
+        return $http.get('/private/viewLoad?userId='+arg,{
+            ignoreLoadingBar: true
+        });
     };
     return internalCall;
 });

@@ -425,7 +425,7 @@ app.controller('fullStatCtr', function ($scope,$rootScope,$location,fullStat) {
             })
         }
     });
-app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,externalCall,pgCall,socket,ngToast) {
+app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,externalCall,pgCall,socket,ngToast,internalCall) {
 
         $scope.stop =  null;
         $scope.buckets = [];
@@ -473,7 +473,7 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
         }
 
         function viewLoad() {
-            pgCall.callGetService('/private/viewLoad?userId='+$rootScope.user.uid).success(function(response){
+            internalCall.viewReload($rootScope.user.uid).success(function(response){
                 console.log(response);
                 for(var i = 0;i<response.length;i++) {
                     if(response[i].timestamp != null) {

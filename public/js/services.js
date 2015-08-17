@@ -82,6 +82,9 @@ myApp.factory('internalCall', function ($http) {
     internalCall.submitCode = function(arg) {
         return $http.post('/private/submitCode',arg);
     };
+    internalCall.submitSQL = function(arg) {
+        return $http.post('/private/submitSQL',arg);
+    };
     internalCall.viewReload = function(arg) {
         return $http.get('/private/viewLoad?userId='+arg,{
             ignoreLoadingBar: true

@@ -105,10 +105,10 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
 
             console.log('connected as id ' + connection.threadId);
 
-            connection.query(sql,function(err,rows){
+            connection.query(sql,function(err,rows,fields){
                 connection.release();
                 if(!err) {
-                    res.json({"code" : 200, data:rows});
+                    res.json({"code" : 200, rows:rows, fields:fields});
                 }
                 else {
                     res.json({"code" : 150, "status" : "Error in sql"});
@@ -216,6 +216,46 @@ router.post('/submitCode',requiresLogin,function(req,res) {
             });
 
         });
+    });
+});
+router.post('/submitSQL',requiresLogin,function(req,res) {
+    var uid = req.body.userId;
+    var solution = req.body.solution;
+    var bucket_challenge_id = req.body.bucket_challenge_id;
+    var challengeid = req.body.challengeid;
+
+    pg.connect(config.connection, function(err, client, done) {
+        if(err) {
+            res.write("error..");
+            return console.error('error fetching client from pool', err);
+        }
+        client.query('SELECT count(*) as count FROM "userChallenge" WHERE bucket_challenge_id = $1 AND "isSubmitted" = true',
+            [bucket_challenge_id],
+            function(err, result) {
+                //call `done()` to release the client back to the pool
+                done();
+
+                if(err) {
+                    //
+                    res.write("error..");
+                    return console.error('error running query', err);
+                }
+                var count = 1;
+                if(result.rows.length>0) {
+                    count = parseInt(result.rows[0].count) + 1;
+                }
+                client.query(
+                    'UPDATE "userChallenge" SET "isSubmitted" = $1, "submissionNo" = $2 , "solution" = $3 WHERE uid = $4 AND bucket_challenge_id = $5',
+                    [true, count,solution, uid, bucket_challenge_id],
+                    function(err, result) {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            res.json({status:'loser'});
+                        }
+                    });
+
+            });
     });
 });
 router.post('/submitSolution',requiresLogin,function(req,res) {

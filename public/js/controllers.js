@@ -321,17 +321,25 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 }).success(function (data, status, headers, config) {
                     $scope.result = data;
                     console.log(data);
-                    if($scope.result.code == 200) {
-                        internalCall.submitCode({userId:$rootScope.user.uid,
+                    if($scope.result.code == 200 && $scope.result.rows > 0) {
+                        internalCall.submitSQL({userId:$rootScope.user.uid,
                             bucket_challenge_id:$scope.challenge.bucket_challenge,
-                            challengeid:$scope.challenge.challengeId}).success(function(response){
+                            challengeid:$scope.challenge.challengeId,
+                            solution:$scope.result.rows[0][$scope.result.fields[0]]}).success(function(response){
                             console.log(response);
                             loadChallenge();
                             ngToast.create({
                                 className: 'success',
-                                content: '<i class="fa fa-smile-o"></i> Submitted your code.',
+                                content: '<i class="fa fa-smile-o"></i> Submitted your SQL.',
                                 timeout:2000
                             });
+                        });
+                    }
+                    else if($scope.result.rows == 0) {
+                        ngToast.create({
+                            className: 'danger',
+                            content: '<span class="glyphicon glyphicon-ok-circle"></span> No Result.',
+                            timeout:2000
                         });
                     }
                     else {

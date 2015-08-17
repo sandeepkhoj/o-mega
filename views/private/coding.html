@@ -99,8 +99,7 @@
                     </div>
                     <div class="form-group">
                         <label>Submit Solution</label>
-                        <ui-codemirror ui-codemirror-opts="editorOptions" ng-model="challenge.code" ng-show="challenge.type == 'Coding'"></ui-codemirror>
-                        <textarea class="form-control" ng-model="challenge.code" ng-show="challenge.type == 'SQL'"></textarea>
+                        <ui-codemirror ui-codemirror-opts="editorOptions" ng-model="challenge.code" ng-show="challenge.type == 'Coding' || challenge.type == 'SQL'"></ui-codemirror>
                         <textarea class="form-control" ng-model="challenge.solution" ng-show="challenge.type == 'Descriptive'"></textarea>
                         <ul class="list-group" ng-show="challenge.type == 'Objective'">
                             <li class="list-group-item" ng-class="testCase.testCase1 == true ? 'list-group-item-success' : ''">

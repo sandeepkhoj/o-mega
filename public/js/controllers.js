@@ -915,6 +915,17 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
             $scope.rounds = new Object();
             console.log($scope.liveData);
             for(var i = 0; i < $scope.liveData.length; i++) {
+                if($scope.liveData[i].correctOption != null ) {
+                    $scope.liveData[i].correctOption == $scope.liveData[i].correctOption.trim();
+
+                }
+                if($scope.liveData[i].correctOption == null || $scope.liveData[i].correctOption == '') {
+                    $scope.liveData[i].correctOption = $scope.liveData[i].singleresult;
+                }
+                if($scope.liveData[i].correctOption != null ) {
+                    $scope.liveData[i].correctOption == $scope.liveData[i].correctOption.trim();
+
+                }
 
                 console.log($scope.liveData[i].bucket_id);
                 if($scope.buckets[$scope.liveData[i].bucket_id] == null) {

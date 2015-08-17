@@ -45,7 +45,7 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && (score.solution == score.correctOption || score.solution == scope.singleresult),'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
+                            <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                                 <td>
 
                               <span>
@@ -59,12 +59,12 @@
                                 </td>
                                 <td>
 
-                                    <i class="fa fa-check" ng-show="(score.solution == score.correctOption || score.solution == scope.singleresult) && score.isSubmitted"></i>
-                                    <i class="fa fa-times" ng-show="score.solution != score.correctOption && score.solution != scope.singleresult"></i>
+                                    <i class="fa fa-check" ng-show="score.solution == score.correctOption && score.isSubmitted"></i>
+                                    <i class="fa fa-times" ng-show="score.solution != score.correctOption"></i>
                                 </td>
                                 <td>
                               <span>
-                                  <input type="checkbox" ng-model="score.isWinner" ng-disabled="!score.isSubmitted || (score.solution != score.correctOption && score.solution != scope.singleresult)" ng-change="setWinner(score.user_challenge_id,score.isWinner)">
+                                  <input type="checkbox" ng-model="score.isWinner" ng-disabled="!score.isSubmitted || score.solution != score.correctOption" ng-change="setWinner(score.user_challenge_id,score.isWinner)">
                               </span>
                                 </td>
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/controllers.js" afterPath="$PROJECT_DIR$/public/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/liveall.html" afterPath="$PROJECT_DIR$/views/admin/liveall.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -24,21 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="controllers.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="450.81482">
-              <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.6828753">
+              <caret line="927" column="17" selection-start-line="927" selection-start-column="17" selection-end-line="927" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="liveall.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="liveall.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/admin/liveall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37184873">
-              <caret line="47" column="241" selection-start-line="47" selection-start-column="241" selection-end-line="47" selection-end-column="241" />
+            <state vertical-scroll-proportion="-15.458333">
+              <caret line="61" column="105" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="105" />
               <folding />
             </state>
           </provider>
@@ -195,10 +196,10 @@
         <option value="$PROJECT_DIR$/public/js/app.js" />
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/public/ng-ckeditor/libs/ckeditor/ckeditor.js" />
-        <option value="$PROJECT_DIR$/public/js/controllers.js" />
         <option value="$PROJECT_DIR$/views/admin/editchallenge.html" />
         <option value="$PROJECT_DIR$/routes/private.js" />
         <option value="$PROJECT_DIR$/views/admin/liveall.html" />
+        <option value="$PROJECT_DIR$/public/js/controllers.js" />
       </list>
     </option>
   </component>
@@ -798,18 +799,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
+    <entry file="file://$PROJECT_DIR$/views/admin/liveall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="450.81482">
-          <caret line="94" column="17" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+        <state vertical-scroll-proportion="-15.458333">
+          <caret line="61" column="105" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="105" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/liveall.html">
+    <entry file="file://$PROJECT_DIR$/public/js/controllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37184873">
-          <caret line="47" column="241" selection-start-line="47" selection-start-column="241" selection-end-line="47" selection-end-column="241" />
+        <state vertical-scroll-proportion="0.6828753">
+          <caret line="927" column="17" selection-start-line="927" selection-start-column="17" selection-end-line="927" selection-end-column="17" />
           <folding />
         </state>
       </provider>

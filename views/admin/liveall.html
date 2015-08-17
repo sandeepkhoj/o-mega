@@ -57,7 +57,7 @@
                     <div class="panel-heading">{{bucketvalue[0].name}}</div>
                     <div class="panel-body">
                         <div ng-repeat="(roundkey, roundvalue) in rounds[bucketkey]">
-                            Round - {{$index+1}} AT {{roundvalue[0].timestamp | date:'mediumTime'}}
+                            Round - {{roundvalue[0].id}} AT {{roundvalue[0].timestamp | date:'mediumTime'}} ON Challege {{roundvalue[0].challengeId}}
                         <table class="table table-bordered table-condensed" ng-show="roundvalue.length>0">
                             <thead>
                             <tr style="font-weight: bold">

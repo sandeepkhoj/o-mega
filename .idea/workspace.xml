@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/liveall.html" afterPath="$PROJECT_DIR$/views/admin/liveall.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/private.js" afterPath="$PROJECT_DIR$/routes/private.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="codeComp.iws" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="liveall.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/admin/liveall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6407563">
-              <caret line="62" column="108" selection-start-line="62" selection-start-column="108" selection-end-line="62" selection-end-column="108" />
+            <state vertical-scroll-proportion="0.37184873">
+              <caret line="47" column="241" selection-start-line="47" selection-start-column="241" selection-end-line="47" selection-end-column="241" />
               <folding />
             </state>
           </provider>
@@ -809,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/liveall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6407563">
-          <caret line="62" column="108" selection-start-line="62" selection-start-column="108" selection-end-line="62" selection-end-column="108" />
+        <state vertical-scroll-proportion="0.37184873">
+          <caret line="47" column="241" selection-start-line="47" selection-start-column="241" selection-end-line="47" selection-end-column="241" />
           <folding />
         </state>
       </provider>

@@ -26,6 +26,7 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
 
     var code = req.body.code;
     var input = req.body.input;
+    var sql = req.body.sql;
     console.log(code);
     console.log(input);
     var lang = req.body.lang;

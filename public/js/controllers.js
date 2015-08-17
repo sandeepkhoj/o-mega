@@ -1009,53 +1009,74 @@ app.controller('liveAllCtr', function ($scope,$rootScope,$location,$routeParams,
                 console.log($rootScope.user);
             });
         }
-        //loadChallenges();
+        loadBuckets();
+        //$scope.loadChallenges();
     }
-    $scope.selectedBucket = 1;
+    $scope.selectedBucket = null;
+    $scope.selectedRound = null;
     $scope.buckets = new Object();
     $scope.rounds = new Object();
 
     $scope.liveData;
 
-    function loadChallenges() {
-        pgCall.callGetService('/admin/getLiveAllData?id='+$scope.selectedBucket).success(function(response){
-            $scope.liveData = response;
-            $scope.buckets = new Object();
-            $scope.rounds = new Object();
-            console.log($scope.liveData);
-            for(var i = 0; i < $scope.liveData.length; i++) {
-                if($scope.liveData[i].correctOption != null ) {
-                    $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
-
-                }
-                if($scope.liveData[i].correctOption == null || $scope.liveData[i].correctOption == '') {
-                    $scope.liveData[i].correctOption = $scope.liveData[i].singleresult;
-                }
-                if($scope.liveData[i].correctOption != null ) {
-                    $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
-
-                }
-
-                console.log($scope.liveData[i].bucket_id);
-                if($scope.buckets[$scope.liveData[i].bucket_id] == null) {
-                    $scope.buckets[$scope.liveData[i].bucket_id] = [];
-                }
-                $scope.buckets[$scope.liveData[i].bucket_id].push($scope.liveData[i]);
-            }
-
-            for(var bucketKey in $scope.buckets) {
-                var buckets = $scope.buckets[bucketKey];
-                $scope.rounds[bucketKey] = new Object();
-                for (var j = 0; j < buckets.length; j++) {
-                    if ($scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] == null) {
-                        $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] = [];
-                    }
-                    $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id].push(buckets[j]);
-                }
-            }
-            console.log($scope.buckets);
-            console.log($scope.rounds);
+    function loadBuckets() {
+        pgCall.callGetService('/admin/viewBuckets').success(function(response){
+            $scope.allBuckets = response;
+            console.log($scope.allBuckets);
         });
+    }
+    $scope.allBuckets = [];
+
+    $scope.loadRounds = function() {
+        $scope.selectedRound = null;
+        pgCall.callGetService('/admin/viewRounds?id='+$scope.selectedBucket).success(function(response){
+            $scope.allRounds = response;
+            console.log($scope.allRounds);
+        });
+    }
+    $scope.allRounds = [];
+
+    $scope.loadChallenges = function() {
+        if($scope.selectedRound != null) {
+            pgCall.callGetService('/admin/getLiveAllData?id=' + $scope.selectedBucket + '&round=' + $scope.selectedRound).success(function (response) {
+                $scope.liveData = response;
+                $scope.buckets = new Object();
+                $scope.rounds = new Object();
+                console.log($scope.liveData);
+                for (var i = 0; i < $scope.liveData.length; i++) {
+                    if ($scope.liveData[i].correctOption != null) {
+                        $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
+
+                    }
+                    if ($scope.liveData[i].correctOption == null || $scope.liveData[i].correctOption == '') {
+                        $scope.liveData[i].correctOption = $scope.liveData[i].singleresult;
+                    }
+                    if ($scope.liveData[i].correctOption != null) {
+                        $scope.liveData[i].correctOption == removeSpace($scope.liveData[i].correctOption);
+
+                    }
+
+                    console.log($scope.liveData[i].bucket_id);
+                    if ($scope.buckets[$scope.liveData[i].bucket_id] == null) {
+                        $scope.buckets[$scope.liveData[i].bucket_id] = [];
+                    }
+                    $scope.buckets[$scope.liveData[i].bucket_id].push($scope.liveData[i]);
+                }
+
+                for (var bucketKey in $scope.buckets) {
+                    var buckets = $scope.buckets[bucketKey];
+                    $scope.rounds[bucketKey] = new Object();
+                    for (var j = 0; j < buckets.length; j++) {
+                        if ($scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] == null) {
+                            $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id] = [];
+                        }
+                        $scope.rounds[bucketKey][buckets[j].bucket_challenge_main_id].push(buckets[j]);
+                    }
+                }
+                console.log($scope.buckets);
+                console.log($scope.rounds);
+            });
+        }
     }
     $scope.setWinner = function(id,status) {
         pgCall.callPostService('/admin/setWinner',{id:id,status:status}).success(function(response){

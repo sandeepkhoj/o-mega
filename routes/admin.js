@@ -88,6 +88,7 @@ router.get('/getLiveData',requiresAdmin,function(req,res) {
 router.get('/getLiveAllData',requiresAdmin,function(req,res) {
     var uid = req.query.uid;
     var id = req.query.id;
+    var round = req.query.round;
     pg.connect(config.connection, function(err, client, done) {
 
         client.query(' SELECT bucket.id AS bucket_id, bucket_challenge.id AS bucket_challenge_main_id, "userChallenge".id as user_challenge_id, * FROM bucket'+
@@ -96,7 +97,25 @@ router.get('/getLiveAllData',requiresAdmin,function(req,res) {
             ' LEFT JOIN "userChallenge" ON bucket_challenge.id = "userChallenge".bucket_challenge_id'+
                 ' LEFT JOIN "userTbl" ON "userChallenge".uid = "userTbl".uid'+
                 ' WHERE "userTbl".uid IS NOT NULL AND bucket.id = '+ id +
+                ' AND bucket_challenge.id = ' + round +
             ' ORDER BY bucket.id, "userChallenge".id',
+            function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.json(result.rows);
+                }
+                client.end();
+            });
+    });
+});
+router.get('/viewRounds',requiresAdmin,function(req,res) {
+    var id = req.query.id;
+    pg.connect(config.connection, function(err, client, done) {
+
+        client.query(' SELECT id FROM bucket_challenge '+
+            ' WHERE "bucketId" = '+ id +
+            ' ORDER BY bucket_challenge.id DESC',
             function(err, result) {
                 if (err) {
                     console.log(err);

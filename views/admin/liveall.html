@@ -28,14 +28,31 @@
 </style>
 <div class="container-fluid" ng-init="init()">
     <div class="row">
-        <div class="col-md-12">
-            <label>SELECT BUCKET</label>
-            <select ng-repeat="(bucketkey, bucketvalue) in buckets" ng-bind="selectedBucket" ng-change="loadChallenges()">
-                <option value="{{bucketvalue[0].id}}">{{bucketvalue[0].name}}</option>
-            </select>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label >SELECT BUCKET</label>
+                <select ng-model="selectedBucket" class="form-control" ng-change="loadRounds()" ng-options="bucket.id as bucket.name for bucket in allBuckets">
+
+                </select>
+            </div>
+
         </div>
-        <div class="col-md-12">
-            <div class="col-md-3" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label >SELECT ROUND</label>
+                <select ng-model="selectedRound" class="form-control" ng-change="loadChallenges()"  ng-options="round.id as allRounds.indexOf(round)+1 for round in allRounds">
+
+                </select>{{buckets.length}}
+            </div>
+        </div>
+        </div>
+    <div class="row">
+
+        <div class="alert alert-dismissible alert-danger" ng-show="liveData.length == 0 && selectedRound != null">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <strong>Note!</strong> No participation in this round.
+        </div>
+            <div class="col-md-12" ng-repeat="(bucketkey, bucketvalue) in buckets" ng-show="bucketvalue[0].name != null">
                 <div class="panel panel-default">
                     <div class="panel-heading">{{bucketvalue[0].name}}</div>
                     <div class="panel-body">
@@ -45,6 +62,8 @@
                             <thead>
                             <tr style="font-weight: bold">
                                 <th>Handle</th>
+                                <th ng-hide="bucketvalue[0].type == 'Coding'">Submitted Solution</th>
+                                <th ng-hide="bucketvalue[0].type == 'Coding'">Correct Solution</th>
                                 <th>Submitted</th>
                                 <th>Valid</th>
                                 <th>Winner</th>
@@ -54,8 +73,18 @@
                             <tr ng-show="score.handle != null" ng-repeat="score in roundvalue" ng-class="score.isWinner?'success':{'warning':score.isSubmitted && score.solution == score.correctOption,'info':!score.isSubmitted,'danger':score.isSubmitted && score.solution != score.correctOption}">
                                 <td>
 
-                              <span>
+                              <span style="font-weight: bold">
                                 {{ score.handle }}
+                              </span>
+                                <td ng-hide="bucketvalue[0].type == 'Coding'">
+
+                              <span>
+                                {{ score.solution || 'empty'}}
+                              </span>
+                                <td ng-hide="bucketvalue[0].type == 'Coding'">
+
+                              <span>
+                                {{ score.correctOption || 'empty'}}
                               </span>
                                 </td>
                                 <td>
@@ -81,6 +110,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+
     </div>
 </div>

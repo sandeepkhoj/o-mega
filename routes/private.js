@@ -5,7 +5,13 @@ var compiler = require('../compilex/compilex');
 var config = require('../routes/config');
 var requiresLogin = require('../requiresLogin');
 var requiresAdmin = require('../requiresAdmin');
-
+var mysql      = require('mysql');
+var mysql_connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'me',
+    password : 'secret',
+    database : 'my_db'
+});
 
 var option = {stats : true};
 compiler.init(option);
@@ -50,6 +56,17 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
         compiler.runJavaWithInput( envData , path , input ,  function(data){
             res.json(data);
         });
+    }
+    if(lang === 'sql') {
+        mysql_connection.connect();
+
+        mysql_connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
+            if (err) throw err;
+
+            console.log('The solution is: ', rows[0].solution);
+        });
+
+        mysql_connection.end();
     }
 });
 router.get('/view/:name',requiresLogin,function (req, res) {

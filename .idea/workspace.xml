@@ -4,7 +4,6 @@
     <list default="true" id="de15c0af-12e3-47ed-96ee-d2e83015ce9d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/private/coding.html" afterPath="$PROJECT_DIR$/views/private/coding.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/private/dashboard.html" afterPath="$PROJECT_DIR$/views/private/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/winners.html" afterPath="$PROJECT_DIR$/views/admin/winners.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="codeComp.iws" />
@@ -58,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.583333">
-              <caret line="49" column="106" selection-start-line="49" selection-start-column="79" selection-end-line="49" selection-end-column="106" />
+            <state vertical-scroll-proportion="0.48319328">
+              <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
               <folding />
             </state>
           </provider>
@@ -126,11 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="coding.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="coding.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/private/coding.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34663865">
-              <caret line="54" column="102" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="102" />
+            <state vertical-scroll-proportion="-6.875">
+              <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
@@ -200,8 +199,8 @@
         <option value="$PROJECT_DIR$/views/admin/liveall.html" />
         <option value="$PROJECT_DIR$/views/partials/login.html" />
         <option value="$PROJECT_DIR$/views/admin/winners.html" />
-        <option value="$PROJECT_DIR$/views/private/dashboard.html" />
         <option value="$PROJECT_DIR$/views/private/coding.html" />
+        <option value="$PROJECT_DIR$/views/private/dashboard.html" />
       </list>
     </option>
   </component>
@@ -885,22 +884,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.583333">
-          <caret line="49" column="106" selection-start-line="49" selection-start-column="79" selection-end-line="49" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/private/coding.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34663865">
-          <caret line="54" column="102" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="102" />
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="54" column="100" selection-start-line="54" selection-start-column="100" selection-end-line="54" selection-end-column="100" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#form#0;n#div#1;n#div#0;n#div#0;n#div#4;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/private/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48319328">
+          <caret line="49" column="104" selection-start-line="49" selection-start-column="104" selection-end-line="49" selection-end-column="104" />
+          <folding />
         </state>
       </provider>
     </entry>

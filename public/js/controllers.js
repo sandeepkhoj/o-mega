@@ -322,10 +322,11 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                     $scope.result = data;
                     console.log(data);
                     if($scope.result.code == 200 && $scope.result.rows.length > 0) {
+
                         internalCall.submitSQL({userId:$rootScope.user.uid,
                             bucket_challenge_id:$scope.challenge.bucket_challenge,
                             challengeid:$scope.challenge.challengeId,
-                            solution:$scope.result.rows[0][$scope.result.fields[0]]}).success(function(response){
+                            solution:$scope.result.rows[0][$scope.result.fields[0].name]}).success(function(response){
                             console.log(response);
                             loadChallenge();
                             ngToast.create({

@@ -328,7 +328,7 @@ router.get('/viewLoad',requiresLogin,function(req,res) {
     pg.connect(config.connection, function(err, client, done) {
 
         client.query(
-            'SELECT bucket.id AS bucketId, bucket.type AS buckettype, bucket."isActive", bucket.type as buckettype, date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, bucket.shortname, challenge.id AS challengeId, * FROM bucket'+
+            'SELECT bucket.bucket_challenge_id as bucket_challenge, bucket.id AS bucketId, bucket.type AS buckettype, bucket."isActive", bucket.type as buckettype, date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, bucket.shortname, challenge.id AS challengeId, * FROM bucket'+
             ' LEFT JOIN challenge ON bucket."challengeId" = challenge.id'+
             ' LEFT JOIN "userChallenge" ON (bucket.bucket_challenge_id = "userChallenge".bucket_challenge_id AND "userChallenge".uid = '+uid+') ORDER BY bucket.id',
             function(err, result) {

@@ -4,7 +4,7 @@
 var _ = require('lodash');
 module.exports = function(req, res, next) {
     if (!req.isAuthenticated() || typeof req.user == "undefined" || !req.user.copilot)
-        res.render('error.ejs',{error:{status:401},message:'authorization failed for admin.'});
+        res.status(503);
     else
         next();
 }

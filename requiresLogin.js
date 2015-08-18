@@ -3,7 +3,7 @@
  */
 module.exports = function(req, res, next) {
     if (!req.isAuthenticated())
-        res.render('error.ejs',{error:{status:401},message:'authorization failed'});
+        res.status(503);
     else
         next();
 }

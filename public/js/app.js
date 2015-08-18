@@ -21,7 +21,7 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
           },
           responseError: function(response) {
             if (response.status === 503)
-              $location.url('/login');
+              $location.url('/');
             return $q.reject(response);
           }
         };
@@ -101,4 +101,16 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
           animation:'fade'
       });
   //$locationProvider.html5Mode(true).hashPrefix('!');
-});
+}).factory('$exceptionHandler', function($injector) {
+      return function(exception, cause) {
+        console.log(exception,cause);
+        var $rootScope = $injector.get('$rootScope');
+        var $location = $injector.get('$location');
+
+        $rootScope.errors = $rootScope.errors || [];
+        $rootScope.errors.push(exception.message)
+        //exception.message += ' (caused by "' + cause + '")';
+        $location.url('/error');
+        throw exception;
+      };
+    });

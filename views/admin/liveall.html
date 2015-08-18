@@ -40,7 +40,7 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label >SELECT ROUND</label>
-                <select ng-model="selectedRound" class="form-control" ng-change="loadChallenges()"  ng-options="round.id as allRounds.length - (allRounds.indexOf(round)+1) for round in allRounds">
+                <select ng-model="selectedRound" class="form-control" ng-change="loadChallenges()"  ng-options="round.id as round.id for round in allRounds">
 
                 </select>{{buckets.length}}
             </div>

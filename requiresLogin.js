@@ -3,7 +3,7 @@
  */
 module.exports = function(req, res, next) {
     if (!req.isAuthenticated())
-        res.status(503);
+        res.status(503).send('Login required');
     else
         next();
 }

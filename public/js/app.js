@@ -13,7 +13,7 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
       //================================================
       // Add an interceptor for AJAX errors
       //================================================
-      $httpProvider.interceptors.push(function($q, $location) {
+      $httpProvider.interceptors.push(function($q, $location, $rootScope) {
         return {
           response: function(response) {
             // do something on success
@@ -21,6 +21,7 @@ config(function ($routeProvider, $locationProvider,$httpProvider,ngToastProvider
           },
           responseError: function(response) {
             if (response.status === 503)
+              $rootScope.user = null;
               $location.url('/');
             return $q.reject(response);
           }

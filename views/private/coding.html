@@ -94,7 +94,7 @@
                 <form id="myform" name="myform" method="post">
                     <div class="form-group" ng-show="challenge.type == 'Coding'">
                         <label for="lang">Language</label>
-                        <select name="lang" ng-model="challenge.code_language" id="lang" ng-change="updateLanguage()">
+                        <select name="lang" ng-model="challenge.code_language" id="lang" ng-change="updateLanguage()" style="color: #000;">
                             <option ng-repeat="lang in allowedlanguage">{{lang.value}}</option>
                         </select>
                     </div>

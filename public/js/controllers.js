@@ -87,24 +87,25 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                         {value: "C", text: 'C'},
                         {value: "C++", text: 'C++'}
                     ];
+                    $scope.challenge.code_language = 'Java';
                 }
                 else if($scope.challenge.language == 'Java') {
                     $scope.allowedlanguage = [
-                        {value: "C", text: 'C'},
                         {value: "C++", text: 'C++'}
                     ];
+                    $scope.challenge.code_language = 'C++';
                 }
                 else {
                     $scope.allowedlanguage = [
                         {value: "Java", text: 'Java'}
                     ];
-                }
-                if($scope.challenge.code_language == null) {
                     $scope.challenge.code_language = 'Java';
                 }
+
                 if($scope.challenge.type == 'SQL') {
                     $scope.challenge.code_language = 'SQL'
                 }
+
                 console.log($scope.challenge.code_language);
                 if($scope.challenge.userchallengeid == null) {
                     pgCall.callPostService('/private/openProblem', {

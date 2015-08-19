@@ -84,7 +84,6 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                 if($scope.challenge.language == null) {
                     $scope.allowedlanguage = [
                         {value: "Java", text: 'Java'},
-                        {value: "C", text: 'C'},
                         {value: "C++", text: 'C++'}
                     ];
                     $scope.challenge.code_language = 'Java';
@@ -840,7 +839,6 @@ app.controller('editchallengesCtr', function ($scope,$rootScope,$location,$route
     $scope.allowedlanguage = [
         {value: null, text: null},
         {value: "Java", text: 'Java'},
-        {value: "C", text: 'C'},
         {value: "C++", text: 'C++'}
     ];
     $scope.init = function() {
@@ -873,7 +871,6 @@ app.controller('newchallengesCtr', function ($scope,$rootScope,$location,$routeP
     $scope.allowedlanguage = [
         {value: null, text: null},
         {value: "Java", text: 'Java'},
-        {value: "C", text: 'C'},
         {value: "C++", text: 'C++'}
     ];
     $scope.init = function() {

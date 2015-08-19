@@ -198,7 +198,7 @@ exports.compileCPPWithInput = function ( envData , code , input ,  fn ) {
 } //end of compileCPPWithInput
 exports.runCppWithInput = function (envData , filename , input , fn ){
 	if(input){
-		var path = './temp/';
+		var path = '.\\temp\\';
 		var inputfile = filename + 'input.txt';
 
 		fs.writeFile( path  +  inputfile , input  , function(err ){

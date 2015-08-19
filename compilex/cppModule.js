@@ -211,7 +211,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 			}
 		});
 
-		exec( path + filename +'.exe' + ' < ' + path + inputfile , function( error , stdout , stderr ){
+		exec( path + filename +'.exe < ' + path + inputfile , function( error , stdout , stderr ){
 			if(error)
 			{
 
@@ -224,7 +224,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 				{
 					if(exports.stats)
 					{
-						console.log('INFO: '.green + filename + '.cpp contained an error while executing');
+						console.log('INFO: '.green + filename + '.exe contained an error while executing');
 					}
 					var out =  { output : stderr};
 					fn(out);
@@ -234,7 +234,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 			{
 				if(exports.stats)
 				{
-					console.log('INFO: '.green + filename + '.cpp successfully compiled and executed !');
+					console.log('INFO: '.green + filename + '.exe successfully executed !');
 				}
 				var out = {message: 'success', output: stdout};
 				fn(out);

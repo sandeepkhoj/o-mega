@@ -90,6 +90,9 @@ myApp.factory('internalCall', function ($http) {
             ignoreLoadingBar: true
         });
     };
+    internalCall.viewLoad = function(arg) {
+        return $http.get('/private/viewLoad?userId='+arg);
+    };
     return internalCall;
 });
 

@@ -526,7 +526,7 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
         }
 
         function viewLoad() {
-            internalCall.viewReload($rootScope.user.uid).success(function(response){
+            internalCall.viewLoad($rootScope.user.uid).success(function(response){
                 console.log(response);
                 for(var i = 0;i<response.length;i++) {
                     if(response[i].timestamp != null) {

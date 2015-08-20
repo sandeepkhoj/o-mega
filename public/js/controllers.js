@@ -81,7 +81,7 @@ app.controller('codingCtr', function ($scope,internalCall,pgCall,externalCall,$r
                     $scope.challenge.code = $scope.challenge.starter_code_java;
                 }
 
-                if($scope.challenge.language == null) {
+                if($scope.challenge.language == null || $scope.challenge.language == '') {
                     $scope.allowedlanguage = [
                         {value: "Java", text: 'Java'},
                         {value: "C++", text: 'C++'}

@@ -1,4 +1,4 @@
-var exec  = require('child_process').exec;
+var exec  = require('child_process').outc;
 var fs = require('fs');
 var cuid = require('cuid');
 var colors = require('colors');
@@ -26,7 +26,7 @@ exports.compileCPP = function ( envData ,  code , fn ) {
 					       if(envData.cmd === 'g++')
 					       {
 							   //compile c code
-							   commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.exe' ;
+							   commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.out' ;
 							   exec(commmand , function ( error , stdout , stderr ){
 								   if(error)
 								   {
@@ -146,7 +146,7 @@ exports.compileCPPWithInput = function ( envData , code , input ,  fn ) {
 				if(envData.cmd ==='g++')
 				    {
 
-						commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.exe' ;
+						commmand = 'g++ ' + path + filename +'.cpp -o '+ path + filename+'.out' ;
 						exec(commmand , function ( error , stdout , stderr ){
 							if(error)
 							{
@@ -211,7 +211,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 			}
 		});
 
-		exec( path + filename +'.exe < ' + path + inputfile , function( error , stdout , stderr ){
+		exec( path + filename +'.out < ' + path + inputfile , function( error , stdout , stderr ){
 			if(error)
 			{
 
@@ -224,7 +224,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 				{
 					if(exports.stats)
 					{
-						console.log('INFO: '.green + filename + '.exe contained an error while executing');
+						console.log('INFO: '.green + filename + '.out contained an error while executing');
 					}
 					var out =  { output : stderr};
 					fn(out);
@@ -234,7 +234,7 @@ exports.runCppWithInput = function (envData , filename , input , fn ){
 			{
 				if(exports.stats)
 				{
-					console.log('INFO: '.green + filename + '.exe successfully executed !');
+					console.log('INFO: '.green + filename + '.out successfully executed !');
 				}
 				var out = {message: 'success', output: stdout};
 				fn(out);

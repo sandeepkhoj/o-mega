@@ -19,6 +19,7 @@ var io = require('socket.io')(http);
 var flash = require('connect-flash');
 
 var users = [];
+var buckets = [];
 
 
 function findById(id, fn) {
@@ -201,8 +202,97 @@ io.sockets.setMaxListeners(0);
 
 http.listen(config.port, function(){
   console.log('listening on *:'+config.port);
-    //updateBuckets();
+    updateBuckets();
 });
+
+var minutes = 1, the_interval = minutes * 60 * 1000;
+setInterval(function() {
+    for(var i = 0 ; i < buckets.length ; i++) {
+        console.log(buckets[i].timestamp);
+        if(buckets[i].timestamp != null) {
+            var counter = addMinutes(new Date(buckets[i].timestamp), buckets[i].timer).getTime() - new Date().getTime();
+            console.log('--counter--'+counter);
+            if (counter <= 0) {
+
+                assignNewChallenge(buckets[i].id,buckets[i].challengeId);
+                break;
+            }
+        }
+        else if(buckets[i].isActive){
+            console.log('--buckets[i]--'+buckets[i].id);
+            assignNewChallenge(buckets[i].id,buckets[i].challengeId);
+            break;
+        }
+    }
+}, the_interval);
+
+function addMinutes(date, minutes) {
+    return new Date(date.getTime() + minutes*60000);
+}
+
+function updateBuckets() {
+    console.log('--in Bucket Update--');
+    pg.connect(connection, function (err, client, done) {
+
+        client.query(
+            'SELECT date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, id, "challengeId", "isActive", timer FROM bucket WHERE "isActive" = true',
+            function (err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    buckets = result.rows;
+                }
+                client.end();
+            });
+    });
+}
+function assignNewChallenge(bucketId,lastChallengeId) {
+    console.log(lastChallengeId);
+    pg.connect(connection, function(err, client, done) {
+        var sql = '';
+        if(lastChallengeId != null) {
+            sql = 'SELECT id FROM challenge WHERE (solved = false OR solved IS NULL) AND "bucketId" = '+bucketId+' AND id != '+lastChallengeId+' ORDER BY RANDOM() LIMIT 1';
+        }
+        else {
+            sql = 'SELECT id FROM challenge WHERE (solved = false OR solved IS NULL) AND "bucketId" = '+bucketId+' ORDER BY RANDOM() LIMIT 1';
+        }
+        client.query(sql,
+            function(err, result) {
+                if (err) {
+                    console.log(err);
+                } else {
+                    if(result.rows.length>0) {
+                        var challengeId = result.rows[0].id;
+                        client.query(
+                            'INSERT INTO bucket_challenge ("bucketId","challengeId","timestamp") VALUES($1,$2,$3)',
+                            [bucketId,challengeId,new Date()],
+                            function(err, result) {
+                                if (err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('new challenge no ['+challengeId+'] assign on bucket ['+bucketId+']');
+
+                                }
+                            });
+                    }
+                    else {
+                        console.log('all challenge solved on bucket ['+bucketId+']');
+                        client.query(
+                            'Update bucket Set ("isActive","challengeId") = ($1,$2) WHERE id = $3',
+                            [false,null,bucketId],
+                            function(err, result) {
+                                if (err) {
+                                    console.log(err);
+                                } else {
+                                    console.log('closed bucket ['+bucketId+']');
+
+                                }
+                            });
+                    }
+                }
+            });
+    });
+}
 
 module.exports = app;
 

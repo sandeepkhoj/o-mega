@@ -232,7 +232,7 @@ function addMinutes(date, minutes) {
 
 function updateBuckets() {
     console.log('--in Bucket Update--');
-    pg.connect(connection, function (err, client, done) {
+    pg.connect(config.connection, function (err, client, done) {
 
         client.query(
             'SELECT date_part(\'epoch\',bucket.timestamp)*1000 as timestamp, id, "challengeId", "isActive", timer FROM bucket WHERE "isActive" = true',
@@ -248,7 +248,7 @@ function updateBuckets() {
 }
 function assignNewChallenge(bucketId,lastChallengeId) {
     console.log(lastChallengeId);
-    pg.connect(connection, function(err, client, done) {
+    pg.connect(config.connection, function(err, client, done) {
         var sql = '';
         if(lastChallengeId != null) {
             sql = 'SELECT id FROM challenge WHERE (solved = false OR solved IS NULL) AND "bucketId" = '+bucketId+' AND id != '+lastChallengeId+' ORDER BY RANDOM() LIMIT 1';

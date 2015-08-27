@@ -521,7 +521,9 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
             //alert('ok');
             socket.disconnect();
         });
-
+        $scope.$on('$routeChangeStart', function() {
+            socket.disconnect();
+        });
 
 
 

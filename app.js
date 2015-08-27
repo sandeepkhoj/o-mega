@@ -223,6 +223,9 @@ setInterval(function() {
             assignNewChallenge(buckets[i].id,buckets[i].challengeId);
             break;
         }
+        else {
+            updateBuckets();
+        }
     }
 }, the_interval);
 

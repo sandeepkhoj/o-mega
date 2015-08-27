@@ -35,7 +35,7 @@ router.post('/compile' ,requiresLogin, function (req , res ) {
     console.log(input);
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
-        var envData = { OS : "windows" , cmd : "gcc"};
+        var envData = { OS : "windows" , cmd : "g++"};
         compiler.compileCPPWithInput(envData , code ,input , function (data) {
 
             res.json(data);
@@ -86,7 +86,7 @@ router.post('/testCode' ,requiresLogin, function (req , res ) {
     }
     var lang = req.body.lang;
     if((lang === "C") || (lang === "C++")) {
-        var envData = { OS : "windows" , cmd : "gcc"};
+        var envData = { OS : "windows" , cmd : "g++"};
         compiler.runCppWithInput(envData , path ,input , function (data) {
             res.json(data);
         });

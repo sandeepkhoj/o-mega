@@ -276,6 +276,7 @@ function assignNewChallenge(bucketId,lastChallengeId) {
                                     console.log('new challenge no ['+challengeId+'] assign on bucket ['+bucketId+']');
 
                                 }
+                                updateBuckets();
                             });
                     }
                     else {
@@ -290,6 +291,7 @@ function assignNewChallenge(bucketId,lastChallengeId) {
                                     console.log('closed bucket ['+bucketId+']');
 
                                 }
+                                updateBuckets();
                             });
                     }
                 }

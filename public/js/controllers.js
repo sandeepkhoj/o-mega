@@ -495,33 +495,35 @@ app.controller('dashboardCtr', function ($scope,$rootScope,$location,$interval,e
                     $rootScope.user = response;
                     console.log($rootScope.user);
                     viewLoad();
+                    socket.on('connected', function (data) {
+                        socket.emit('ready for updateuser update', {});
+                        socket.emit('ready for bucket update', {});
+                    });
+
+                    socket.on('updateuser', function (data) {
+                        console.log(data);
+                        //notify({ message:'Updating view..', position:'right'});
+                        viewReload();
+                    });
+
+                    socket.on('bucketupdate', function (data) {
+                        console.log(data);
+                        viewReload();
+                    });
+                    $scope.$on('timer-stopped', function (event, data){
+                        console.log('Timer Stopped - data = ', data);
+                        viewReload();
+                    });
                 }
             });
         }
         $scope.$on("$destroy", function(){
+            alert('ok');
             socket.disconnect();
         });
 
 
-        socket.on('connected', function (data) {
-            socket.emit('ready for updateuser update', {});
-            socket.emit('ready for bucket update', {});
-        });
 
-        socket.on('updateuser', function (data) {
-            console.log(data);
-            //notify({ message:'Updating view..', position:'right'});
-            viewReload();
-        });
-
-        socket.on('bucketupdate', function (data) {
-            console.log(data);
-            viewReload();
-        });
-        $scope.$on('timer-stopped', function (event, data){
-            console.log('Timer Stopped - data = ', data);
-            viewReload();
-        });
 
 
         function addMinutes(date, minutes) {
